@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ccc6dfab68aecde43a9e6e8e18aca8d7
+guid: 65faaf499e74a614db22fc1cd9422859
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -48,8 +48,8 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
-  spriteBorder: {x: 0, y: 0, z: 30, w: 0}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -123,64 +123,64 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: frente-Sheet_0
-      rect:
-        serializedVersion: 2
-        x: 15
-        y: 0
-        width: 15
-        height: 32
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d5f5bb66b28087d4ba4ad4e948f06bbe
-      internalID: -1470581431
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: frente-Sheet_1
+      name: frente_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 15
         height: 32
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ba509e59201044b459d3ac0256c01729
-      internalID: 1760767945
+      spriteID: 9df981f3e61835d45987191d0a4a59e5
+      internalID: -1686000366
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: frente-Sheet_2
+      name: frente_1
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 0
+        width: 15
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe2e6e274479a5243810528de9d8b42a
+      internalID: -215647034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: frente_2
       rect:
         serializedVersion: 2
         x: 30
         y: 0
         width: 15
         height: 32
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 73df546f1fa19144c9fa48d38e242269
-      internalID: 1749787390
+      spriteID: 734b4110e44db404eaeba20af1e27c7b
+      internalID: 1961421884
       vertices: []
       indices: 
       edges: []
@@ -189,16 +189,16 @@ TextureImporter:
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
-    internalID: 1537655665
+    internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      frente-Sheet_0: -1470581431
-      frente-Sheet_1: 1760767945
-      frente-Sheet_2: 1749787390
+      frente_0: -1686000366
+      frente_1: -215647034
+      frente_2: 1961421884
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
