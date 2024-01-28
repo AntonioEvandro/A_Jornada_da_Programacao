@@ -1,0 +1,3 @@
+ A personagem principal surge numa estrada que leva soemnte a uma direção. Seguindo essa trilha ela irá se deparar com um NPC que é um fazendeiro, este irá solicitar uma missão, de orienta-lo a como levar tres cargas para outro lado do rio numa canoa  que sópode levar o fazendeiro e uma das tres cargas, sendo elas: uma ovelha, uma raposa e um cesto de alface, não podendo comprometer nenhuma das cargas. Após a resolução, ele deixará usar a canoa para atravessar o rio.
+ Apos atravessar o rio, a personagem chega a um vilarejo, nele ela se encontra com uma criança com tres potes, ela pede ajuda a personagem para levar alguns dos potes
+ 
