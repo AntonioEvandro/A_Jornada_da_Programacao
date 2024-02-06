@@ -13,7 +13,7 @@ public class ControlePersonagem : MonoBehaviour
 
         BoxCollider2D boxCollider = gameObject.AddComponent<BoxCollider2D>();
 
-        boxCollider.size = new Vector2(1f, 1f);
+        boxCollider.size = new Vector2();
     }
 
     void Update()
