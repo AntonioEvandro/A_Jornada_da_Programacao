@@ -1,0 +1,11 @@
+	Primeiro desafio
+Para levar as três cargas para a outra margem do rio, haverá as seguintes opções:
+
+ levar, deixar, ir, voltar, onça, bode, alface
+
+A primeira opção obrigatoriamente será [levar] e após a opção [levar] sempre será seguida de alguma [carga], a proxima opção deverá ser [deixar] segida da [carga]. 
+[levar] [cargaX], [deixar] [cargaX],
+
+A resposta será:
+ levar bode, deixar bode, voltar, levar alface, deixar alface, voltar bode, deixar bode, levar onça, deixar onça, voltar, levar bode, deixar bode.
+
