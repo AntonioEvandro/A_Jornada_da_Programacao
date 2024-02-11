@@ -1,0 +1,55 @@
+	[Monólogo da Laida]
+
+AH!!!
+O que é isso? O que aconteceu?
+Que estranho... onde estou?
+Não pode ser, isso se parece muito com um jogo, tipo os que eu faço.
+Tantas horas desperdiçadas pra depois.. o que mesmo? Parece que me deu um branco depois de noites em claro.
+Deveria ouvir mais meu chefe.
+Acho melhor procurar algo que me faça voltar ao meu quarto, ou melhor, meu mundo.
+
+
+	[Após avistar o fazendeiro inicia-se mais esse pensamento dela]
+
+Tem alguém perto daquele rio. Deve ser um NPC, não me parece hostil.
+Posso conseguir algumas informações com ele.
+
+
+	[Interagindo com o fazendeiro começa esse diálogo]
+
+Estranha:
+ Bom dia senhor! Tudo bem com você?
+Fazendeiro:
+ Nem tão bom! Poderia estar bem se eu não tivesse com esse problema.
+Estranha:
+ Desculpe incomodar, não gastarei muito do seu tempo, só quero umas informações, certo?
+Fazendeiro:
+ Com essas roupas, com certeza você não é daqui.
+Estranha: 
+Pode-se dizer que sou de um lugar distante.
+Fazendeiro: 
+Vamos fazer assim, eu te ajudo se você me ajudar primeiro, que tal?
+Estranha: 
+Certo, eu ajudo. Aliás, eu me chamo Laida!
+Fazendeiro:
+ E eu sou o João!
+Laida:
+ É um prazer conhece-lo!
+João:
+ O prazer é meu!
+ Vamos logo ao que interessa.
+ Eu tenho que atravessar esse rio, mas eu só tenho essa pequena embarcação, além de mim, preciso levar essas três cargas para o outro lado do rio sem perder nenhuma dessas cargas, não sei como começar, se me ajudar posso até te levar ao outro lado do rio também se quiser.
+Laida:
+ Combinado! Aceito a carona também.
+ É como uma missão num jogo.
+ Vamos ver, ele tem três cargas, elas são, um bode, um cesto de alface e uma... onça? Bem isso é uma missão, vou resolve-lá logo.
+ Estranho!? Parece que reconheço essa questão.
+ Bem senhor João, acho que tenho a resposta para esse dilema.
+João:
+ Estou ouvindo.
+Laida:
+ Faça assim.
+[Resposta do jogador a seguir]
+
+
+
