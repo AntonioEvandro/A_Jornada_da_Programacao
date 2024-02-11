@@ -9,3 +9,5 @@ A primeira opção obrigatoriamente será [levar] e após a opção [levar] semp
 A resposta será:
  levar bode, deixar bode, voltar, levar alface, deixar alface, voltar bode, deixar bode, levar onça, deixar onça, voltar, levar bode, deixar bode.
 
+	Segundo desafio
+
