@@ -14,7 +14,7 @@ public class ControlePersonagem : MonoBehaviour
 
         // Adiciona um BoxCollider2D ao objeto do jogador
         BoxCollider2D boxCollider = gameObject.AddComponent<BoxCollider2D>();
-        boxCollider.size = new Vector2(1f, 1f);
+        boxCollider.size = new Vector2();
 
         // Obtém a referência ao Animator
         animator = GetComponent<Animator>();
