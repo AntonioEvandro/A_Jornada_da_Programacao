@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7a6db50f840629a48a2ff983158259b9
+guid: e2c57524ba9ca2a44bbb1f22c07e21cb
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -45,7 +45,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 0
+  spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -110,39 +110,10 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Back_0
+      name: Joao_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 14
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 0, y: -16}
-        - {x: 7, y: 0}
-        - {x: 0, y: 16}
-        - {x: -7, y: 0}
-      physicsShape:
-      - - {x: 0, y: -16}
-        - {x: 7, y: 0}
-        - {x: 0, y: 16}
-        - {x: -7, y: 0}
-      tessellationDetail: 0
-      bones: []
-      spriteID: a174d5c5279dd9542b664a908bd9b319
-      internalID: 2024153426
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Back_1
-      rect:
-        serializedVersion: 2
-        x: 14
+        x: 1
         y: 0
         width: 14
         height: 32
@@ -153,17 +124,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2812b244fada1374abb18ea7634db897
-      internalID: -747967047
+      spriteID: 5320091be9827a346b33899a20a3a6d8
+      internalID: -686161837
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Back_2
+      name: Joao_1
       rect:
         serializedVersion: 2
-        x: 28
+        x: 17
         y: 0
         width: 14
         height: 32
@@ -174,17 +145,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e0bdabfbb1a356448a4b1d87be2f2d58
-      internalID: -1335351290
+      spriteID: 9b993288f539ec44ba02a4be458db593
+      internalID: -1177626415
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Back_3
+      name: Joao_2
       rect:
         serializedVersion: 2
-        x: 42
+        x: 33
         y: 0
         width: 14
         height: 32
@@ -195,17 +166,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f710db2c71fcb1c4dae0438c6a8443b1
-      internalID: -1689688637
+      spriteID: 92e756951a4ff1645b2e39826ca77c3b
+      internalID: 2109548443
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Back_4
+      name: Joao_3
       rect:
         serializedVersion: 2
-        x: 56
+        x: 49
         y: 0
         width: 14
         height: 32
@@ -216,8 +187,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f15665d61c2145643a93b6120df77fcf
-      internalID: 898261285
+      spriteID: fbfc7a3f520659148ba1b0c837f4210d
+      internalID: -1046233315
       vertices: []
       indices: 
       edges: []
@@ -233,11 +204,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Back_0: 2024153426
-      Back_1: -747967047
-      Back_2: -1335351290
-      Back_3: -1689688637
-      Back_4: 898261285
+      Joao_0: -686161837
+      Joao_1: -1177626415
+      Joao_2: 2109548443
+      Joao_3: -1046233315
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

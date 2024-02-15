@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -110,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Front_0
+      name: Blink_0
       rect:
         serializedVersion: 2
         x: 0
@@ -124,14 +124,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cf3ccbb7a6506d54fab1afe4aadd8efb
-      internalID: -1992488729
+      spriteID: 76722ea0611b8fd45bc8c7c0e7c6e7b2
+      internalID: -1247527502
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Front_1
+      name: Blink_1
       rect:
         serializedVersion: 2
         x: 14
@@ -145,14 +145,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 64b342ae9143f4b46b0ffbeaa4b3b28c
-      internalID: -1886230733
+      spriteID: 6732fcd89c8554c43aea11e16e25c236
+      internalID: -318091986
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Front_2
+      name: Blink_2
       rect:
         serializedVersion: 2
         x: 28
@@ -166,8 +166,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 90a8f75d7b501ff45a1db12423bbdb36
-      internalID: 798509889
+      spriteID: dc3b47e911d54d8468fac624af1e8435
+      internalID: -1376902788
       vertices: []
       indices: 
       edges: []
@@ -183,9 +183,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Front_0: -1992488729
-      Front_1: -1886230733
-      Front_2: 798509889
+      Blink_0: -1247527502
+      Blink_1: -318091986
+      Blink_2: -1376902788
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
