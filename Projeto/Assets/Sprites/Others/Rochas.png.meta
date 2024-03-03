@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: fb83ea7eb90c6d644ae345d9b020b0db
+guid: dbf78d17694a54b4c91ed0b0b5b95953
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Canoa_0
+      name: Rochas_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 27
-        width: 62
-        height: 13
+        x: 0
+        y: 1
+        width: 16
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 19aaa38d7ba894840863c99f196c8045
-      internalID: 154900203
+      spriteID: 6094dc116050ee24e9d4c7b6a7df0c52
+      internalID: 895805380
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Canoa_1
+      name: Rochas_1
       rect:
         serializedVersion: 2
-        x: 65
-        y: 27
-        width: 62
-        height: 13
+        x: 17
+        y: 2
+        width: 15
+        height: 11
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5465b62fdaa093a44ad2c69f2ee869de
-      internalID: 476340186
+      spriteID: 78c7f5ae591b9484c84629fdb9ae5ebc
+      internalID: 1597242409
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Canoa_2
+      name: Rochas_2
       rect:
         serializedVersion: 2
-        x: 129
-        y: 27
-        width: 62
-        height: 13
+        x: 34
+        y: 2
+        width: 12
+        height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,20 +166,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3247ffcf301296e439daa179c2700335
-      internalID: 663445527
+      spriteID: 526356bd20b891840ac38eec42d33b37
+      internalID: -1672545185
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Canoa_3
+      name: Rochas_3
       rect:
         serializedVersion: 2
-        x: 193
-        y: 27
-        width: 62
-        height: 13
+        x: 53
+        y: 4
+        width: 7
+        height: 6
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,29 +187,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e068e75aca6fb804392dc1f99211431f
-      internalID: -1148384412
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Canoa_4
-      rect:
-        serializedVersion: 2
-        x: 257
-        y: 27
-        width: 62
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a603d089c76cbec45bba1950441695a5
-      internalID: 1639892819
+      spriteID: 98c95ab2722c1b345ac160f8e3e802ca
+      internalID: 1580110077
       vertices: []
       indices: 
       edges: []
@@ -225,11 +204,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Canoa_0: 154900203
-      Canoa_1: 476340186
-      Canoa_2: 663445527
-      Canoa_3: -1148384412
-      Canoa_4: 1639892819
+      Rochas_0: 895805380
+      Rochas_1: 1597242409
+      Rochas_2: -1672545185
+      Rochas_3: 1580110077
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
