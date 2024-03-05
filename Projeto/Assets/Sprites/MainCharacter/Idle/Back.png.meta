@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ed4c54a830fb2864dae6cc405500e9b4
+guid: a6e168107ca12f3439b2f80d1fcc9cec
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SideRight_0
+      name: Back_0
       rect:
         serializedVersion: 2
         x: 0
@@ -124,14 +124,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e4bbb55fbd50abb478eead1ba54b0b66
-      internalID: -1664101972
+      spriteID: faae51e5169f93048b84dd7f8f0ea8fd
+      internalID: -993156414
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SideRight_1
+      name: Back_1
       rect:
         serializedVersion: 2
         x: 14
@@ -145,14 +145,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 932ab252d579fc8458190e86256f7d60
-      internalID: -1529698197
+      spriteID: 428f5a4f7101f384c878d42a81e1c8d4
+      internalID: -1010752393
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SideRight_2
+      name: Back_2
       rect:
         serializedVersion: 2
         x: 28
@@ -166,29 +166,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 180bb1ae1b53bce46898e2cb76381a41
-      internalID: 586060773
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SideRight_3
-      rect:
-        serializedVersion: 2
-        x: 42
-        y: 0
-        width: 14
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8d462a0c66fd644459ef1f1069168d12
-      internalID: -586648991
+      spriteID: ad21de4433a76fe4daf751a81a680a9d
+      internalID: -10687967
       vertices: []
       indices: 
       edges: []
@@ -204,10 +183,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      SideRight_0: -1664101972
-      SideRight_1: -1529698197
-      SideRight_2: 586060773
-      SideRight_3: -586648991
+      Back_0: -993156414
+      Back_1: -1010752393
+      Back_2: -10687967
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

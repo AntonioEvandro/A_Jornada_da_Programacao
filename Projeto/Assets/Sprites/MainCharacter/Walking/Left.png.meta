@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f764876c697e1c448bada8cbaa89e728
+guid: c91630fc91d68144aa95b22e6391d0ab
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Blink_0
+      name: Left_0
       rect:
         serializedVersion: 2
         x: 0
@@ -118,20 +118,20 @@ TextureImporter:
         width: 14
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 76722ea0611b8fd45bc8c7c0e7c6e7b2
-      internalID: -1247527502
+      spriteID: 42fd60a687ca43248b4c7a7c9ed1f4e5
+      internalID: 1796706269
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Blink_1
+      name: Left_1
       rect:
         serializedVersion: 2
         x: 14
@@ -139,20 +139,20 @@ TextureImporter:
         width: 14
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6732fcd89c8554c43aea11e16e25c236
-      internalID: -318091986
+      spriteID: 7e6f55f43c047234896c6f0959e7294a
+      internalID: -620063595
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Blink_2
+      name: Left_2
       rect:
         serializedVersion: 2
         x: 28
@@ -160,14 +160,35 @@ TextureImporter:
         width: 14
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dc3b47e911d54d8468fac624af1e8435
-      internalID: -1376902788
+      spriteID: b02256a77d7458a4ea4fc70cb4b16e43
+      internalID: 762679317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Left_3
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 0
+        width: 14
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37d7b0d5cd97e6f4da30c6d1b764e931
+      internalID: 743549121
       vertices: []
       indices: 
       edges: []
@@ -183,9 +204,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Blink_0: -1247527502
-      Blink_1: -318091986
-      Blink_2: -1376902788
+      Left_0: 1796706269
+      Left_1: -620063595
+      Left_2: 762679317
+      Left_3: 743549121
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
