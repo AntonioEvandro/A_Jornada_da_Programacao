@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdb9af3eae6f37748b74de2ec6710ccf, type: 3}
+  m_Name: DialogueData NPC 1
+  m_EditorClassIdentifier: 
+  talkScript:
+  - name: Laida
+    text: " Bom dia senhor! Tudo bem com voc\xEA?"
+  - name: 'Fazendeiro:'
+    text: " Nem t\xE3o bom! Poderia estar bem se eu n\xE3o tivesse com esse problema."
+  - name: Laida
+    text: " Desculpe incomodar, n\xE3o gastarei muito do seu tempo, s\xF3 quero umas
+      informa\xE7\xF5es, certo?"
+  - name: 'Fazendeiro:'
+    text: " Com essas roupas, com certeza voc\xEA n\xE3o \xE9 daqui."
+  - name: Laida
+    text: Pode-se dizer que sou de um lugar distante.
+  - name: 'Fazendeiro:'
+    text: "Vamos fazer assim, eu te ajudo se voc\xEA me ajudar primeiro, que tal?"
+  - name: Laida
+    text: "Certo, eu ajudo. Ali\xE1s, eu me chamo Laida!"
+  - name: Laida
+    text: "Acho melhor procurar algo que me fa\xE7a voltar ao meu quarto, ou melhor,
+      meu mundo."
+  - name: 'Laida:'
+    text: " \xC9 um prazer conhece-lo!"
+  - name: "Jo\xE3o:"
+    text: "O prazer \xE9 meu!\r\n Vamos logo ao que interessa.\r\n Eu tenho que atravessar
+      esse rio, mas eu s\xF3 tenho essa canoa, al\xE9m de mim, preciso levar essas
+      tr\xEAs cargas para o outro lado do rio sem perder nenhuma dessas cargas, n\xE3o
+      sei como come\xE7ar, se me ajudar posso at\xE9 te levar ao outro lado do rio
+      tamb\xE9m se quiser.\r"
+  - name: 'Laida:'
+    text: " Combinado! Aceito a carona tamb\xE9m."
+  - name: 'Laida:'
+    text: " Combinado! Aceito a carona tamb\xE9m.\n"
+  - name: 'Laida:'
+    text: " \xC9 como uma miss\xE3o num jogo."
+  - name: 'Laida:'
+    text: " Vamos ver, ele tem tr\xEAs cargas, elas s\xE3o, um bode, um cesto de
+      alface e uma... on\xE7a? Bem isso \xE9 uma miss\xE3o, vou resolve-l\xE1 logo."
+  - name: 'Laida:'
+    text: " Estranho!? Parece que reconhe\xE7o essa quest\xE3o."
+  - name: 'Laida:'
+    text: " Bem senhor Jo\xE3o, acho que tenho a resposta para esse dilema."
+  - name: "Jo\xE3o:"
+    text: ' Estou ouvindo.'
+  - name: 'Laida:'
+    text: " Fa\xE7a assim."
+  - name: 'Laida:'
+    text: 'Escolha uma alternativa:'

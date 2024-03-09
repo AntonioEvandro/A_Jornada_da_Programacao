@@ -1,7 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class ControlePersonagem : MonoBehaviour
@@ -10,12 +6,11 @@ public class ControlePersonagem : MonoBehaviour
     public Rigidbody2D rb; 
     public Animator animator;
 
-    Vector2 movimento;
+    public Transform npc;
 
-    void Start()
-    {
-        
-    }
+    public DialogueSystem dialogueSystem;
+
+    Vector2 movimento;
 
     void Update()
     {
@@ -30,10 +25,13 @@ public class ControlePersonagem : MonoBehaviour
             animator.SetFloat("horizontalIdle", movimento.x);
             animator.SetFloat("verticalIdle", movimento.y);
         }
-    }
 
-    private void FixedUpdate()
-    {
         rb.MovePosition(rb.position + movimento * velocidade * Time.fixedDeltaTime);
+
+        if (Mathf.Abs(transform.position.x - npc.position.x) < 2.0f) {
+            if (Input.GetKeyDown(KeyCode.E)) {
+                dialogueSystem.Next();
+            }
+        }
     }
 }
