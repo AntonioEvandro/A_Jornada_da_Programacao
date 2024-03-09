@@ -8,8 +8,10 @@ public class PauseMenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (!pauseMenu.gameObject.activeSelf)
+        if (pauseMenu.gameObject.activeSelf)
         {
+            Time.timeScale = 0;
+        }else{
             Time.timeScale = 1;
         }
     }
