@@ -3,8 +3,10 @@
 AH!!!
 O que é isso? O que aconteceu?
 Que estranho... onde estou?
-Não pode ser, isso se parece muito com um jogo, tipo os que eu faço.
-Tantas horas desperdiçadas pra depois.. o que mesmo? Parece que me deu um branco depois de noites em claro.
+Não pode ser... 
+Isso se parece muito com um jogo, tipo os que eu faço.
+Tantas horas desperdiçadas pra depois... 
+o que mesmo? Parece que me deu um branco depois de noites em claro.
 Deveria ouvir mais meu chefe.
 Acho melhor procurar algo que me faça voltar ao meu quarto, ou melhor, meu mundo.
 
@@ -50,6 +52,26 @@ João:
 Laida:
  Faça assim.
 [Resposta do jogador a seguir]
+João:
+ Obrigado! Irei fazer como disse.
+Laida:
+Espero que volte logo.
+[Após a resolução do desafio]
+João:
+ Obrigado pela ajuda!
+Laida:
+ Disponha. Mas acho que seria mais fácil se eu tivesse ficado de olho nas suas cargas, aí não precisaria de tanto esforço.
+João:
+ Sem problemas, é sempre bom botar a mente pra funcionar.
+Então, aqui está! Como recompensa, pode usar minha canoa para atravessar o rio tabém.
+Laida:
+ Obrigada Senhor João!
+João:
+ Nada, apenas cumprindo minha parte.
+ Até mais garotinha!
+Laida:
+ Até!
+
 
 
 
