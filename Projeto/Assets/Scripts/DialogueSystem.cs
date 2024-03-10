@@ -21,6 +21,8 @@ public class DialogueSystem : MonoBehaviour {
 
     STATE state;
 
+    public Transform npcJoao; // Referência ao NPC "Joao"
+
     void Awake() {
         typeText = FindObjectOfType<TypeTextAnimation>();
         dialogueUI = FindObjectOfType<DialogueUI>();
@@ -29,7 +31,7 @@ public class DialogueSystem : MonoBehaviour {
     }
 
     void Start() {
-        StartMonologue(); // Inicia o monólogo assim que o jogo começar
+        StartPlayerDialogue(); // Inicia o diálogo do jogador assim que o jogo começar
     }
 
     void Update() {
@@ -44,8 +46,8 @@ public class DialogueSystem : MonoBehaviour {
                 break;
         }
 
-        // Verifica se a tecla "E" foi pressionada para avançar no monólogo
-        if (Input.GetKeyDown(KeyCode.E) && GetCurrentDialogueData() == playerDialogueData) {
+        // Verifica se a tecla "E" foi pressionada para avançar no diálogo
+        if (Input.GetKeyDown(KeyCode.E)) {
             Next();
         }
     }
@@ -58,11 +60,6 @@ public class DialogueSystem : MonoBehaviour {
     public void StartJoaoDialogue() {
         currentText = 0;
         LoadDialogue(joaoDialogueData);
-    }
-
-    public void StartMonologue() {
-        currentText = 0;
-        LoadDialogue(playerDialogueData); // Carrega o diálogo inicial (monólogo)
     }
 
     public void Next() {
@@ -130,10 +127,15 @@ public class DialogueSystem : MonoBehaviour {
     }
 
     DialogueData GetCurrentDialogueData() {
-        if (currentText == 0 || currentText > playerDialogueData.talkScript.Count) {
-            return joaoDialogueData;
-        } else {
-            return playerDialogueData;
-        }
+        return playerDialogueData;
+    }
+
+    public bool IsDialogueActive() {
+        return state != STATE.DISABLED;
+    }
+
+    // Método para verificar se o jogador está perto do NPC "Joao"
+    bool EstaPertoDoJoao(Transform npcJoao) {
+        return Mathf.Abs(transform.position.x - npcJoao.position.x) < 2.0f;
     }
 }

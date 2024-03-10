@@ -14,8 +14,8 @@ public class ControlePersonagem : MonoBehaviour
 
     void Update()
     {
-        // Verifica se o jogo não está pausado
-        if (Time.timeScale > 0)
+        // Verifica se o jogo nï¿½o estï¿½ pausado
+        if (Time.timeScale > 0 && !dialogueSystem.IsDialogueActive())
         {
             movimento.x = Input.GetAxisRaw("Horizontal");
             movimento.y = Input.GetAxisRaw("Vertical");
@@ -34,7 +34,7 @@ public class ControlePersonagem : MonoBehaviour
         }
         else
         {
-            // Congela o personagem quando o jogo está pausado
+            // Congela o personagem quando o jogo estï¿½ pausado ou a caixa de diÃ¡logo estÃ¡ ativa
             movimento = Vector2.zero;
             rb.velocity = Vector2.zero;
         }
