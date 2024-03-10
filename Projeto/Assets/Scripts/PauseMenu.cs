@@ -5,14 +5,18 @@ using UnityEngine;
 public class PauseMenu : MonoBehaviour
 {
     public Transform pauseMenu;
+    private bool isGamePaused = false;
+
     // Start is called before the first frame update
     void Start()
     {
         if (pauseMenu.gameObject.activeSelf)
         {
-            Time.timeScale = 0;
-        }else{
-            Time.timeScale = 1;
+            PauseGame();
+        }
+        else
+        {
+            ResumeGame();
         }
     }
 
@@ -21,21 +25,40 @@ public class PauseMenu : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (pauseMenu.gameObject.activeSelf)
-            {
-                pauseMenu.gameObject.SetActive(false);
-                Time.timeScale = 1;
-            }
-            else
-            {
-                pauseMenu.gameObject.SetActive(true);
-                Time.timeScale = 1 - 1;
-            }
+            TogglePauseState();
+        }
+
+        // Block input when the game is paused
+        if (isGamePaused)
+        {
+            // Optionally, you can add additional code here to handle other paused state actions
+            return;
         }
     }
+
     public void ResumeGame()
     {
         pauseMenu.gameObject.SetActive(false);
         Time.timeScale = 1;
+        isGamePaused = false;
+    }
+
+    private void PauseGame()
+    {
+        pauseMenu.gameObject.SetActive(true);
+        Time.timeScale = 0;
+        isGamePaused = true;
+    }
+
+    private void TogglePauseState()
+    {
+        if (isGamePaused)
+        {
+            ResumeGame();
+        }
+        else
+        {
+            PauseGame();
+        }
     }
 }

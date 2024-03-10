@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class ControlePersonagem : MonoBehaviour
 {
-    public float velocidade = 5f; 
-    public Rigidbody2D rb; 
+    public float velocidade = 5f;
+    public Rigidbody2D rb;
     public Animator animator;
 
     public Transform npc;
@@ -14,22 +14,35 @@ public class ControlePersonagem : MonoBehaviour
 
     void Update()
     {
-        movimento.x = Input.GetAxisRaw("Horizontal");
-        movimento.y = Input.GetAxisRaw("Vertical");
+        // Verifica se o jogo não está pausado
+        if (Time.timeScale > 0)
+        {
+            movimento.x = Input.GetAxisRaw("Horizontal");
+            movimento.y = Input.GetAxisRaw("Vertical");
 
-        animator.SetFloat("horizontal", movimento.x);
-        animator.SetFloat("vertical", movimento.y);
-        animator.SetFloat("velocidade", movimento.sqrMagnitude);
+            animator.SetFloat("horizontal", movimento.x);
+            animator.SetFloat("vertical", movimento.y);
+            animator.SetFloat("velocidade", movimento.sqrMagnitude);
 
-        if (movimento != Vector2.zero){
-            animator.SetFloat("horizontalIdle", movimento.x);
-            animator.SetFloat("verticalIdle", movimento.y);
+            if (movimento != Vector2.zero)
+            {
+                animator.SetFloat("horizontalIdle", movimento.x);
+                animator.SetFloat("verticalIdle", movimento.y);
+            }
+
+            rb.MovePosition(rb.position + movimento * velocidade * Time.fixedDeltaTime);
+        }
+        else
+        {
+            // Congela o personagem quando o jogo está pausado
+            movimento = Vector2.zero;
+            rb.velocity = Vector2.zero;
         }
 
-        rb.MovePosition(rb.position + movimento * velocidade * Time.fixedDeltaTime);
-
-        if (Mathf.Abs(transform.position.x - npc.position.x) < 2.0f) {
-            if (Input.GetKeyDown(KeyCode.E)) {
+        if (Mathf.Abs(transform.position.x - npc.position.x) < 2.0f && Time.timeScale > 0)
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
                 dialogueSystem.Next();
             }
         }
