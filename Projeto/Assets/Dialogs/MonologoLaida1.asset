@@ -10,25 +10,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fdb9af3eae6f37748b74de2ec6710ccf, type: 3}
-  m_Name: DialogueData
+  m_Name: MonologoLaida1
   m_EditorClassIdentifier: 
   talkScript:
   - name: Laida
-    text: AH!!!
+    text: ' AH!!!'
   - name: Laida
-    text: "O que \xE9 isso? O que aconteceu?"
+    text: " O que \xE9 isso?\n O que aconteceu?"
   - name: Laida
-    text: Que estranho... onde estou?
+    text: " Que estranho...\n onde estou?"
   - name: Laida
-    text: "N\xE3o pode ser, isso se parece muito com um jogo, tipo os que eu fa\xE7o."
+    text: " N\xE3o pode ser..."
   - name: Laida
-    text: "Tantas horas desperdi\xE7adas pra depois.. o que mesmo? Parece que me
-      deu um branco depois de noites em claro."
+    text: " Isso se parece muito com um jogo, tipo os que eu fa\xE7o."
+  - name: Laida
+    text: "Tantas horas desperdi\xE7adas pra depois..\n o que mesmo?\n Parece que
+      me deu um branco depois de noites em claro."
   - name: Laida
     text: Deveria ouvir mais meu chefe.
-  - name: Laida
-    text: "Acho melhor procurar algo que me fa\xE7a voltar ao meu quarto, ou melhor,
-      meu mundo."
   - name: Laida
     text: "Acho melhor procurar algo que me fa\xE7a voltar ao meu quarto, ou melhor,
       meu mundo."

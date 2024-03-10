@@ -22,7 +22,7 @@ Posso conseguir algumas informações com ele.
 Estranha:
  Bom dia senhor! Tudo bem com você?
 Fazendeiro:
- Nem tão bom! Poderia estar bem se eu não tivesse com esse problema.
+ Nem tão bom! Poderia estar bem se eu não tivesse esse problema.
 Estranha:
  Desculpe incomodar, não gastarei muito do seu tempo, só quero umas informações, certo?
 Fazendeiro:
@@ -46,7 +46,8 @@ Laida:
  É como uma missão num jogo.
  Vamos ver, ele tem três cargas, elas são, um bode, um cesto de alface e uma... onça? Bem isso é uma missão, vou resolve-lá logo.
  Estranho!? Parece que reconheço essa questão.
- Bem senhor João, acho que tenho a resposta para esse dilema.
+[Espaço para escolher as alternativas]
+ Pois bem senhor João, acho que tenho a resposta para esse dilema.
 João:
  Estou ouvindo.
 Laida:
