@@ -26,9 +26,9 @@ public class MenuPrincipalManager : MonoBehaviour
         painelMenuInicial.SetActive(true);
     }
 
-    public void SairJogo()
+    public void ExitGame()
     {
-        Debug.Log("Sair do Jogo");
+        // Quit the application
         Application.Quit();
     }
 }
