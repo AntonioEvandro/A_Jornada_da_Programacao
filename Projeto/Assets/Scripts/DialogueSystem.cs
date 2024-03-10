@@ -54,37 +54,42 @@ public class DialogueSystem : MonoBehaviour {
 
     public void StartPlayerDialogue() {
         currentText = 0;
+        dialogueUI.Enable(); // Ativa a caixa de diálogo
         LoadDialogue(playerDialogueData);
     }
 
     public void StartJoaoDialogue() {
         currentText = 0;
+        dialogueUI.Enable(); // Ativa a caixa de diálogo
         LoadDialogue(joaoDialogueData);
     }
 
-    public void Next() {
-        DialogueData currentData = GetCurrentDialogueData();
-
-        if (currentText < currentData.talkScript.Count) {
-            if (currentText == 0) {
-                dialogueUI.Enable();
-            }
-
-            dialogueUI.SetName(currentData.talkScript[currentText].name);
-            typeText.fullText = currentData.talkScript[currentText].text;
-
-            typeText.StartTyping();
-            state = STATE.TYPING;
-
-            currentText++; // Incrementa o índice após acessar o elemento
-        } else {
-            Debug.LogWarning("End of dialogue reached."); // Aviso de que o fim do diálogo foi alcançado
-            dialogueUI.Disable();
-            state = STATE.DISABLED;
-            currentText = 0;
-            finished = false;
-        }
+    public void StartJoaoDialogueAfterMonologue() {
+        currentText = 0;
+        dialogueUI.Enable(); // Ativa a caixa de diálogo
+        LoadDialogue(joaoDialogueData);
     }
+
+public void Next() {
+    currentText++; // Incrementa o índice antes de carregar o próximo diálogo
+
+    DialogueData currentData = GetCurrentDialogueData();
+
+    if (currentText < currentData.talkScript.Count) {
+        dialogueUI.SetName(currentData.talkScript[currentText].name);
+        typeText.fullText = currentData.talkScript[currentText].text;
+
+        typeText.StartTyping();
+        state = STATE.TYPING;
+    } else {
+        Debug.LogWarning("End of dialogue reached."); // Aviso de que o fim do diálogo foi alcançado
+        dialogueUI.Disable();
+        state = STATE.DISABLED;
+        currentText = 0;
+        finished = false;
+    }
+}
+
 
     void OnTypeFinished() {
         state = STATE.WAITING;
@@ -111,10 +116,6 @@ public class DialogueSystem : MonoBehaviour {
     }
 
     void LoadDialogue(DialogueData data) {
-        if (currentText == 0) {
-            dialogueUI.Enable();
-        }
-
         dialogueUI.SetName(data.talkScript[currentText].name);
         typeText.fullText = data.talkScript[currentText].text;
 
@@ -126,9 +127,13 @@ public class DialogueSystem : MonoBehaviour {
         state = STATE.TYPING;
     }
 
-    DialogueData GetCurrentDialogueData() {
+DialogueData GetCurrentDialogueData() {
+    if (EstaPertoDoJoao(npcJoao)) {
+        return joaoDialogueData;
+    } else {
         return playerDialogueData;
     }
+}
 
     public bool IsDialogueActive() {
         return state != STATE.DISABLED;
