@@ -6,6 +6,7 @@ public class PauseMenu : MonoBehaviour
 {
     public Transform pauseMenu;
     private bool isGamePaused = false;
+    public GameObject player;
 
     // Start is called before the first frame update
     void Start()
@@ -48,6 +49,7 @@ public class PauseMenu : MonoBehaviour
         pauseMenu.gameObject.SetActive(true);
         Time.timeScale = 0;
         isGamePaused = true;
+        player.gameObject.GetComponent<HeartSystem>().CloseQuest();
     }
 
     private void TogglePauseState()

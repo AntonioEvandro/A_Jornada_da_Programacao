@@ -49147,6 +49147,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Option
       objectReference: {fileID: 0}
+    - target: {fileID: 8289020733916027352, guid: 0244edbda5ef5a545a16ff345b9e017e, type: 3}
+      propertyPath: m_text
+      value: " Leve o bode, deixe-o do outro lado e volte, leve o alface, deixe l\xE1
+        e volte, leve a on\xE7a e deixe a on\xE7a l\xE1."
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -49259,6 +49264,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 1125873773}
+  player: {fileID: 1661821625}
 --- !u!114 &343105647
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50343,7 +50349,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8289020733916027352, guid: 0244edbda5ef5a545a16ff345b9e017e, type: 3}
       propertyPath: m_text
-      value: "Op\xE7\xE3o 2"
+      value: " Leve a on\xE7a, deixe-a do outro lado e volte, leve o bode e deixe
+        l\xE1 e volte,  leve o alface e deixe l\xE1 e volte sem nada."
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -50457,9 +50464,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8289020733916027352, guid: 0244edbda5ef5a545a16ff345b9e017e, type: 3}
       propertyPath: m_text
-      value: " Leve bode e deixe bode, volte leve o alface e deixe o alface, volte
-        com o bode, deixe o bode, leve a on\xE7a, deixe a on\xE7a, volte sem nada,
-        leve o bode, deixe bode."
+      value: " Leve o bode, deixe-o do outro lado e volte, leve o alface e deixe
+        l\xE1, volte com o bode, deixe o bode aqui, mas leve a on\xE7a, deixe a on\xE7a
+        l\xE1 e volte sem nada, por fim leve o bode e deixe l\xE1."
       objectReference: {fileID: 0}
     - target: {fileID: 8289020733916027352, guid: 0244edbda5ef5a545a16ff345b9e017e, type: 3}
       propertyPath: m_fontSize
@@ -51019,13 +51026,14 @@ GameObject:
   - component: {fileID: 638949396}
   - component: {fileID: 638949398}
   - component: {fileID: 638949397}
+  - component: {fileID: 638949399}
   m_Layer: 5
   m_Name: GameOver
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &638949396
 RectTransform:
   m_ObjectHideFlags: 0
@@ -51033,7 +51041,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 638949395}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -51086,6 +51094,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 638949395}
   m_CullTransparentMesh: 1
+--- !u!114 &638949399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 638949395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5270460e2094c54093a74e99a8aa686, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newGame: SampleScene
 --- !u!1 &654466643
 GameObject:
   m_ObjectHideFlags: 0
@@ -52605,7 +52626,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8289020733916027352, guid: 0244edbda5ef5a545a16ff345b9e017e, type: 3}
       propertyPath: m_text
-      value: "Op\xE7\xE3o 4"
+      value: " Leve o alface, deixe-o do outro lado e volte, leve o bode e deixe
+        l\xE1, volte com o alface, deixe o alface aqui, mas leve a on\xE7a, deixe
+        a on\xE7a l\xE1 e volte sem nada, por fim leve o alface e deixe l\xE1."
+      objectReference: {fileID: 0}
+    - target: {fileID: 8289020733916027352, guid: 0244edbda5ef5a545a16ff345b9e017e, type: 3}
+      propertyPath: m_fontSize
+      value: 26
+      objectReference: {fileID: 0}
+    - target: {fileID: 8289020733916027352, guid: 0244edbda5ef5a545a16ff345b9e017e, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 26
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -72133,9 +72164,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Option (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 4815955937561476851, guid: 0244edbda5ef5a545a16ff345b9e017e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8289020733916027352, guid: 0244edbda5ef5a545a16ff345b9e017e, type: 3}
       propertyPath: m_text
-      value: "Op\xE7\xE3o 5"
+      value: " Leve a on\xE7a, deixe-a do outro lado e volte, leve o alface e deixe
+        l\xE1, volte, por fim leve o bode e deixe l\xE1."
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -72175,10 +72211,14 @@ PrefabInstance:
     - target: {fileID: 990977574056768512, guid: 0244edbda5ef5a545a16ff345b9e017e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 343105643}
+      objectReference: {fileID: 638949399}
     - target: {fileID: 990977574056768512, guid: 0244edbda5ef5a545a16ff345b9e017e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: 
+      value: Jogar
+      objectReference: {fileID: 0}
+    - target: {fileID: 990977574056768512, guid: 0244edbda5ef5a545a16ff345b9e017e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameOver, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 1545181426936697842, guid: 0244edbda5ef5a545a16ff345b9e017e, type: 3}
       propertyPath: m_Pivot.x
@@ -74555,7 +74595,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1661821625}
-  canvasQuest: {fileID: 1479287749}
 --- !u!1 &1479795892 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1832108647683973434, guid: aaca4d703a998d043bd4befcd052cf83, type: 3}
@@ -75346,7 +75385,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vidaMaxima: 3
   vidaAtual: 3
+  gameOver: {fileID: 638949396}
   heartText: {fileID: 810271296}
+  canvasQuest: {fileID: 1479287749}
 --- !u!4 &1679013057 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4558787696900897296, guid: c5b6073f640f09842839266586c9c0dc, type: 3}

@@ -5,7 +5,6 @@ using UnityEngine;
 public class Quest : MonoBehaviour
 {
     public GameObject player;
-    public Transform canvasQuest;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +25,6 @@ public class Quest : MonoBehaviour
     public void RigthOption()
     {
         player.gameObject.GetComponent<HeartSystem>().AumentarVida();
-        canvasQuest.gameObject.SetActive(false);
+        player.gameObject.GetComponent<HeartSystem>().CloseQuest();
     }
 }

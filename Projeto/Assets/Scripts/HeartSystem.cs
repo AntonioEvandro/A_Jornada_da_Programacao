@@ -8,8 +8,10 @@ public class HeartSystem : MonoBehaviour
 {
     public int vidaMaxima;
     public int vidaAtual;
+    public Transform gameOver;
 
     public TMP_Text heartText;
+    public Transform canvasQuest;
 
     // Start is called before the first frame update
     void Start()
@@ -38,6 +40,8 @@ public class HeartSystem : MonoBehaviour
         if(vidaAtual <= 0)
         {
             Debug.Log("Fim de jogo!");
+            gameOver.gameObject.SetActive(true);
+            CloseQuest();
         }
     }
     public void AumentarVida()
@@ -56,5 +60,10 @@ public class HeartSystem : MonoBehaviour
     private void UpdateCount()
     {
         heartText.text = vidaAtual.ToString();
+    }
+    
+    public void CloseQuest()
+    {
+        canvasQuest.gameObject.SetActive(false);
     }
 }
