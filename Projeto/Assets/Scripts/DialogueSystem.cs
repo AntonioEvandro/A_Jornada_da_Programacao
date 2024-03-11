@@ -64,12 +64,6 @@ public class DialogueSystem : MonoBehaviour {
         LoadDialogue(joaoDialogueData);
     }
 
-    public void StartJoaoDialogueAfterMonologue() {
-        currentText = 0;
-        dialogueUI.Enable(); // Ativa a caixa de diálogo
-        LoadDialogue(joaoDialogueData);
-    }
-
 public void Next() {
     currentText++; // Incrementa o índice antes de carregar o próximo diálogo
 
