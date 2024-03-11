@@ -58,7 +58,11 @@ public class DialogueSystem : MonoBehaviour {
         LoadDialogue(playerDialogueData);
     }
 
+<<<<<<< Updated upstream
     public void StartJoaoDialogue() {
+=======
+    public void StartJoaoDialogueAfterMonologue() {
+>>>>>>> Stashed changes
         currentText = 0;
         dialogueUI.Enable(); // Ativa a caixa de diálogo
         LoadDialogue(joaoDialogueData);
@@ -81,13 +85,14 @@ public void Next() {
         state = STATE.DISABLED;
         currentText = 0;
         finished = false;
+         
     }
 }
 
 
-    void OnTypeFinished() {
-        state = STATE.WAITING;
-    }
+        void OnTypeFinished() {
+            state = STATE.WAITING;
+        }
 
     void Waiting() {
         if (Input.GetKeyDown(KeyCode.Return)) {
