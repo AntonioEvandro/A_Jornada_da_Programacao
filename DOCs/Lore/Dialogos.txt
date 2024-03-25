@@ -1,14 +1,8 @@
 	[Monólogo da Laida]
 
-AH!!!
-O que é isso? O que aconteceu?
-Que estranho... onde estou?
-Não pode ser... 
-Isso se parece muito com um jogo, tipo os que eu faço.
-Tantas horas desperdiçadas pra depois... 
-o que mesmo? Parece que me deu um branco depois de noites em claro.
-Deveria ouvir mais meu chefe.
-Acho melhor procurar algo que me faça voltar ao meu quarto, ou melhor, meu mundo.
+ Olá ilha _____!
+ Finalmente cheguei aqui.
+ Agora posso iniciar minha carreira como desenvolvedora.
 
 
 	[Após avistar o fazendeiro inicia-se mais esse pensamento dela]
