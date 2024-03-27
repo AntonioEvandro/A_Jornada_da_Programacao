@@ -40,13 +40,19 @@ Valor fornecidos:
 
 
 	***Terceiro desafio***
+ Operadores e Expressões 
 
 	***Quarto desafio***
+ Estruturas de controle 
 
 	***Quinto desafio***
+  Estrutura de dados homogêneas 
 
 	***Sexto desafio***
+ Estrutura de dados homogêneas: Ordenação e pesquisa
 
 	***Setimo desafio***
+ Estrutura de dados heterogêneas
 
 	***Oitavo desafio***
+ Sub-rotinas
