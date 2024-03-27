@@ -1,4 +1,4 @@
-		Temas a serem abordados nos desafios
+		**Temas a serem abordados nos desafios**
 	1º Introdução a lógica de programação - Algoritmos
 	2º Variáveis, tipos de dados e constantes - Atribuições e inicialização das variáveis 
 	3º Operadores e Expressões 
@@ -9,7 +9,7 @@
 	8º Sub-rotinas
 
 
-	Primeiro desafio
+	***Primeiro desafio***
 Para levar as três cargas para a outra margem do rio, haverá as seguintes opções:
 
  levar, deixar, ir, voltar, onça, bode, alface
@@ -20,5 +20,33 @@ A primeira opção obrigatoriamente será [levar] e após a opção [levar] semp
 A resposta será:
  levar bode, deixar bode, voltar, levar alface, deixar alface, voltar bode, deixar bode, levar onça, deixar onça, voltar, levar bode, deixar bode.
 
-	Segundo desafio
+	***Segundo desafio***
+ Classifique o tipo de dado de acordo com o valor das variáveis fornecidas, usando as seguintes opções:
+ i, r, c, l.
+ i=Inteiro, r=Real, c=Caráctere, l=Lógico
 
+Valor fornecidos:
+ "0", V, "Olá mundo!", 0, 0.0, F, -25, "F"
+
+ Resposta:
+ "0" = c
+ V = l
+ "Olá mundo!" = c
+ 0 = i
+ 0.0 = r
+ F = l
+ -25 = i
+ "F" = c
+
+
+	***Terceiro desafio***
+
+	***Quarto desafio***
+
+	***Quinto desafio***
+
+	***Sexto desafio***
+
+	***Setimo desafio***
+
+	***Oitavo desafio***
