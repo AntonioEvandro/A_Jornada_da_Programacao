@@ -1,3 +1,14 @@
+		Temas a serem abordados nos desafios
+	1º Introdução a lógica de programação - Algoritmos
+	2º Variáveis, tipos de dados e constantes - Atribuições e inicialização das variáveis 
+	3º Operadores e Expressões 
+	4º Estruturas de controle 
+	5º Estrutura de dados homogêneas 
+	6º Estrutura de dados homogêneas: Ordenação e pesquisa
+	7º Estrutura de dados heterogêneas 
+	8º Sub-rotinas
+
+
 	Primeiro desafio
 Para levar as três cargas para a outra margem do rio, haverá as seguintes opções:
 
