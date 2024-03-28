@@ -9,6 +9,7 @@
 	8º Sub-rotinas
 
 
+
 	***Primeiro desafio***
 Para levar as três cargas para a outra margem do rio, haverá as seguintes opções:
 
@@ -40,7 +41,13 @@ Valor fornecidos:
 
 
 	***Terceiro desafio***
- Operadores e Expressões 
+ Para a expressão 8_2_3=2 estar correta, quais operadores devem ser usados, de acordo com as seguintes opções:
+ a) +, /
+ b) *, ^
+ c) -, /
+ d) -, *
+ e) +, ^
+ 
 
 	***Quarto desafio***
  Estruturas de controle 
