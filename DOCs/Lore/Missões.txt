@@ -50,10 +50,31 @@ Valor fornecidos:
  
 
 	***Quarto desafio***
- Estruturas de controle 
+ Qual seria a melhor forma para representar um algoritimo em pseudo codigo que mostre se um aluno está aprovado, reprovado ou em analise. caso esteje em analise deve mostrar repetidamente que ele terá que fazer prova final.
+Considere as variáveis necessarias já declaradas.
+
+Se(média>= 7) Então
+	Escreva("Aprovado");
+Senão
+	Se (média >= 4) Então
+	Para contador De 1 Até 3 Passo 1 Faça
+		Escreva ("Em analise");
+	Senão
+		Escreva ("Reprovado");
+	Fim_se
+Fim_se
+
 
 	***Quinto desafio***
-  Estrutura de dados homogêneas 
+ Qual dos trechos de algoritmo é mais viável para armazenar códigos de 5 livros 
+Variáveis	códigosLivros: Vetor[1..5] De Inteiro;
+	Contador: Inteiro;
+Início	Para contador De 1 Até 5 Passo 1 Faça
+		Escreva("Digite o código do " + contador + "º livro: ");
+		Leia (códigosLivro[contador]);
+	Fim_para;
+Fim
+
 
 	***Sexto desafio***
  Estrutura de dados homogêneas: Ordenação e pesquisa
