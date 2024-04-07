@@ -50356,9 +50356,42 @@ PrefabInstance:
       propertyPath: m_Name
       value: Option (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5207876787010637156, guid: 0244edbda5ef5a545a16ff345b9e017e, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -200
+      objectReference: {fileID: 0}
+    - target: {fileID: 5207876787010637156, guid: 0244edbda5ef5a545a16ff345b9e017e, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5207876787010637156, guid: 0244edbda5ef5a545a16ff345b9e017e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5207876787010637156, guid: 0244edbda5ef5a545a16ff345b9e017e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -3.5
+      objectReference: {fileID: 0}
     - target: {fileID: 8289020733916027352, guid: 0244edbda5ef5a545a16ff345b9e017e, type: 3}
       propertyPath: m_text
-      value: Opc2
+      value: "\"0\" = c\r\t\t\t\t V = l\r\n\"Ol\xE1 mundo!\" = c\r\t\t\t\t 0 = i\n
+        0.0 = i\t\t\t F = l\r\n-25 = r\t\t\t\"F\" = c"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8289020733916027352, guid: 0244edbda5ef5a545a16ff345b9e017e, type: 3}
+      propertyPath: m_fontSize
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 8289020733916027352, guid: 0244edbda5ef5a545a16ff345b9e017e, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 8289020733916027352, guid: 0244edbda5ef5a545a16ff345b9e017e, type: 3}
+      propertyPath: m_wordWrappingRatios
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8289020733916027352, guid: 0244edbda5ef5a545a16ff345b9e017e, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -51327,6 +51360,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 364605096}
+  - component: {fileID: 364605097}
   m_Layer: 0
   m_Name: 03
   m_TagString: Untagged
@@ -51350,6 +51384,20 @@ Transform:
   - {fileID: 858621757}
   m_Father: {fileID: 1247971958}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &364605097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 364605095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25228f99d2db05649b0a018efa4d3f69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvasQuest: {fileID: 858621757}
+  colisor: {fileID: 0}
 --- !u!4 &367885130 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4052944600586554987, guid: aaca4d703a998d043bd4befcd052cf83, type: 3}
@@ -55107,7 +55155,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvasQuest: {fileID: 1479287749}
-  colisor: {fileID: 0}
+  colisor: {fileID: 654466645}
 --- !u!1 &657533430
 GameObject:
   m_ObjectHideFlags: 0
@@ -55584,7 +55632,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &697050260
 RectTransform:
   m_ObjectHideFlags: 0
@@ -57132,6 +57180,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 832805592}
+  - component: {fileID: 832805593}
   m_Layer: 0
   m_Name: 05
   m_TagString: Untagged
@@ -57155,6 +57204,20 @@ Transform:
   - {fileID: 524744834}
   m_Father: {fileID: 1247971958}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &832805593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 832805591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25228f99d2db05649b0a018efa4d3f69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvasQuest: {fileID: 524744834}
+  colisor: {fileID: 0}
 --- !u!1 &834410807
 GameObject:
   m_ObjectHideFlags: 0
@@ -78940,6 +79003,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1178848769}
+  - component: {fileID: 1178848770}
   m_Layer: 0
   m_Name: 02
   m_TagString: Untagged
@@ -78963,6 +79027,20 @@ Transform:
   - {fileID: 697050260}
   m_Father: {fileID: 1247971958}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1178848770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1178848768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25228f99d2db05649b0a018efa4d3f69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvasQuest: {fileID: 697050260}
+  colisor: {fileID: 0}
 --- !u!1001 &1182040097
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -79368,8 +79446,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: " Para a express\xE3o 8_2_3=2 estar o mais correta possivel, quais operadores
-    devem ser usados, de acordo com as seguintes op\xE7\xF5es"
+  m_text: " Para a express\xE3o 8_2_3=2 possa estar o mais correta poss\xEDvel, quais
+    operadores devem ser usados, de acordo com as seguintes op\xE7\xF5es"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -79990,18 +80068,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: Option (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 5207876787010637156, guid: 0244edbda5ef5a545a16ff345b9e017e, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -200
+      objectReference: {fileID: 0}
+    - target: {fileID: 5207876787010637156, guid: 0244edbda5ef5a545a16ff345b9e017e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8289020733916027352, guid: 0244edbda5ef5a545a16ff345b9e017e, type: 3}
       propertyPath: m_text
-      value: " \"0\" = c\r\t\t\t\t V = l\r\n \"Ol\xE1 mundo!\" = c\r\t\t\t\t 0 =
-        i\r\n 0.0 = r\r\t\t\t\t F = l\r\n  -25 = i\r\t\t\t\t \"F\" = c"
+      value: "\"0\" = c\r\t\t\t\t V = l\r\n\"Ol\xE1 mundo!\" = c\r\t\t\t\t 0 = i\r\n
+        0.0 = r\r\t\t\t\t F = l\r\n-25 = i\r\t\t\t\t\"F\" = c"
       objectReference: {fileID: 0}
     - target: {fileID: 8289020733916027352, guid: 0244edbda5ef5a545a16ff345b9e017e, type: 3}
       propertyPath: m_fontSize
-      value: 26
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 8289020733916027352, guid: 0244edbda5ef5a545a16ff345b9e017e, type: 3}
       propertyPath: m_fontSizeBase
-      value: 26
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 8289020733916027352, guid: 0244edbda5ef5a545a16ff345b9e017e, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -80139,6 +80229,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1275942818}
+  - component: {fileID: 1275942819}
   m_Layer: 0
   m_Name: 04
   m_TagString: Untagged
@@ -80162,6 +80253,20 @@ Transform:
   - {fileID: 1632963711}
   m_Father: {fileID: 1247971958}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1275942819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1275942817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25228f99d2db05649b0a018efa4d3f69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvasQuest: {fileID: 1632963711}
+  colisor: {fileID: 0}
 --- !u!1 &1287760086
 GameObject:
   m_ObjectHideFlags: 0
@@ -82961,9 +83066,30 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5207876787010637156, guid: 0244edbda5ef5a545a16ff345b9e017e, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -200
+      objectReference: {fileID: 0}
+    - target: {fileID: 5207876787010637156, guid: 0244edbda5ef5a545a16ff345b9e017e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8289020733916027352, guid: 0244edbda5ef5a545a16ff345b9e017e, type: 3}
       propertyPath: m_text
-      value: Opc5
+      value: "\"0\" = i\r\t\t\t\t V = c\n\"Ol\xE1 mundo!\" = c\r\t\t\t\t 0 = l\n
+        0.0 = r\r\t\t\t\t F = c\r\n-25 = c\r\t\t\t\t\"F\" = l"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8289020733916027352, guid: 0244edbda5ef5a545a16ff345b9e017e, type: 3}
+      propertyPath: m_fontSize
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 8289020733916027352, guid: 0244edbda5ef5a545a16ff345b9e017e, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 8289020733916027352, guid: 0244edbda5ef5a545a16ff345b9e017e, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -83197,7 +83323,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1632963710}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
@@ -84049,9 +84175,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: Option
       objectReference: {fileID: 0}
+    - target: {fileID: 5207876787010637156, guid: 0244edbda5ef5a545a16ff345b9e017e, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -200
+      objectReference: {fileID: 0}
+    - target: {fileID: 5207876787010637156, guid: 0244edbda5ef5a545a16ff345b9e017e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8289020733916027352, guid: 0244edbda5ef5a545a16ff345b9e017e, type: 3}
       propertyPath: m_text
-      value: Opc1
+      value: "\"0\" = r\t\t\t V = c\n\"Ol\xE1 mundo!\" = c\r\t\t\t\t 0 = i\r\n 0.0
+        = r\t\t\t F = c\n-25 = r\r\t\t\t\t\"F\" = l"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8289020733916027352, guid: 0244edbda5ef5a545a16ff345b9e017e, type: 3}
+      propertyPath: m_fontSize
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 8289020733916027352, guid: 0244edbda5ef5a545a16ff345b9e017e, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 8289020733916027352, guid: 0244edbda5ef5a545a16ff345b9e017e, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -85528,15 +85675,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Option (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5207876787010637156, guid: 0244edbda5ef5a545a16ff345b9e017e, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -200
+      objectReference: {fileID: 0}
+    - target: {fileID: 5207876787010637156, guid: 0244edbda5ef5a545a16ff345b9e017e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8289020733916027352, guid: 0244edbda5ef5a545a16ff345b9e017e, type: 3}
       propertyPath: m_text
-      value: 'Opc3
-
-'
+      value: "\"0\" = i\r\t\t\t\t V = c\n\"Ol\xE1 mundo!\" = c\r\t\t\t\t 0 = i\r\n
+        0.0 = r\r\t\t\t\t F = c\n-25 = r\r\t\t\t\t\"F\" = c"
       objectReference: {fileID: 0}
     - target: {fileID: 8289020733916027352, guid: 0244edbda5ef5a545a16ff345b9e017e, type: 3}
       propertyPath: m_fontSize
-      value: 26
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 8289020733916027352, guid: 0244edbda5ef5a545a16ff345b9e017e, type: 3}
       propertyPath: m_margin.x
@@ -85548,7 +85702,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8289020733916027352, guid: 0244edbda5ef5a545a16ff345b9e017e, type: 3}
       propertyPath: m_fontSizeBase
-      value: 26
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 8289020733916027352, guid: 0244edbda5ef5a545a16ff345b9e017e, type: 3}
+      propertyPath: m_wordWrappingRatios
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8289020733916027352, guid: 0244edbda5ef5a545a16ff345b9e017e, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -87080,7 +87242,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 506.9, y: 0.000005722}
+  m_AnchoredPosition: {x: 506.89996, y: 0.000005722}
   m_SizeDelta: {x: 807.6, y: 350}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2060604134
