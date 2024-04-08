@@ -4,66 +4,22 @@
  Finalmente cheguei aqui.
  Agora posso iniciar minha carreira como desenvolvedora.
 
-
-	[Após avistar o fazendeiro inicia-se mais esse pensamento dela]
-
-Tem alguém perto daquele rio. Deve ser um NPC, não me parece hostil.
-Posso conseguir algumas informações com ele.
-
-
-	[Interagindo com o fazendeiro começa esse diálogo]
-
-Estranha:
- Bom dia senhor! Tudo bem com você?
-Fazendeiro:
- Nem tão bom! Poderia estar bem se eu não tivesse esse problema.
-Estranha:
- Desculpe incomodar, não gastarei muito do seu tempo, só quero umas informações, certo?
-Fazendeiro:
- Com essas roupas, com certeza você não é daqui.
-Estranha: 
-Pode-se dizer que sou de um lugar distante.
-Fazendeiro: 
-Vamos fazer assim, eu te ajudo se você me ajudar primeiro, que tal?
-Estranha: 
-Certo, eu ajudo. Aliás, eu me chamo Laida!
-Fazendeiro:
- E eu sou o João!
-Laida:
- É um prazer conhece-lo!
-João:
- O prazer é meu!
+Estranho: 
+ Seja bem vinda a ilha _____, Laida!
+ Fiquei sabendo que viria, eu me chamo João!
+ E aqui você poderá testar seus conhecimentos iniciais de programação, mas primeiro, quero testar suas capacidades.
  Vamos logo ao que interessa.
- Eu tenho que atravessar esse rio, mas eu só tenho essa canoa, além de mim, preciso levar essas três cargas para o outro lado do rio sem perder nenhuma dessas cargas, não sei como começar, se me ajudar posso até te levar ao outro lado do rio também se quiser.
-Laida:
- Combinado! Aceito a carona também.
- É como uma missão num jogo.
- Vamos ver, ele tem três cargas, elas são, um bode, um cesto de alface e uma... onça? Bem isso é uma missão, vou resolve-lá logo.
- Estranho!? Parece que reconheço essa questão.
+ Eu tenho que atravessar esse rio, mas eu só tenho essa canoa, além de mim, preciso levar essas três cargas para o outro lado do rio sem perder nenhuma dessas cargas, o que eu faço?
+
 [Espaço para escolher as alternativas]
- Pois bem senhor João, acho que tenho a resposta para esse dilema.
+
 João:
- Estou ouvindo.
-Laida:
- Faça assim.
-[Resposta do jogador a seguir]
-João:
- Obrigado! Irei fazer como disse.
-Laida:
-Espero que volte logo.
-[Após a resolução do desafio]
-João:
- Obrigado pela ajuda!
-Laida:
- Disponha. Mas acho que seria mais fácil se eu tivesse ficado de olho nas suas cargas, aí não precisaria de tanto esforço.
-João:
- Sem problemas, é sempre bom botar a mente pra funcionar.
-Então, aqui está! Como recompensa, pode usar minha canoa para atravessar o rio tabém.
+ Correto! Aqui está seu prêmio.
 Laida:
  Obrigada Senhor João!
 João:
  Nada, apenas cumprindo minha parte.
- Até mais garotinha!
+ Desbrave a ilha o quanto puder. Até mais garotinha!
 Laida:
  Até!
 
