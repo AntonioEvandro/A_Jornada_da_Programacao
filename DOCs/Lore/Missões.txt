@@ -80,6 +80,7 @@ Fim
  Qual opção completa o seguinte algoritmo em pseudo código para ordenar a lista com os seguintes nomes:
 Jéssica, Gabriela, Maria, Lucia e Beatriz
 
+Resposta:
 Variáveis
 	pessoas : Vetor [1..5] de Caractere;
 	aux : Caractere;
@@ -101,8 +102,31 @@ Início
 	Fim_Para
 Fim
 
+
 	***Setimo desafio***
- Estrutura de dados heterogêneas
+ Qual algoritmo representa um registro simples de clientes assiduos para o mercadinho da ilha
+Tipos
+	RegCliente : Registro
+		nome : Caractere;
+		endereco : Caractere;
+		numero : Inteiro;
+		total : Real;
+Vairáveis
+	cliente : Vetor [1..15] de RegClientes
+	cont : Inteiro;
+Início
+	Para cont De 1 Até 15 Passo 1 Faça
+		Escreva("Informe o nome do cliente");
+		Leia(cliente.nome);
+		Escreva("Informe o endereço");
+		Leia(cliente.endereco);
+		Escreva("Informe o numero");
+		Leia(cliente.numero);
+		Escreva("Informe o valor a ser pago");
+		Leia(cliente.total);
+	Fim_Para
+Fim
+	
 
 	***Oitavo desafio***
  Sub-rotinas
