@@ -193,6 +193,195 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Joao_4
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 16
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6edab1942e2c5fd4ca8614be7d994560
+      internalID: -72334233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Joao_5
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 16
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 671ac881e6e2fa648b6e534f4cdf7f90
+      internalID: -996098036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Joao_6
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 16
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc6460c195cfcb947b4300e8a4078488
+      internalID: 434233681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Joao_7
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 16
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1c663fb8eae886488e0499170527ac3
+      internalID: 64956768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Joao_8
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 16
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b14e1a059e32c346bd18c21f60b4f53
+      internalID: -885568242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Joao_9
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 16
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b082d63c2bf03c498621e611d071e79
+      internalID: 1363708208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Joao_10
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 16
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2afaf02ac3e7da747985c42e0fdc0ba2
+      internalID: -1725513611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Joao_11
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 16
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 473848786c386e447b4e25a3124e4003
+      internalID: -1681184504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Joao_12
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 16
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7c60d9c5240ce0478fe6a1397c9064a
+      internalID: -698010570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -206,8 +395,17 @@ TextureImporter:
     nameFileIdTable:
       Joao_0: -686161837
       Joao_1: -1177626415
+      Joao_10: -1725513611
+      Joao_11: -1681184504
+      Joao_12: -698010570
       Joao_2: 2109548443
       Joao_3: -1046233315
+      Joao_4: -72334233
+      Joao_5: -996098036
+      Joao_6: 434233681
+      Joao_7: 64956768
+      Joao_8: -885568242
+      Joao_9: 1363708208
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

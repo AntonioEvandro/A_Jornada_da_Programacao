@@ -118,7 +118,7 @@ TextureImporter:
         width: 14
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -139,7 +139,7 @@ TextureImporter:
         width: 14
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -160,7 +160,7 @@ TextureImporter:
         width: 14
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -168,6 +168,69 @@ TextureImporter:
       bones: []
       spriteID: 0df17cf5ab46096418d6f4a5e0b8df8c
       internalID: -508479287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Right_3
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 13
+        width: 14
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25312beb9246d8340a142718a8321d6d
+      internalID: -283652527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Right_4
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 13
+        width: 14
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33342655c744a0541bab07f2cdce11a5
+      internalID: 1169034778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Right_5
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 13
+        width: 14
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bcf015ed9268f3468ecf1594425dc34
+      internalID: 321163935
       vertices: []
       indices: 
       edges: []
@@ -186,6 +249,9 @@ TextureImporter:
       Right_0: 1472982370
       Right_1: 778446324
       Right_2: -508479287
+      Right_3: -283652527
+      Right_4: 1169034778
+      Right_5: 321163935
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

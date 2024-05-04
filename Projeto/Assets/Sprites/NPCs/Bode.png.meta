@@ -137,7 +137,7 @@ TextureImporter:
         x: 34
         y: 0
         width: 26
-        height: 16
+        height: 15
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,7 +179,7 @@ TextureImporter:
         x: 98
         y: 0
         width: 26
-        height: 16
+        height: 15
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -214,6 +214,90 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Bode_5
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 6
+        width: 26
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cba1bddc42b006948b421eb3fe121aba
+      internalID: -563912289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bode_6
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 6
+        width: 26
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fcfa1556f2021b429824e244dfe6e51
+      internalID: 1958922578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bode_7
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 6
+        width: 26
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f18d8b124f3b2648b8d51c04ed4d2b9
+      internalID: -171090191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bode_8
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 6
+        width: 26
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a679c847218131a4c9d1669364cb4d11
+      internalID: -1153844870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -230,6 +314,10 @@ TextureImporter:
       Bode_2: 420861592
       Bode_3: 641147351
       Bode_4: -1304558635
+      Bode_5: -563912289
+      Bode_6: 1958922578
+      Bode_7: -171090191
+      Bode_8: -1153844870
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

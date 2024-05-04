@@ -127,9 +127,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 2
-        y: 0
+        y: 2
         width: 10
-        height: 24
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -148,9 +148,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 16
-        y: 0
+        y: 2
         width: 10
-        height: 24
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -169,9 +169,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 30
-        y: 0
+        y: 2
         width: 10
-        height: 24
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,6 +181,48 @@ TextureImporter:
       bones: []
       spriteID: 14765f6e90e13dd43a6a438be112070c
       internalID: 637598197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zezinho_3
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 3
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dca6b6efbfd889d48aa7312f0b654b12
+      internalID: 1933578218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zezinho_4
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 3
+        width: 12
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89975397f2f77764e9c6664cf958beaa
+      internalID: -431062994
       vertices: []
       indices: 
       edges: []
@@ -199,6 +241,8 @@ TextureImporter:
       Zezinho_0: -1697603649
       Zezinho_1: -593888655
       Zezinho_2: 637598197
+      Zezinho_3: 1933578218
+      Zezinho_4: -431062994
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

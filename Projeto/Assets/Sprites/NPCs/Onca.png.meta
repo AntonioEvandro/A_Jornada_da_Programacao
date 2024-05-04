@@ -136,8 +136,8 @@ TextureImporter:
         serializedVersion: 2
         x: 33
         y: 0
-        width: 28
-        height: 15
+        width: 27
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -157,8 +157,8 @@ TextureImporter:
         serializedVersion: 2
         x: 65
         y: 0
-        width: 28
-        height: 15
+        width: 27
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -193,6 +193,69 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Onca_4
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 8
+        width: 28
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f8552a3113234348ae775d2b9256d94
+      internalID: 1081366517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Onca_5
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 8
+        width: 27
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f924e4b9fe029494983d89207e94414a
+      internalID: -1945390746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Onca_6
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 8
+        width: 26
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d29e9fdb2fc818447aa22fb7d70c5633
+      internalID: -37173883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -208,6 +271,9 @@ TextureImporter:
       Onca_1: -1237065307
       Onca_2: -1849293254
       Onca_3: -192979581
+      Onca_4: 1081366517
+      Onca_5: -1945390746
+      Onca_6: -37173883
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -172,6 +172,69 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Front_3
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 13
+        width: 14
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55d6c93365af37d4480878a605a0e93f
+      internalID: 107730563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Front_4
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 13
+        width: 14
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5d1f5472202d78439d86b4fca7db3ac
+      internalID: 1498760781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Front_5
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 13
+        width: 14
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c7250017038fcb4f8babf7bf96b8b02
+      internalID: 554292769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -186,6 +249,9 @@ TextureImporter:
       Front_0: -1247527502
       Front_1: -318091986
       Front_2: -1376902788
+      Front_3: 107730563
+      Front_4: 1498760781
+      Front_5: 554292769
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -118,7 +118,7 @@ TextureImporter:
         width: 14
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -139,7 +139,7 @@ TextureImporter:
         width: 14
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -160,7 +160,7 @@ TextureImporter:
         width: 14
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -168,6 +168,69 @@ TextureImporter:
       bones: []
       spriteID: 7930f2cab063c7640a28d2b5a221796f
       internalID: 288932906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Front_3
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 13
+        width: 14
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5eed94b529a7a104fa3af75816dc6440
+      internalID: -514902855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Front_4
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 13
+        width: 14
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7e17d975c4646347adbeb9f081690aa
+      internalID: 1278754090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Front_5
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 13
+        width: 14
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1335def2a261b914e921e69f597fe6a0
+      internalID: -250702492
       vertices: []
       indices: 
       edges: []
@@ -186,6 +249,9 @@ TextureImporter:
       Front_0: -147186927
       Front_1: 225589081
       Front_2: 288932906
+      Front_3: -514902855
+      Front_4: 1278754090
+      Front_5: -250702492
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
