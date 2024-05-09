@@ -23,9 +23,9 @@ public class SaveLoad : MonoBehaviour
             false, false, false, false, false, false, false, false, false
         };
 
-        //SaveGame(s);
+        SaveGame(s);
 
-        Save load = LoadGame();
+        /*Save load = LoadGame();
 
         Debug.Log(
             "<color=red> Vida: </color>" + load.life + 
@@ -45,7 +45,7 @@ public class SaveLoad : MonoBehaviour
             "<color=with> 5: </color>" + s.missions[5] + 
             "<color=with> 6: </color>" + s.missions[6] + 
             "<color=with> 7: </color>" + s.missions[7] + 
-            "<color=with> 8: </color>" + s.missions[8]);
+            "<color=with> 8: </color>" + s.missions[8]);*/
     }
 
     public void SaveGame(Save s){

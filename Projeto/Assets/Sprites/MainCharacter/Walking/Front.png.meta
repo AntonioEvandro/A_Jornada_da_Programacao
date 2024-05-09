@@ -110,127 +110,127 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Front 1_0
+      name: Front_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 14
         height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 92460f1e9fb377d4597dea3c669b5639
-      internalID: 18544691
+      spriteID: 63df7b3ba6095ef488e9e4ed14958963
+      internalID: -1753485667
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Front 1_1
+      name: Front_1
       rect:
         serializedVersion: 2
         x: 14
         y: 0
         width: 14
         height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7e0ded028a170ce4cb049505cd80153c
-      internalID: 1490604691
+      spriteID: 9cf2e105d1df01b44ac4f363bc082a35
+      internalID: -1807213577
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Front 1_2
+      name: Front_2
       rect:
         serializedVersion: 2
         x: 28
         y: 0
         width: 14
         height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 71d9672cd2c84824886360df98142043
-      internalID: 52477959
+      spriteID: 125ea4041de26e94c99f3697d7c0d95e
+      internalID: -865188499
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Front 1_3
+      name: Front_3
       rect:
         serializedVersion: 2
         x: 42
         y: 0
         width: 14
         height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1b358f5d2edbd034086006c2b9d8cafd
-      internalID: 1071760620
+      spriteID: 1ce01821da1b1b9428da4e2e000fc052
+      internalID: 1238867066
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Front 1_4
+      name: Front_4
       rect:
         serializedVersion: 2
         x: 56
         y: 0
         width: 14
         height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a1bcde6030aa4cd4893681dfa6cedc99
-      internalID: 1600959659
+      spriteID: 9f47e0474cc6bbd4a9ddc21862518958
+      internalID: 1891191469
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Front 1_5
+      name: Front_5
       rect:
         serializedVersion: 2
         x: 70
         y: 0
         width: 14
         height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4b4bfa10ba2b77f49b647465da85bc72
-      internalID: -451503713
+      spriteID: 6e66e5a858885624a952849883b6bd6e
+      internalID: 1714005001
       vertices: []
       indices: 
       edges: []
@@ -246,12 +246,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Front 1_0: 18544691
-      Front 1_1: 1490604691
-      Front 1_2: 52477959
-      Front 1_3: 1071760620
-      Front 1_4: 1600959659
-      Front 1_5: -451503713
+      Front_0: -1753485667
+      Front_1: -1807213577
+      Front_2: -865188499
+      Front_3: 1238867066
+      Front_4: 1891191469
+      Front_5: 1714005001
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
