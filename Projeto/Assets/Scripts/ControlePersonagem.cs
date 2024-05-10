@@ -14,7 +14,7 @@ public class ControlePersonagem : MonoBehaviour
 
     void Update()
     {
-        // Verifica se o jogo n�o est� pausado
+        // Verifica se o jogo não está pausado
         if (Time.timeScale > 0 && !dialogueSystem.IsDialogueActive())
         {
             movimento.x = Input.GetAxisRaw("Horizontal");
@@ -30,7 +30,7 @@ public class ControlePersonagem : MonoBehaviour
                 animator.SetFloat("verticalIdle", movimento.y);
             }
 
-            rb.MovePosition(rb.position + movimento * velocidade * Time.fixedDeltaTime);
+            rb.MovePosition(rb.position + Time.fixedDeltaTime * velocidade * movimento.normalized);
         }
         else
         {

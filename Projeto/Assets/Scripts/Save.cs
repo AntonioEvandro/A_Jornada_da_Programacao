@@ -5,6 +5,7 @@ using UnityEngine;
 [System.Serializable]
 public class Save
 {
+    public float[] position;
     public int life;
     public int score;
     public int aid;
