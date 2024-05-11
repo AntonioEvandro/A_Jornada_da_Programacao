@@ -5,27 +5,27 @@ using System.Runtime.Serialization.Formatters.Binary;
 using TreeEditor;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.UIElements;
 
 public class SaveLoad : MonoBehaviour
 {
+    [SerializeField] private string newGame;
     [SerializeField]
-    float[] posicao = new float[2]{-16.5f,-0.75f};
+    float[] posicao;
     [SerializeField]
-    int vida = 3, pontos = 0, ajudas = 0, dicas = 0, mn2 = 0;
-    bool companheiro = false;
+    int vida, pontos, ajudas, dicas, mn2;
+    bool companheiro;
     [SerializeField]
-    List<bool> missoes = new(){false, false, false, false, false, false, false, false, false};
+    List<bool> missoes;
 
     // Start is called before the first frame update
     private void Start()
     {
 
-        //SaveGame();
-
         Save load = LoadGame();
-
-        Logs(load);
+        LoadLogs(load);
     }
 
     public void SaveGame(){
@@ -47,50 +47,78 @@ public class SaveLoad : MonoBehaviour
 
         string path = Path.Combine(Application.persistentDataPath + "/savegame.save"); //C:\Users\T-Gamer\AppData\LocalLow\DefaultCompany\Projeto
 
-        Debug.Log("Arquivo existe" + File.Exists(path));
+        //Debug.Log("Arquivo existe" + File.Exists(path));
         
         if (File.Exists(path)){
-            Debug.Log("" + path);
+            //Debug.Log("" + path);
             File.WriteAllText(path, string.Empty);
-            Debug.Log("Arquivo limpo!");
+            //Debug.Log("Arquivo limpo!");
         }
         else{
             FileStream f = File.Create(path);
             f.Dispose();
-            Debug.Log("Arquivo criado!");
+            //Debug.Log("Arquivo criado!");
         }
         
         FileStream file = new(path, FileMode.Append);
-        Debug.Log("Acrescentado");
+        //Debug.Log("Acrescentado");
 
         bf.Serialize(file, s);
         file.Close();
 
-        Debug.Log("Jogo salvo com sucesso!!!");
+        Debug.Log("<color=green>Jogo salvo com sucesso!!!</color>");
     }
 
     public Save LoadGame(){
+        //Debug.Log("bf add");  //Variavel bf com formato binário definido
         BinaryFormatter bf = new BinaryFormatter();
+        //Debug.Log("path add");    //Caminho do arquivo de dados salvos adicionado a váriavel path
         string path = Application.persistentDataPath;
-
+        
+        //Debug.Log("Create file"); //Criando a variável file para receber dados do arquivo de dados salvos
         FileStream file;
 
+        //Verificando se já existe dados de salvamento anteriores
         if (File.Exists(path + "/savegame.save")){
+            //Debug.Log("Open save"); //Abrindo arquivo de dados salvos e copiando para a variavel file
             file = File.Open(path + "/savegame.save", FileMode.Open);
-            Save load = (Save)bf.Deserialize(file);
+            
+            //Debug.Log("Create load"); //Variavel load tipo save criada para receber os dados de file 
+            Save load = new();
+            //load recebe dados de file tornando-os legivel para leitura posterior
+            load = (Save)bf.Deserialize(file);
+
+            Debug.Log("<color=orange>Jogo carregado!!!</color>");
+            //Debug.Log("Closed file"); //Arquivo fechado. Evitando erro terrível.
             file.Close();
 
-            Debug.Log("Jogo carregado!!!");
-
+            //Pegando posição do player salvo no arquivo save e adicionando a ele
             transform.position = new Vector3(load.position[0],load.position[1],0);
+            //Armazenando valores nas variáveis
+            vida = load.life;
+            pontos = load.score;
+            ajudas = load.aid;
+            dicas = load.tips;
+            mn2 = load.m2;
+            companheiro = load.partner;
+            missoes = load.missions;
 
+            //enviando a variavel load para uso externo
             return load;
         }
 
         return null;
     }
-
-    public void Logs(Save load){
+    //Função teste criada para carregar dados salvos, usa-se através do botão carregar no jogo.
+    public void BtnCarregar(bool car){
+        if (car){
+            Save l = LoadGame();
+            LoadLogs(l);
+            BtnCarregar(false);
+        }
+    }
+    //Todos os logs de carregamento do arquivo de dados salvos
+    public void LoadLogs(Save load){
         Debug.Log(
             "<color=gray> Posição: </color>" + load.position[0] + "." + load.position[1] +
             "<color=red> Vida: </color>" + load.life + 
@@ -113,14 +141,45 @@ public class SaveLoad : MonoBehaviour
             "<color=with> 8: </color>" + load.missions[8]
         );}
     
-    /*public void Carregar(bool car){
-        Save l = LoadGame();
-        Logs(l);
-        Carregar(car = false);
-    }*/
-    void Update(){
-
+    void Update()
+    {
+        //Atualiza a váriavel posição com os dados de localização do player para salvar onde o player esteve anteriormente
         posicao = new float[2]{transform.position.x, transform.position.y};
-        //
+        
+    }
+
+    //Reiniciar o jogo
+    public void TryAgain(){
+        posicao = new float[2]{-16.5f,-0.75f};
+        vida = 3;
+        pontos = 0;
+        ajudas = 0;
+        dicas = 0;
+        mn2 = 0;
+        companheiro = false;
+        missoes = new(){false, false, false, false, false, false, false, false, false};
+        SaveGame();
+        SceneManager.LoadScene(newGame);
+    }
+    //Salvar/Carregar dados do jogo
+    public void SalvarPontos(int pts){
+        pontos =+ pts;
+        SaveGame();
+    }
+    public int CarregarPontos(){
+        return pontos;
+    }
+    public void SalvarVidas(int vds) {
+        vida = vds;
+        SaveGame();
+    }
+    public int CarregarVidas() {
+        return vida;
+    }
+    public void SalvarMissao(int mis){
+        missoes[mis] = true;
+    }
+    public bool CarregarMissao(int n){
+        return missoes[n];
     }
 }

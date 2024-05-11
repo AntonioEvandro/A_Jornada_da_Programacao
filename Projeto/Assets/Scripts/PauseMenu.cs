@@ -6,7 +6,9 @@ public class PauseMenu : MonoBehaviour
 {
     public Transform pauseMenu;
     private bool isGamePaused = false;
-    public GameObject player;
+    public GameObject Quests;
+    public GameObject Market;
+    public GameObject Dialog;
 
     // Start is called before the first frame update
     void Start()
@@ -24,7 +26,7 @@ public class PauseMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && !Market.transform.gameObject.activeSelf)
         {
             TogglePauseState();
         }
@@ -42,6 +44,8 @@ public class PauseMenu : MonoBehaviour
         pauseMenu.gameObject.SetActive(false);
         Time.timeScale = 1;
         isGamePaused = false;
+        Quests.transform.gameObject.SetActive(true);
+        Dialog.transform.gameObject.SetActive(true);
     }
 
     public void PauseGame()
@@ -49,7 +53,8 @@ public class PauseMenu : MonoBehaviour
         pauseMenu.gameObject.SetActive(true);
         Time.timeScale = 0;
         isGamePaused = true;
-        player.gameObject.GetComponent<HeartSystem>().CloseQuest();
+        Quests.transform.gameObject.SetActive(false);
+        Dialog.transform.gameObject.SetActive(false);
     }
 
     private void TogglePauseState()

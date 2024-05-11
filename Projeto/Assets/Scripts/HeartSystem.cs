@@ -11,27 +11,28 @@ public class HeartSystem : MonoBehaviour
     public Transform gameOver;
 
     public TMP_Text heartText;
-    public Transform canvasQuest;
+    public GameObject Quests;
 
     // Start is called before the first frame update
     void Start()
     {
-        vidaAtual = vidaMaxima;
-        UpdateCount();
+        vidaAtual = gameObject.GetComponent<SaveLoad>().CarregarVidas();
+        //UpdateCount();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        UpdateCount();
     }
 
     public void DiminuirVida()
     {
         vidaAtual -= 1;
-        UpdateCount();
+        gameObject.GetComponent<SaveLoad>().SalvarVidas(vidaAtual);
+        //UpdateCount();
 
-        Debug.Log("Resposta errada!");
+        Debug.Log("<color=red>Resposta errada!</color>");
 
         if(vidaMaxima > 3){
             vidaMaxima -= 1;
@@ -39,31 +40,27 @@ public class HeartSystem : MonoBehaviour
 
         if(vidaAtual <= 0)
         {
-            Debug.Log("Fim de jogo!");
+            Debug.Log("<color=black>Fim de jogo!</color>");
             gameOver.gameObject.SetActive(true);
-            CloseQuest();
+            Quests.SetActive(false);
         }
     }
     public void AumentarVida()
     {
         vidaAtual += 1;
-        UpdateCount();
+        gameObject.GetComponent<SaveLoad>().SalvarVidas(vidaAtual);
+        //UpdateCount();
         if(vidaAtual == vidaMaxima + 1)
         {
             vidaMaxima += 1;
         }
-        Debug.Log("Parabéns! Resposta correta, sua recompensa 1pv");
     }
 
 
     // Atualizando vida no contador
     private void UpdateCount()
     {
-        heartText.text = vidaAtual.ToString();
+        heartText.text = gameObject.GetComponent<SaveLoad>().CarregarVidas().ToString();
     }
     
-    public void CloseQuest()
-    {
-        canvasQuest.gameObject.SetActive(false);
-    }
 }
