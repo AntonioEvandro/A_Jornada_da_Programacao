@@ -17,12 +17,17 @@ public class ActivateChallenge : MonoBehaviour
     {
         
     }
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerStay2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
             canvasQuest.gameObject.SetActive(true);
-            colisor.enabled = false;
+        }
+    }
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if(other.gameObject.CompareTag("Player")){
+            canvasQuest.gameObject.SetActive(false);
         }
     }
 }

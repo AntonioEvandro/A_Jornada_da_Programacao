@@ -20,11 +20,13 @@ public class Quest : MonoBehaviour
     public void WrongOption()
     {
         player.gameObject.GetComponent<HeartSystem>().DiminuirVida();
+        player.GetComponent<SaveLoad>().SaveGame();
     }
 
     public void RigthOption()
     {
         player.gameObject.GetComponent<HeartSystem>().AumentarVida();
         player.gameObject.GetComponent<HeartSystem>().CloseQuest();
+        player.GetComponent<SaveLoad>().SaveGame();
     }
 }

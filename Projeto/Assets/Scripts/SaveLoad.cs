@@ -10,18 +10,18 @@ using UnityEngine.UIElements;
 public class SaveLoad : MonoBehaviour
 {
     [SerializeField]
-    private float[] posicao = new float[2]{-16.5f,-0.75f};
+    float[] posicao = new float[2]{-16.5f,-0.75f};
     [SerializeField]
-    private int vida = 3, pontos = 0, ajudas = 0, dicas = 0, mn2 = 0;
-    private bool companheiro = false;
+    int vida = 3, pontos = 0, ajudas = 0, dicas = 0, mn2 = 0;
+    bool companheiro = false;
     [SerializeField]
-    private List<bool> missoes = new(){false, false, false, false, false, false, false, false, false};
+    List<bool> missoes = new(){false, false, false, false, false, false, false, false, false};
 
     // Start is called before the first frame update
     private void Start()
     {
 
-        SaveGame();
+        //SaveGame();
 
         Save load = LoadGame();
 
@@ -42,10 +42,26 @@ public class SaveLoad : MonoBehaviour
             missions = missoes
         };
 
-        BinaryFormatter bf = new BinaryFormatter();
 
-        string path = Application.persistentDataPath; //C:\Users\T-Gamer\AppData\LocalLow\DefaultCompany\Projeto
-        FileStream file = File.Create(path + "/savegame.save");
+        BinaryFormatter bf = new();
+
+        string path = Path.Combine(Application.persistentDataPath + "/savegame.save"); //C:\Users\T-Gamer\AppData\LocalLow\DefaultCompany\Projeto
+
+        Debug.Log("Arquivo existe" + File.Exists(path));
+        
+        if (File.Exists(path)){
+            Debug.Log("" + path);
+            File.WriteAllText(path, string.Empty);
+            Debug.Log("Arquivo limpo!");
+        }
+        else{
+            FileStream f = File.Create(path);
+            f.Dispose();
+            Debug.Log("Arquivo criado!");
+        }
+        
+        FileStream file = new(path, FileMode.Append);
+        Debug.Log("Acrescentado");
 
         bf.Serialize(file, s);
         file.Close();
@@ -62,8 +78,11 @@ public class SaveLoad : MonoBehaviour
         if (File.Exists(path + "/savegame.save")){
             file = File.Open(path + "/savegame.save", FileMode.Open);
             Save load = (Save)bf.Deserialize(file);
+            file.Close();
 
             Debug.Log("Jogo carregado!!!");
+
+            transform.position = new Vector3(load.position[0],load.position[1],0);
 
             return load;
         }
@@ -93,8 +112,14 @@ public class SaveLoad : MonoBehaviour
             "<color=with> 7: </color>" + load.missions[7] + 
             "<color=with> 8: </color>" + load.missions[8]
         );}
+    
+    /*public void Carregar(bool car){
+        Save l = LoadGame();
+        Logs(l);
+        Carregar(car = false);
+    }*/
+    void Update(){
 
-    public void Update(){
         posicao = new float[2]{transform.position.x, transform.position.y};
         //
     }
