@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
+using TMPro;
 using TreeEditor;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -12,6 +13,7 @@ using UnityEngine.UIElements;
 public class SaveLoad : MonoBehaviour
 {
     [SerializeField] private string newGame;
+    [SerializeField] public TMP_Text coinsText;
     [SerializeField]
     float[] posicao;
     [SerializeField]
@@ -145,6 +147,7 @@ public class SaveLoad : MonoBehaviour
     {
         //Atualiza a váriavel posição com os dados de localização do player para salvar onde o player esteve anteriormente
         posicao = new float[2]{transform.position.x, transform.position.y};
+        coinsText.text = CarregarPontos().ToString();
         
     }
 
