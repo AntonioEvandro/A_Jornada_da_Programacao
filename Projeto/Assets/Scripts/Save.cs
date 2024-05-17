@@ -5,14 +5,14 @@ using UnityEngine;
 [System.Serializable]
 public class Save
 {
-    public float[] position;
+    public List<float> position;
     //public bool sound;
     //public float volume;
     public int life;
     public int coins;
-    public int advice;
+    public int advices;
     public int tips;
     public int m2;
     public bool partner;
-    public List<bool> missions;
+    public bool[,] missions;
 }

@@ -18,13 +18,13 @@ public class Items : MonoBehaviour
     {
         SavePosition();
         ItemsHUD();
-        //ItemsUI();
-        //ItemsGUI();
+        ItemsGUI();
+        ItemsUI();
     }
 
     //Chamar as funcoes para salvar os dados
     public void SavePosition(){
-        GetComponent<SaveLoad>().posicao = new float[2]{
+        GetComponent<SaveLoad>().posicao = new(){
             transform.position.x, transform.position.y
         };
         
@@ -49,16 +49,15 @@ public class Items : MonoBehaviour
         GetComponent<SaveLoad>().companheiro = true;
     }
     public void SaveMissions(int mis){
-        GetComponent<SaveLoad>().missoes[mis] = true;
+        GetComponent<SaveLoad>().missoes[mis, 0] = true;
     }
 
 
     // Chamar os itens
-    public Vector3 LoadPosition(){
-        return transform.position = new Vector3(
-            GetComponent<SaveLoad>().posicao[0], GetComponent<SaveLoad>().posicao[1], 0
+    public void LoadPosition(){
+        transform.position = new Vector2(
+            GetComponent<SaveLoad>().posicao[0], GetComponent<SaveLoad>().posicao[1]
         );
-        //Debug.Log("carregando posição" + GetComponent<SaveLoad>().posicao[0] + ", " + GetComponent<SaveLoad>().posicao[1]);
     }
     public int LoadLifes(){
         return GetComponent<SaveLoad>().vidas;
@@ -79,7 +78,7 @@ public class Items : MonoBehaviour
         return gameObject.GetComponent<SaveLoad>().companheiro;
     }
     public bool LoadMission(int n){
-        return gameObject.GetComponent<SaveLoad>().missoes[n];
+        return gameObject.GetComponent<SaveLoad>().missoes[n,0];
     }
 
 
@@ -94,9 +93,9 @@ public class Items : MonoBehaviour
     public void ItemsUI(){
         lifesTextUI.text = LoadLifes().ToString();
         coinsTextUI.text = LoadCoins().ToString();
-        tipsTextUI.text = LoadTips().ToString();
-        adviceTextUI.text = LoadAdvices().ToString();
-        m2TextUI.text = LoadMinus2().ToString();
+        //tipsTextUI.text = LoadTips().ToString();
+        //adviceTextUI.text = LoadAdvices().ToString();
+        //m2TextUI.text = LoadMinus2().ToString();
     }
     public void ItemsGUI(){
         lifesTextGUI.text = LoadLifes().ToString();

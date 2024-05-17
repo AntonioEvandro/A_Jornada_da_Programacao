@@ -13,15 +13,17 @@ using UnityEngine.UIElements;
 public class SaveLoad : MonoBehaviour
 {
     [SerializeField] private string newGame;
-    public float[] posicao;
+    private int x, y;
+    private readonly int tam1 = 9, tam2 = 3;
+    public List<float> posicao;
     public int vidas, moedas, ajudas, dicas, m2;
     public bool companheiro;
-    public List<bool> missoes;
+    public bool[,] missoes;
 
     // Start is called before the first frame update
     private void Start()
     {
-
+        missoes = new bool[tam1, tam2];
         Save load = LoadGame();
         LoadLogs(load);
     }
@@ -40,7 +42,7 @@ public class SaveLoad : MonoBehaviour
             position = posicao,
             life = vidas,
             coins = moedas,
-            advice = ajudas,
+            advices = ajudas,
             tips = dicas,
             m2 = m2,
             partner = companheiro,
@@ -98,11 +100,13 @@ public class SaveLoad : MonoBehaviour
             file.Close();
 
             //Pegando posição do player salvo no arquivo save e adicionando a ele
-            transform.position = new Vector2(load.position[0],load.position[1]);
+            //transform.position = new Vector2(load.position[0],load.position[1]);
             //Armazenando valores nas variáveis
+            posicao = load.position;
+            GetComponent<Items>().LoadPosition();
             vidas = load.life;
             moedas = load.coins;
-            ajudas = load.advice;
+            ajudas = load.advices;
             dicas = load.tips;
             m2 = load.m2;
             companheiro = load.partner;
@@ -129,34 +133,39 @@ public class SaveLoad : MonoBehaviour
             "<color=gray> Posição: </color>" + load.position[0] + "." + load.position[1] +
             "<color=red> Vida: </color>" + load.life + 
             "<color=yellow> Pontos: </color>" +  load.coins + 
-            "<color=blue> Ajudas: </color>" +  load.advice + 
+            "<color=blue> Ajudas: </color>" +  load.advices + 
             "<color=green> Dicas: </color>" + load.tips + 
             "<color=orange> -2: </color>" + load.m2 + 
             "<color=cyan> Companheiro: </color>" + load.partner
         );
         Debug.Log(
             "<color=black> Missões: </color>" +
-            "<color=with> 0: </color>" + load.missions[0] + 
-            "<color=with> 1: </color>" + load.missions[1] + 
-            "<color=with> 2: </color>" + load.missions[2] + 
-            "<color=with> 3: </color>" + load.missions[3] + 
-            "<color=with> 4: </color>" + load.missions[4] + 
-            "<color=with> 5: </color>" + load.missions[5] + 
-            "<color=with> 6: </color>" + load.missions[6] + 
-            "<color=with> 7: </color>" + load.missions[7] + 
-            "<color=with> 8: </color>" + load.missions[8]
+            "<color=with> 0: </color>" + load.missions[0,0] + 
+            "<color=with> 1: </color>" + load.missions[1,0] + 
+            "<color=with> 2: </color>" + load.missions[2,0] + 
+            "<color=with> 4: </color>" + load.missions[4,0] + 
+            "<color=with> 3: </color>" + load.missions[3,0] + 
+            "<color=with> 5: </color>" + load.missions[5,0] + 
+            "<color=with> 6: </color>" + load.missions[6,0] + 
+            "<color=with> 7: </color>" + load.missions[7,0] + 
+            "<color=with> 8: </color>" + load.missions[8,0]
         );}
-    
+
     //Reiniciar o jogo
+
     public void TryAgain(){
-        posicao = new float[2]{-16.5f,-0.75f};
+        posicao = new(){-16.5f,-0.75f};
         vidas = 3;
         moedas = 0;
         ajudas = 0;
         dicas = 0;
         m2 = 0;
         companheiro = false;
-        missoes = new(){false, false, false, false, false, false, false, false, false};
+        for(x=0; x<tam1; x++){
+            for(y=0; y<tam2; y++){
+                missoes[x,y] = false;
+            }
+        }
         SaveGame();
         SceneManager.LoadScene(newGame);
     }
