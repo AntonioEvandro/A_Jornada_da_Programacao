@@ -12,7 +12,8 @@ public class Quest : MonoBehaviour
     void Start()
     {
         
-        if(player.GetComponent<SaveLoad>().CarregarMissao(num)){
+        //if(player.GetComponent<SaveLoad>().CarregarMissao(num)){
+        if (player.GetComponent<Items>().LoadMission(num)){
             CloseQuest();
         }else{
             colisor.enabled = true;
@@ -32,10 +33,12 @@ public class Quest : MonoBehaviour
 
     public void RigthOption()
     {
-        player.GetComponent<SaveLoad>().SalvarMissao(num);
+        player.GetComponent<Items>().SaveMissions(num);
+        //player.GetComponent<SaveLoad>().SalvarMissao(num);
         CloseQuest();
         Debug.Log("<color=blue>Resposta correta!!!</color> Sua recompensa <color=yellow>10</color> moedas");
-        player.GetComponent<SaveLoad>().SalvarPontos(10);
+        player.GetComponent<Items>().SaveCoins(10);
+        //player.GetComponent<SaveLoad>().SalvarPontos(10);
     }
     
     public void CloseQuest()

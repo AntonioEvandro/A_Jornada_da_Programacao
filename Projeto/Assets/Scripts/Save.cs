@@ -6,9 +6,11 @@ using UnityEngine;
 public class Save
 {
     public float[] position;
+    //public bool sound;
+    //public float volume;
     public int life;
-    public int score;
-    public int aid;
+    public int coins;
+    public int advice;
     public int tips;
     public int m2;
     public bool partner;

@@ -13,14 +13,10 @@ using UnityEngine.UIElements;
 public class SaveLoad : MonoBehaviour
 {
     [SerializeField] private string newGame;
-    [SerializeField] public TMP_Text coinsText;
-    [SerializeField]
-    float[] posicao;
-    [SerializeField]
-    int vida, pontos, ajudas, dicas, mn2;
-    bool companheiro;
-    [SerializeField]
-    List<bool> missoes;
+    public float[] posicao;
+    public int vidas, moedas, ajudas, dicas, m2;
+    public bool companheiro;
+    public List<bool> missoes;
 
     // Start is called before the first frame update
     private void Start()
@@ -30,16 +26,23 @@ public class SaveLoad : MonoBehaviour
         LoadLogs(load);
     }
 
+    void Update()
+    {
+        //Atualiza a váriavel posição com os dados de localização do player para salvar onde o player esteve anteriormente
+        //posicao = new float[2]{transform.position.x, transform.position.y};
+    }
+
+
     public void SaveGame(){
 
         Save s = new()
         {
             position = posicao,
-            life = vida,
-            score = pontos,
-            aid = ajudas,
+            life = vidas,
+            coins = moedas,
+            advice = ajudas,
             tips = dicas,
-            m2 = mn2,
+            m2 = m2,
             partner = companheiro,
             missions = missoes
         };
@@ -95,15 +98,18 @@ public class SaveLoad : MonoBehaviour
             file.Close();
 
             //Pegando posição do player salvo no arquivo save e adicionando a ele
-            transform.position = new Vector3(load.position[0],load.position[1],0);
+            //transform.position = new Vector3(load.position[0],load.position[1],0);
+            GetComponent<Items>().LoadPosition();
             //Armazenando valores nas variáveis
-            vida = load.life;
-            pontos = load.score;
-            ajudas = load.aid;
+            //posicao = load.position;
+            vidas = load.life;
+            moedas = load.coins;
+            ajudas = load.advice;
             dicas = load.tips;
-            mn2 = load.m2;
+            m2 = load.m2;
             companheiro = load.partner;
             missoes = load.missions;
+            Debug.Log("posicão" + posicao[0] + ", " + posicao[1]);
 
             //enviando a variavel load para uso externo
             return load;
@@ -124,8 +130,8 @@ public class SaveLoad : MonoBehaviour
         Debug.Log(
             "<color=gray> Posição: </color>" + load.position[0] + "." + load.position[1] +
             "<color=red> Vida: </color>" + load.life + 
-            "<color=yellow> Pontos: </color>" +  load.score + 
-            "<color=blue> Ajudas: </color>" +  load.aid + 
+            "<color=yellow> Pontos: </color>" +  load.coins + 
+            "<color=blue> Ajudas: </color>" +  load.advice + 
             "<color=green> Dicas: </color>" + load.tips + 
             "<color=orange> -2: </color>" + load.m2 + 
             "<color=cyan> Companheiro: </color>" + load.partner
@@ -143,46 +149,39 @@ public class SaveLoad : MonoBehaviour
             "<color=with> 8: </color>" + load.missions[8]
         );}
     
-    void Update()
-    {
-        //Atualiza a váriavel posição com os dados de localização do player para salvar onde o player esteve anteriormente
-        posicao = new float[2]{transform.position.x, transform.position.y};
-        coinsText.text = CarregarPontos().ToString();
-        
-    }
-
     //Reiniciar o jogo
     public void TryAgain(){
         posicao = new float[2]{-16.5f,-0.75f};
-        vida = 3;
-        pontos = 0;
+        vidas = 3;
+        moedas = 0;
         ajudas = 0;
         dicas = 0;
-        mn2 = 0;
+        m2 = 0;
         companheiro = false;
         missoes = new(){false, false, false, false, false, false, false, false, false};
         SaveGame();
         SceneManager.LoadScene(newGame);
     }
+    /*
     //Salvar/Carregar dados do jogo
-    public void SalvarPontos(int pts){
-        pontos =+ pts;
+    public void SalvarMoedas(int pts){
+        moedas += pts;
         SaveGame();
     }
-    public int CarregarPontos(){
-        return pontos;
+    public int CarregarMoedas(){
+        return moedas;
     }
     public void SalvarVidas(int vds) {
-        vida = vds;
+        vidas = vds;
         SaveGame();
     }
     public int CarregarVidas() {
-        return vida;
+        return vidas;
     }
     public void SalvarMissao(int mis){
         missoes[mis] = true;
     }
     public bool CarregarMissao(int n){
         return missoes[n];
-    }
+    }*/
 }
