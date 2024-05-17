@@ -98,10 +98,8 @@ public class SaveLoad : MonoBehaviour
             file.Close();
 
             //Pegando posição do player salvo no arquivo save e adicionando a ele
-            //transform.position = new Vector3(load.position[0],load.position[1],0);
-            GetComponent<Items>().LoadPosition();
+            transform.position = new Vector2(load.position[0],load.position[1]);
             //Armazenando valores nas variáveis
-            //posicao = load.position;
             vidas = load.life;
             moedas = load.coins;
             ajudas = load.advice;
