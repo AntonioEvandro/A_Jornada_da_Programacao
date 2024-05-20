@@ -16,31 +16,21 @@ public class HeartSystem : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        vidaAtual = GetComponent<Items>().LoadLifes();
-        //vidaAtual = gameObject.GetComponent<SaveLoad>().CarregarVidas();
-        //UpdateCount();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        //UpdateCount();
+        //vidaAtual = GetComponent<Items>().LoadLifes();
     }
 
     public void DiminuirVida()
     {
-        vidaAtual -= 1;
-        GetComponent<Items>().SaveLifes(vidaAtual);
-        //gameObject.GetComponent<SaveLoad>().SalvarVidas(vidaAtual);
-        //UpdateCount();
+        //vidaAtual -= 1;
+        GetComponent<Items>().SaveLifes(1, false);
 
         Debug.Log("<color=red>Resposta errada!</color>");
 
-        if(vidaMaxima > 3){
+        if(GetComponent<Items>().LoadLifes() > 3){
             vidaMaxima -= 1;
         }
 
-        if(vidaAtual <= 0)
+        if(GetComponent<Items>().LoadLifes() <= 0)
         {
             Debug.Log("<color=black>Fim de jogo!</color>");
             gameOver.gameObject.SetActive(true);
@@ -49,21 +39,12 @@ public class HeartSystem : MonoBehaviour
     }
     public void AumentarVida()
     {
-        vidaAtual += 1;
-        GetComponent<Items>().SaveLifes(vidaAtual);
-        //gameObject.GetComponent<SaveLoad>().SalvarVidas(vidaAtual);
-        //UpdateCount();
-        if(vidaAtual == vidaMaxima + 1)
+        //vidaAtual += 1;
+        GetComponent<Items>().SaveLifes(1, true);
+        if(GetComponent<Items>().LoadLifes() == vidaMaxima + 1)
         {
             vidaMaxima += 1;
         }
     }
-
-
-    /*// Atualizando vida no contador
-    private void UpdateCount()
-    {
-        heartText.text = gameObject.GetComponent<Items>().CarregarVidas().ToString();
-    }*/
     
 }

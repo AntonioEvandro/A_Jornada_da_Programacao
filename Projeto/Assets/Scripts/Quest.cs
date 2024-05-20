@@ -7,13 +7,13 @@ public class Quest : MonoBehaviour
 {
     public GameObject player;
     public Collider2D colisor;
-    public int num;
+    public int id;
     // Start is called before the first frame update
     void Start()
     {
         
-        //if(player.GetComponent<SaveLoad>().CarregarMissao(num)){
-        if (player.GetComponent<Items>().LoadMission(num)){
+        //if(player.GetComponent<SaveLoad>().CarregarMissao(id)){
+        if (player.GetComponent<Items>().LoadMission(id).missionActive){
             CloseQuest();
         }else{
             colisor.enabled = true;
@@ -33,12 +33,10 @@ public class Quest : MonoBehaviour
 
     public void RigthOption()
     {
-        player.GetComponent<Items>().SaveMissions(num);
-        //player.GetComponent<SaveLoad>().SalvarMissao(num);
+        player.GetComponent<Items>().SaveMission(id);
         CloseQuest();
         Debug.Log("<color=blue>Resposta correta!!!</color> Sua recompensa <color=yellow>10</color> moedas");
-        player.GetComponent<Items>().SaveCoins(10);
-        //player.GetComponent<SaveLoad>().SalvarPontos(10);
+        player.GetComponent<Items>().SaveCoins(10, true);
     }
     
     public void CloseQuest()

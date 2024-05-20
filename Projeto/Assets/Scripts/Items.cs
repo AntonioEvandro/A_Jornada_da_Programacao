@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -6,7 +7,6 @@ using UnityEngine;
 public class Items : MonoBehaviour
 {
     public TMP_Text lifesTextHUD, coinsTextHUD, lifesTextUI, coinsTextUI, lifesTextGUI, coinsTextGUI, adviceTextHUD, tipsTextHUD, m2TextHUD,  adviceTextUI, tipsTextUI, m2TextUI, adviceTextGUI, tipsTextGUI, m2TextGUI;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -22,38 +22,102 @@ public class Items : MonoBehaviour
         ItemsUI();
     }
 
-    //Chamar as funcoes para salvar os dados
+    //          ***Funções para salvar os dados***
     public void SavePosition(){
+        //Atualiza a váriavel posição com os dados de localização do player para salvar onde o player esteve anteriormente
         GetComponent<SaveLoad>().posicao = new(){
             transform.position.x, transform.position.y
         };
         
     }
-    public void SaveLifes(int l){
-        GetComponent<SaveLoad>().vidas = l;
-        GetComponent<SaveLoad>().SaveGame();
+    public void SaveLifes(int l, bool ss){
+        if(ss){
+            SaveCoins(10, false);
+            GetComponent<SaveLoad>().vidas += l;
+            GetComponent<SaveLoad>().SaveGame();
+        }else if(!ss){
+            GetComponent<SaveLoad>().vidas -= l;
+            GetComponent<SaveLoad>().SaveGame();
+        }else{
+            Debug.LogError("Ops! houve algum erro. Veja se o seguinte valor é false ou true: " + ss);
+        }
     }
-    public void SaveCoins(int c){
-        GetComponent<SaveLoad>().moedas += c;
+    public void SaveCoins(int c, bool ss){
+        if (ss){
+            GetComponent<SaveLoad>().moedas += c;
+            GetComponent<SaveLoad>().SaveGame();
+        }else if(!ss){
+            GetComponent<SaveLoad>().moedas -= c;
+            GetComponent<SaveLoad>().SaveGame();
+        }else{
+            Debug.LogError("Ops! houve algum erro. Veja se o seguinte valor é false ou true: " + ss);
+        }
     }
-    public void SaveTips(int t){
-        GetComponent<SaveLoad>().dicas = t;
+    public void SaveTips(bool ss){
+        if (ss){
+            SaveCoins(10, false);
+            GetComponent<SaveLoad>().dicas++;
+            GetComponent<SaveLoad>().SaveGame();
+        }else if(!ss){
+            GetComponent<SaveLoad>().dicas--;
+            GetComponent<SaveLoad>().SaveGame();
+        }else{
+            Debug.LogError("Ops! houve algum erro. Veja se o seguinte valor é false ou true: " + ss);
+        }
     }
-    public void SaveAdvices(int a){
-        GetComponent<SaveLoad>().ajudas = a;
+    public void SaveAdvices(bool ss){
+        if (ss){
+            SaveCoins(10, false);
+            GetComponent<SaveLoad>().recomen++;
+            GetComponent<SaveLoad>().SaveGame();
+        }else if(!ss){
+            GetComponent<SaveLoad>().recomen--;
+            GetComponent<SaveLoad>().SaveGame();
+        }else{
+            Debug.LogError("Ops! houve algum erro. Veja se o seguinte valor é false ou true: " + ss);
+        }
     }
-    public void SaveMinus2(int m){
-        GetComponent<SaveLoad>().m2 = m;
+    public void SaveMinus2(bool ss){
+        if (ss){
+            SaveCoins(10, false);
+            GetComponent<SaveLoad>().m2++;
+            GetComponent<SaveLoad>().SaveGame();
+        }else if(!ss){
+            GetComponent<SaveLoad>().m2--;
+            GetComponent<SaveLoad>().SaveGame();
+        }else{
+            Debug.LogError("Ops! houve algum erro. Veja se o seguinte valor é false ou true: " + ss);
+        }
     }
     public void SavePartner(){
         GetComponent<SaveLoad>().companheiro = true;
+        GetComponent<SaveLoad>().SaveGame();
     }
-    public void SaveMissions(int mis){
-        GetComponent<SaveLoad>().missoes[mis, 0] = true;
+    public void SaveMission(int id){
+        GetComponent<SaveLoad>().missoes[id].missionActive = true;
+        GetComponent<SaveLoad>().SaveGame();
+    }
+    public void SaveMissionAids(int id){
+        GetComponent<SaveLoad>().missoes[id].aidsUsed++;
+        GetComponent<SaveLoad>().SaveGame();
+    }
+    public void SaveMissionAidsItem(int id, int type){
+        if (type == 0){
+            GetComponent<SaveLoad>().missoes[id].tipsUsed = true;
+            SaveMissionAids(id);
+        }else if(type == 1){
+            GetComponent<SaveLoad>().missoes[id].adviceUsed = true;
+            SaveMissionAids(id);
+        }else if(type == 2){
+            GetComponent<SaveLoad>().missoes[id].m2Used = true;
+            SaveMissionAids(id);
+        }else{
+            Debug.LogError("Ops! houve algum erro. Veja se o seguinte valor é 0, 1 ou 2: " + type);
+        }
     }
 
 
-    // Chamar os itens
+    //          ***Funções para carregar os itens salvos***
     public void LoadPosition(){
         transform.position = new Vector2(
             GetComponent<SaveLoad>().posicao[0], GetComponent<SaveLoad>().posicao[1]
@@ -69,7 +133,7 @@ public class Items : MonoBehaviour
         return GetComponent<SaveLoad>().dicas;
     }
     public int LoadAdvices(){
-        return GetComponent<SaveLoad>().ajudas;
+        return GetComponent<SaveLoad>().recomen;
     }
     public int LoadMinus2(){
         return GetComponent<SaveLoad>().m2;
@@ -77,8 +141,11 @@ public class Items : MonoBehaviour
     public bool LoadPartner(){
         return gameObject.GetComponent<SaveLoad>().companheiro;
     }
-    public bool LoadMission(int n){
-        return gameObject.GetComponent<SaveLoad>().missoes[n,0];
+    public Mission LoadMission(int id){
+        Mission mis = new();
+        mis = GetComponent<SaveLoad>().missoes[id];
+        //Debug.Log("Tipo " + mis);
+        return mis;
     }
 
 

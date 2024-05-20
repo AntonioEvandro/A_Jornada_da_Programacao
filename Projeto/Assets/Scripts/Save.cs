@@ -14,5 +14,5 @@ public class Save
     public int tips;
     public int m2;
     public bool partner;
-    public bool[,] missions;
+    public List<Mission> missions;
 }

@@ -13,36 +13,33 @@ using UnityEngine.UIElements;
 public class SaveLoad : MonoBehaviour
 {
     [SerializeField] private string newGame;
-    private int x, y;
-    private readonly int tam1 = 9, tam2 = 3;
+    private int x;
+    private readonly int tam = 9;
     public List<float> posicao;
-    public int vidas, moedas, ajudas, dicas, m2;
+    public int vidas, moedas, recomen, dicas, m2;
     public bool companheiro;
-    public bool[,] missoes;
+    public List<Mission> missoes/* = new(){null,null,null,null,null,null,null,null,null,null}*/;
 
     // Start is called before the first frame update
     private void Start()
     {
-        missoes = new bool[tam1, tam2];
-        Save load = LoadGame();
-        LoadLogs(load);
+        //missoes = new();
+        Save l = LoadGame();
+        LoadLogs(l);
     }
-
     void Update()
     {
-        //Atualiza a váriavel posição com os dados de localização do player para salvar onde o player esteve anteriormente
-        //posicao = new float[2]{transform.position.x, transform.position.y};
+        
     }
 
 
     public void SaveGame(){
-
         Save s = new()
         {
             position = posicao,
             life = vidas,
             coins = moedas,
-            advices = ajudas,
+            advices = recomen,
             tips = dicas,
             m2 = m2,
             partner = companheiro,
@@ -99,19 +96,20 @@ public class SaveLoad : MonoBehaviour
             //Debug.Log("Closed file"); //Arquivo fechado. Evitando erro terrível.
             file.Close();
 
-            //Pegando posição do player salvo no arquivo save e adicionando a ele
-            //transform.position = new Vector2(load.position[0],load.position[1]);
             //Armazenando valores nas variáveis
             posicao = load.position;
+            //Pegando posição do player salvo no arquivo save e adicionando a ele
             GetComponent<Items>().LoadPosition();
+            
             vidas = load.life;
             moedas = load.coins;
-            ajudas = load.advices;
+            recomen = load.advices;
             dicas = load.tips;
             m2 = load.m2;
             companheiro = load.partner;
+            //missoes = new(){null,null,null,null,null,null,null,null,null,null};
             missoes = load.missions;
-            Debug.Log("posicão" + posicao[0] + ", " + posicao[1]);
+            //Debug.Log("missao " + load.missions[0].id + ", " + load.missions[0].missionActive);
 
             //enviando a variavel load para uso externo
             return load;
@@ -138,33 +136,32 @@ public class SaveLoad : MonoBehaviour
             "<color=orange> -2: </color>" + load.m2 + 
             "<color=cyan> Companheiro: </color>" + load.partner
         );
-        Debug.Log(
-            "<color=black> Missões: </color>" +
-            "<color=with> 0: </color>" + load.missions[0,0] + 
-            "<color=with> 1: </color>" + load.missions[1,0] + 
-            "<color=with> 2: </color>" + load.missions[2,0] + 
-            "<color=with> 4: </color>" + load.missions[4,0] + 
-            "<color=with> 3: </color>" + load.missions[3,0] + 
-            "<color=with> 5: </color>" + load.missions[5,0] + 
-            "<color=with> 6: </color>" + load.missions[6,0] + 
-            "<color=with> 7: </color>" + load.missions[7,0] + 
-            "<color=with> 8: </color>" + load.missions[8,0]
-        );}
+        Debug.Log("<color=black> Missões: </color>");
+        for(x=0; x<tam; x++){
+            Debug.Log("<color=with> Missão " + load.missions[x].id + "</color> completa: " + load.missions[x].missionActive + ", Ajudas usadas: " + load.missions[x].aidsUsed + ", recomendação: " + load.missions[x].adviceUsed + ", dica: " + load.missions[x].tipsUsed + ", menos 2: " + load.missions[x].m2Used);
+        }
+    }
 
     //Reiniciar o jogo
-
     public void TryAgain(){
         posicao = new(){-16.5f,-0.75f};
         vidas = 3;
         moedas = 0;
-        ajudas = 0;
+        recomen = 0;
         dicas = 0;
         m2 = 0;
         companheiro = false;
-        for(x=0; x<tam1; x++){
-            for(y=0; y<tam2; y++){
-                missoes[x,y] = false;
-            }
+        //missoes = new(){null,null,null,null,null,null,null,null,null,null};
+        for(x = 0; x < tam; x++){
+            Mission aux = new(){
+                id = x,
+                missionActive = false,
+                aidsUsed = 0,
+                adviceUsed = false,
+                tipsUsed = false,
+                m2Used = false,
+            };
+            missoes[x] = aux;
         }
         SaveGame();
         SceneManager.LoadScene(newGame);
