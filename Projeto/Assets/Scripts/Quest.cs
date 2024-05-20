@@ -20,12 +20,6 @@ public class Quest : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void WrongOption()
     {
         player.gameObject.GetComponent<HeartSystem>().DiminuirVida();
@@ -35,8 +29,8 @@ public class Quest : MonoBehaviour
     {
         player.GetComponent<Items>().SaveMission(id);
         CloseQuest();
-        Debug.Log("<color=blue>Resposta correta!!!</color> Sua recompensa <color=yellow>10</color> moedas");
         player.GetComponent<Items>().SaveCoins(10, true);
+        Debug.Log("<color=blue>Resposta correta!!!</color>");
     }
     
     public void CloseQuest()

@@ -22,13 +22,25 @@ public class Items : MonoBehaviour
         ItemsUI();
     }
 
-    //          ***Funções para salvar os dados***
+    //          *** Funções para salvar os dados    ***
     public void SavePosition(){
         //Atualiza a váriavel posição com os dados de localização do player para salvar onde o player esteve anteriormente
         GetComponent<SaveLoad>().posicao = new(){
             transform.position.x, transform.position.y
         };
         
+    }
+    public void SaveCoins(int c, bool ss){
+        if (ss){
+            GetComponent<SaveLoad>().moedas += c;
+            GetComponent<SaveLoad>().SaveGame();
+            Debug.Log("Obteve <color=green>" + c + "</color> moedas. Saldo atual<color=yellow>" + LoadCoins() + "</color> moedas");
+        }else if(!ss){
+            GetComponent<SaveLoad>().moedas -= c;
+            Debug.Log("<color=red>-" + c + "</color> moedas. Saldo atual<color=yellow>" + LoadCoins() + "</color> moedas");
+        }else{
+            Debug.LogError("Ops! houve algum erro. Veja se o seguinte valor é false ou true: " + ss);
+        }
     }
     public void SaveLifes(int l, bool ss){
         if(ss){
@@ -42,17 +54,7 @@ public class Items : MonoBehaviour
             Debug.LogError("Ops! houve algum erro. Veja se o seguinte valor é false ou true: " + ss);
         }
     }
-    public void SaveCoins(int c, bool ss){
-        if (ss){
-            GetComponent<SaveLoad>().moedas += c;
-            GetComponent<SaveLoad>().SaveGame();
-        }else if(!ss){
-            GetComponent<SaveLoad>().moedas -= c;
-            GetComponent<SaveLoad>().SaveGame();
-        }else{
-            Debug.LogError("Ops! houve algum erro. Veja se o seguinte valor é false ou true: " + ss);
-        }
-    }
+    
     public void SaveTips(bool ss){
         if (ss){
             SaveCoins(10, false);
@@ -95,7 +97,6 @@ public class Items : MonoBehaviour
     }
     public void SaveMission(int id){
         GetComponent<SaveLoad>().missoes[id].missionActive = true;
-        GetComponent<SaveLoad>().SaveGame();
     }
     public void SaveMissionAids(int id){
         GetComponent<SaveLoad>().missoes[id].aidsUsed++;
@@ -117,7 +118,7 @@ public class Items : MonoBehaviour
     }
 
 
-    //          ***Funções para carregar os itens salvos***
+    //          *** Funções para carregar os itens salvos   ***
     public void LoadPosition(){
         transform.position = new Vector2(
             GetComponent<SaveLoad>().posicao[0], GetComponent<SaveLoad>().posicao[1]
@@ -142,14 +143,11 @@ public class Items : MonoBehaviour
         return gameObject.GetComponent<SaveLoad>().companheiro;
     }
     public Mission LoadMission(int id){
-        Mission mis = new();
-        mis = GetComponent<SaveLoad>().missoes[id];
-        //Debug.Log("Tipo " + mis);
-        return mis;
+        return GetComponent<SaveLoad>().missoes[id];
     }
 
 
-    //Chamar valores dos itens para serem mostrados em textos
+    //  *** Funções para chamar valores dos itens a serem exibidos em textos ***
     public void ItemsHUD(){
         lifesTextHUD.text = LoadLifes().ToString();
         coinsTextHUD.text = LoadCoins().ToString();

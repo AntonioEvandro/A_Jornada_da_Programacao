@@ -40,10 +40,15 @@ public class HeartSystem : MonoBehaviour
     public void AumentarVida()
     {
         //vidaAtual += 1;
-        GetComponent<Items>().SaveLifes(1, true);
-        if(GetComponent<Items>().LoadLifes() == vidaMaxima + 1)
-        {
-            vidaMaxima += 1;
+        if (GetComponent<Items>().LoadCoins()>= 10){
+            GetComponent<Items>().SaveLifes(1, true);
+            if(GetComponent<Items>().LoadLifes() == vidaMaxima + 1)
+            {
+                vidaMaxima += 1;
+            }
+            Debug.Log("<color=Green>Vida adquirida com sucesso!</color> Total: <color=red>" + GetComponent<Items>().LoadLifes() + "</color>. Saldo: <color=yellow>" + GetComponent<Items>().LoadCoins() + "</color>");
+        }else{
+            Debug.Log("<color=red> Moedas insuficientes! </color> Seu saldo é: <color=Orange>" + GetComponent<Items>().LoadCoins() + "</color>");
         }
     }
     

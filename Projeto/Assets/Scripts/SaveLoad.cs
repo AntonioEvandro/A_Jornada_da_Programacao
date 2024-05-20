@@ -18,18 +18,13 @@ public class SaveLoad : MonoBehaviour
     public List<float> posicao;
     public int vidas, moedas, recomen, dicas, m2;
     public bool companheiro;
-    public List<Mission> missoes/* = new(){null,null,null,null,null,null,null,null,null,null}*/;
+    public List<Mission> missoes;
 
     // Start is called before the first frame update
     private void Start()
     {
-        //missoes = new();
         Save l = LoadGame();
         LoadLogs(l);
-    }
-    void Update()
-    {
-        
     }
 
 
@@ -46,12 +41,9 @@ public class SaveLoad : MonoBehaviour
             missions = missoes
         };
 
-
         BinaryFormatter bf = new();
 
         string path = Path.Combine(Application.persistentDataPath + "/savegame.save"); //C:\Users\T-Gamer\AppData\LocalLow\DefaultCompany\Projeto
-
-        //Debug.Log("Arquivo existe" + File.Exists(path));
         
         if (File.Exists(path)){
             //Debug.Log("" + path);
@@ -73,6 +65,7 @@ public class SaveLoad : MonoBehaviour
         Debug.Log("<color=green>Jogo salvo com sucesso!!!</color>");
     }
 
+    //  Função que carrega os dados do arquivo save
     public Save LoadGame(){
         //Debug.Log("bf add");  //Variavel bf com formato binário definido
         BinaryFormatter bf = new BinaryFormatter();
@@ -117,6 +110,7 @@ public class SaveLoad : MonoBehaviour
 
         return null;
     }
+
     //Função teste criada para carregar dados salvos, usa-se através do botão carregar no jogo.
     public void BtnCarregar(bool car){
         if (car){
@@ -125,6 +119,31 @@ public class SaveLoad : MonoBehaviour
             BtnCarregar(false);
         }
     }
+
+    //Reiniciar o jogo
+    public void TryAgain(){
+        posicao = new(){-16.5f,-0.75f};
+        vidas = 3;
+        moedas = 0;
+        recomen = 0;
+        dicas = 0;
+        m2 = 0;
+        companheiro = false;
+        for(x = 0; x < tam; x++){
+            Mission aux = new(){
+                id = x,
+                missionActive = false,
+                aidsUsed = 0,
+                adviceUsed = false,
+                tipsUsed = false,
+                m2Used = false,
+            };
+            missoes[x] = aux;
+        }
+        SaveGame();
+        SceneManager.LoadScene(newGame);
+    }
+
     //Todos os logs de carregamento do arquivo de dados salvos
     public void LoadLogs(Save load){
         Debug.Log(
@@ -141,51 +160,4 @@ public class SaveLoad : MonoBehaviour
             Debug.Log("<color=with> Missão " + load.missions[x].id + "</color> completa: " + load.missions[x].missionActive + ", Ajudas usadas: " + load.missions[x].aidsUsed + ", recomendação: " + load.missions[x].adviceUsed + ", dica: " + load.missions[x].tipsUsed + ", menos 2: " + load.missions[x].m2Used);
         }
     }
-
-    //Reiniciar o jogo
-    public void TryAgain(){
-        posicao = new(){-16.5f,-0.75f};
-        vidas = 3;
-        moedas = 0;
-        recomen = 0;
-        dicas = 0;
-        m2 = 0;
-        companheiro = false;
-        //missoes = new(){null,null,null,null,null,null,null,null,null,null};
-        for(x = 0; x < tam; x++){
-            Mission aux = new(){
-                id = x,
-                missionActive = false,
-                aidsUsed = 0,
-                adviceUsed = false,
-                tipsUsed = false,
-                m2Used = false,
-            };
-            missoes[x] = aux;
-        }
-        SaveGame();
-        SceneManager.LoadScene(newGame);
-    }
-    /*
-    //Salvar/Carregar dados do jogo
-    public void SalvarMoedas(int pts){
-        moedas += pts;
-        SaveGame();
-    }
-    public int CarregarMoedas(){
-        return moedas;
-    }
-    public void SalvarVidas(int vds) {
-        vidas = vds;
-        SaveGame();
-    }
-    public int CarregarVidas() {
-        return vidas;
-    }
-    public void SalvarMissao(int mis){
-        missoes[mis] = true;
-    }
-    public bool CarregarMissao(int n){
-        return missoes[n];
-    }*/
 }
