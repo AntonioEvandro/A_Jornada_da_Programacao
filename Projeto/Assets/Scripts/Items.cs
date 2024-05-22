@@ -42,13 +42,13 @@ public class Items : MonoBehaviour
             Debug.LogError("Ops! houve algum erro. Veja se o seguinte valor é false ou true: " + ss);
         }
     }
-    public void SaveLifes(int l, bool ss){
+    public void SaveLifes(bool ss){
         if(ss){
             SaveCoins(10, false);
-            GetComponent<SaveLoad>().vidas += l;
+            GetComponent<SaveLoad>().vidas++;
             GetComponent<SaveLoad>().SaveGame();
         }else if(!ss){
-            GetComponent<SaveLoad>().vidas -= l;
+            GetComponent<SaveLoad>().vidas--;
             GetComponent<SaveLoad>().SaveGame();
         }else{
             Debug.LogError("Ops! houve algum erro. Veja se o seguinte valor é false ou true: " + ss);
