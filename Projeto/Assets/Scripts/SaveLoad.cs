@@ -85,7 +85,7 @@ public class SaveLoad : MonoBehaviour
             //load recebe dados de file tornando-os legivel para leitura posterior
             load = (Save)bf.Deserialize(file);
 
-            Debug.Log("<color=orange>Jogo carregado!!!</color>");
+            Debug.Log("<size=25><color=orange><b> Jogo carregado!!! </b></color></size>");
             //Debug.Log("Closed file"); //Arquivo fechado. Evitando erro terrível.
             file.Close();
 
@@ -146,18 +146,10 @@ public class SaveLoad : MonoBehaviour
 
     //Todos os logs de carregamento do arquivo de dados salvos
     public void LoadLogs(Save load){
-        Debug.Log(
-            "<color=gray> Posição: </color>" + load.position[0] + "." + load.position[1] +
-            "<color=red> Vida: </color>" + load.life + 
-            "<color=yellow> Pontos: </color>" +  load.coins + 
-            "<color=blue> Ajudas: </color>" +  load.advices + 
-            "<color=green> Dicas: </color>" + load.tips + 
-            "<color=orange> -2: </color>" + load.m2 + 
-            "<color=cyan> Companheiro: </color>" + load.partner
-        );
-        Debug.Log("<color=black> Missões: </color>");
+        Debug.LogFormat("<color=gray> Posição </color><b>X:</b> {0} <b>Y:</b> {1} <color=red> Vida: </color> {2}<color=yellow> Pontos: </color> {3}\n<color=blue> Recomendações: </color> {4}<color=green> Dicas: </color> {5}<color=orange> Menos dois: </color>{6}<color=cyan> Companheiro: </color>{7}", load.position[0].ToString("F2"), load.position[1].ToString("F2"), load.life, load.coins, load.advices, load.tips, load.m2, load.partner);
+        print("<size=23><color=Purple> Missões: </color></size>");
         for(x=0; x<tam; x++){
-            Debug.Log("<color=with> Missão " + load.missions[x].id + "</color> completa: " + load.missions[x].missionActive + ", Ajudas usadas: " + load.missions[x].aidsUsed + ", recomendação: " + load.missions[x].adviceUsed + ", dica: " + load.missions[x].tipsUsed + ", menos 2: " + load.missions[x].m2Used);
+            Debug.Log("<color=with> Missão " + load.missions[x].id + "</color> completa: " + load.missions[x].missionActive + ", Ajudas usadas: " + load.missions[x].aidsUsed + ",\n recomendação: " + load.missions[x].adviceUsed + ", dica: " + load.missions[x].tipsUsed + ", menos duas opções: " + load.missions[x].m2Used);
         }
     }
 }

@@ -40,7 +40,7 @@ public class Aid : MonoBehaviour
         LoadMission();
     }
     public void DesactiveButtons(){
-        if (!missao.tipsUsed){
+        if (!missao.tipsUsed ){
             btnTip.interactable = true;
         }else if(missao.tipsUsed){
             btnTip.interactable = false;
@@ -67,6 +67,17 @@ public class Aid : MonoBehaviour
             btnAdvice.interactable = false;
             btnM2.interactable = false;
             Debug.Log("Número máximo de ajudas atingidos!");
+        }else{
+            if(player.GetComponent<Items>().LoadTips() <= 0){
+                btnTip.interactable = false;
+            }
+            if(player.GetComponent<Items>().LoadAdvices() <= 0){
+                btnAdvice.interactable = false;
+            }
+            if(player.GetComponent<Items>().LoadMinus2() <= 0){
+                btnM2.interactable = false;
+            }
+            Debug.Log("Dicas: <color=withe>" + player.GetComponent<Items>().LoadTips() + "</color> Recomendações: <color=withe>" + player.GetComponent<Items>().LoadAdvices() + "</color> Menos 2: <color=withe>" + player.GetComponent<Items>().LoadMinus2() + "</color>.");
         }
     }
     public void LogMissionLoaded(Mission m) {        
