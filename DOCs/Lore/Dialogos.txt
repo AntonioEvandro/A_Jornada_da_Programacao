@@ -37,8 +37,29 @@ Zezinho:
  Estou precisando levar esses potes até minha casa, mas eles estão fazendo meu carrinho balançar de um jeito estranho. Me ajuda a deixar os potes com pesos iguais para o carrinho não virar.
 Laida:
  Certo vamos ver como distribuir o peso.
+Joãozinho:
+ Obrigado pela ajuda moça!
+ Aqui uma ajudinha pra você.
+Laida:
+ Não precisava.
+Joãozinho:
+ Até mais!
+Laida:
+ Até!
+
+	[Diálogo com Tab 2]
+Tab:
+ Com essas moedas ganhas você podera adiquirir ajudas para facilitar as questões, mais pra frente a gente utilizará isso.
+ Vamos continuar.
+Laida:
+ Tá certo.
 
 	[Diálogo desafio 1]
+Tab:
+ Olha, mais alguém pra ajudar, vamos lá.
+Laida:
+ Nem precisa falar.
+
 Estranho:
  Olá jovenzinha! Eu me chamo João, e estou precisando de ajuda.
 Laida:
