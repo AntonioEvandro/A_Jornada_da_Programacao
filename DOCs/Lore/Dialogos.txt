@@ -4,17 +4,54 @@
  Finalmente cheguei aqui.
  Agora posso iniciar minha carreira como desenvolvedora.
 
+	[Diálogo com Tab]
 Estranho: 
  Seja bem vinda a ilha _____, Laida!
- Fiquei sabendo que viria, eu me chamo João!
- E aqui você poderá testar seus conhecimentos iniciais de programação, mas primeiro, quero testar suas capacidades.
- Vamos logo ao que interessa.
+ Fiquei sabendo que viria, eu me chamo Tab!
+Laida:
+ Prazer em conhece-lo!
+Tab:
+ Serei uma pequena companhia nessa jornada aqui na ilha.
+ Neste lugar você poderá testar seus conhecimentos iniciais de programação. Você terá que ajudar outros aprendizes e tutores da ilha respondendo questões pertinentes a logica de programação para conseguir aprimorar suas capacidades.
+Laida:
+ Vamos nessa!
+
+	[Diálogo desafio 0]
+Tab:
+ Olha lá na frente.
+Laida:
+ Um garotinho, deve estar precisando de ajuda.
+Tab:
+ Parece ser seu primeiro desafio, vamos lá.
+
+Garoto na estrada:
+ Moça, pode me dar uma ajudinha?
+Laida:
+ Mas é claro que sim!
+ Eu me chamo Laida, e você?
+Garoto na estrada:
+ Eu sou José, mas todos me chamam de Zezinho.
+Laida:
+ Então, qual seu problema?
+Zezinho:
+ Estou precisando levar esses potes até minha casa, mas eles estão fazendo meu carrinho balançar de um jeito estranho. Me ajuda a deixar os potes com pesos iguais para o carrinho não virar.
+Laida:
+ Certo vamos ver como distribuir o peso.
+
+	[Diálogo desafio 1]
+Estranho:
+ Olá jovenzinha! Eu me chamo João, e estou precisando de ajuda.
+Laida:
+ Olá senhor! Eu Laida, posso te ajudar, se for do meu alcance.
+João:
+ Certo, então é o seguinte...
  Eu tenho que atravessar esse rio, mas eu só tenho essa canoa, além de mim, preciso levar essas três cargas para o outro lado do rio sem perder nenhuma dessas cargas, o que eu faço?
 
 [Espaço para escolher as alternativas]
 
 João:
- Correto! Aqui está seu prêmio.
+ Correto!!!
+ Aqui está seu prêmio.
 Laida:
  Obrigada Senhor João!
 João:
