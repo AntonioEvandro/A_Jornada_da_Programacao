@@ -1,12 +1,12 @@
 	[Monólogo da Laida]
 
- Olá ilha _____!
+ Olá ilha mundo!
  Finalmente cheguei aqui.
  Agora posso iniciar minha carreira como desenvolvedora.
 
 	[Diálogo com Tab]
 Estranho: 
- Seja bem vinda a ilha _____, Laida!
+ Seja bem vinda a ilha mundo, Laida!
  Fiquei sabendo que viria, eu me chamo Tab!
 Laida:
  Prazer em conhece-lo!
@@ -16,7 +16,7 @@ Tab:
 Laida:
  Vamos nessa!
 
-	[Diálogo desafio 0]
+	[Desafio 00]
 Tab:
  Olha lá na frente.
 Laida:
@@ -54,7 +54,7 @@ Tab:
 Laida:
  Tá certo.
 
-	[Diálogo desafio 1]
+	[Desafio 01]
 Tab:
  Olha, mais alguém pra ajudar, vamos lá.
 Laida:
@@ -76,11 +76,60 @@ João:
 Laida:
  Obrigada Senhor João!
 João:
+ Pelo visto precisa de carona para atravesar até a outra parte.
+Laida:
+ Sim, ficaria agradecida se pudesse me ajudar.
+João:
+ Com todo prazer.
+ Embarque aqui e vamos lá.
+Laida:
+ Claro!
+
+	[Após atravesar o rio]
+Laida:
+ Obrigado pela carona!
+João:
  Nada, apenas cumprindo minha parte.
  Desbrave a ilha o quanto puder. Até mais garotinha!
 Laida:
  Até!
 
 
+	[Descobrindo o mercado]
+Estranho:
+ Garotinha, tem um minuto?
+Laida:
+ Precisa de algo?
+Estranho:
+ Tenho algumas mercadorias que podem ser do seu interesse.
+Laida:
+ Quem é você?
+Estranho:
+ Sou francisco, o Seu Chico. Mas se preferir apenas Chico.
+Chico:
+ O melhor mercador mercador desta ilha!
+ O único na verdade.
+ Alta qualidade e baixos preços é comigo mesmo.
+Laida:
+ Vamos logo ao que interessa.
+Chico:
+ Como desejar.
+	[Após descobrir o mercado]
+Chico:
+ Obrigado pela preferência!
+Laida:
+ Obrigada digo eu!
+Chico:
+ Volte sempre!
 
-
+	[Desafio 02]
+Chico:
+ Espera um pouco Laida.
+Laida:
+ O que foi?
+Chico:
+ Tenho um desafio para você.
+Laida:
+ Então mande!
+Chico:
+ Lá vai.
