@@ -4,24 +4,24 @@
  Finalmente cheguei aqui.
  Agora posso iniciar minha carreira como desenvolvedora.
 
-	[Diálogo com Tab]
+	[Diálogo com T.A.B.]
 Estranho: 
  Seja bem vinda a ilha mundo, Laida!
  Fiquei sabendo que viria, eu me chamo Tab!
 Laida:
  Prazer em conhece-lo!
-Tab:
+T.A.B.:
  Serei uma pequena companhia nessa jornada aqui na ilha.
  Neste lugar você poderá testar seus conhecimentos iniciais de programação. Você terá que ajudar outros aprendizes e tutores da ilha respondendo questões pertinentes a logica de programação para conseguir aprimorar suas capacidades.
 Laida:
  Vamos nessa!
 
 	[Desafio 00]
-Tab:
+T.A.B.:
  Olha lá na frente.
 Laida:
  Um garotinho, deve estar precisando de ajuda.
-Tab:
+T.A.B.:
  Parece ser seu primeiro desafio, vamos lá.
 
 Garoto na estrada:
@@ -47,15 +47,15 @@ Joãozinho:
 Laida:
  Até!
 
-	[Diálogo com Tab 2]
-Tab:
+	[Diálogo com T.A.B. 2]
+T.A.B.:
  Com essas moedas ganhas você podera adiquirir ajudas para facilitar as questões, mais pra frente a gente utilizará isso.
  Vamos continuar.
 Laida:
  Tá certo.
 
 	[Desafio 01]
-Tab:
+T.A.B.:
  Olha, mais alguém pra ajudar, vamos lá.
 Laida:
  Nem precisa falar.
@@ -132,4 +132,138 @@ Chico:
 Laida:
  Então mande!
 Chico:
- Lá vai.
+ Lá vai...
+
+[Após a resposta]
+Chico:
+ Correto!
+ Pegue um pequeno presente!
+Laida:
+ Obrigada!
+Chico:
+ Siga em frente e nos mostre seus conhecimentos.
+Laida:
+ Farei isto.
+ Até mais!
+Chico:
+ Até!
+
+	[Desafio 03]
+Desconhecida:
+ Bom dia!
+Laida:
+ Bom dia!
+ Há algo que eu posso fazer por voce moça?
+Desconhecida:
+ Que prestativa.
+ Tenho apenas um questionamento.
+ Me chamo Maria.
+Laida:
+ Eu me chamo Laida, a novata daqui.
+Maria:
+ Percebi!
+ Pode resolver a minha questão?
+Laida:
+ Com certeza!
+Maria:
+ 
+Maria:
+ Sim, está certo!
+ Como rescompensa, aceite este pequeno pagamento!
+Laida:
+ Obrigada! Não vou recusar.
+Maria:
+ Siga um pouco mais a frente e você verá o instituto da ilha.
+ Seu conhecimento será mais proveitoso por lá.
+Laida:
+ Certo, agradeço pela dica.
+Maria:
+ Foi uma maravilha te conhecer. Até logo!
+Laida:
+ Digo o mesmo, até mais!
+
+	[Diálogo com T.A.B.]
+Laida:
+ T.A.B. tá aí?
+T.A.B.:
+ Sempre! Precisa de algo?
+Laida:
+ Esqueci de perguntar a Maria, mas você pode me dizer o que seria esse tal instituto?
+T.A.B.:
+ Um local exclusivo onde alguns programadores se reunem e trocam conhecimentos.
+ Eles aceitam desde iniciantes a profissionais.
+ E para ser aceita você deve responder alguns questionamentos e estará apta a participar dele.
+Laida:
+ Simples assim?
+T.A.B.:
+ Porém não está operavél no momento.
+Laida:
+ Qual o problema.
+T.A.B.:
+ Estão em manutenção indefenida.
+Laida:
+ O que haverá após a reforma?
+T.A.B.:
+ Estará liberado a entrada para os visitantes e participantes.
+ Será tipo uma versão 2.0
+ Continue a resolver os desafios daqui, no futuro terá mais caminhos a se explorar.
+Laida:
+ Melhor seguir em frente.
+
+	[No instituto]
+Laida:
+ Olá!
+ Alguém?
+Voz desconhecida:
+ Você deve ser a novata. Laida, eu imagino.
+ Sou o atendente do instituto. Por enquanto não precisa saber mais que isso.
+Laida:
+ Isso foi estranho, mas acelera as coisas por aqui.
+Atendente:
+ Responda nossos desafios para ser qualificada a ser mais um de nossos membros.
+Laida:
+ Estou pronta!
+Atendente:
+ Primeiro...
+
+Atendente:
+ Correto!
+ Próximo...
+
+Atendente:
+ Ótimo!
+ Você está qualificada para ser um de nossos memoráveis participantes. 
+ Como deve saber o instituto está atualmente inoperante, exceto pela equipe organizadora.
+ Quando tudo estiver pronto volte para a cerimônia de aprovação.
+ Isso é tudo!
+Laida:
+ Mas haverá mais desafios para concluir na ilha?
+Atendente:
+ Provavelmente sim.
+ Vá se encontrar com os demais residentes e veja por si só.
+Laida:
+ Farei isso, foi uma honra senhor atendente!
+Atendente:
+ Por favor, senhor atendente não!
+ Antonio! No mais, é isso até outro momento.
+Laida:
+ Até breve!
+
+	[Diálogo com T.A.B. 3]
+T.A.B.:
+ Laida.
+Laida:
+ Pode falar.
+T.A.B.:
+ Vou ficar um pouco no instituto.
+ Preciso me abastecer um pouco.
+Laida:
+ A gente nem teve muito tempo.
+T.A.B.:
+ Sem problemas, sei que pode se virar sem mim agora.
+ Futuramente podemos nos rencontramos de novo.
+ Até lá, cuide-se!
+Laida:
+ Você também. 
+
+
