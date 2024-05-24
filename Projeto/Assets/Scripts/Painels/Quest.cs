@@ -11,8 +11,6 @@ public class Quest : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
-        //if(player.GetComponent<SaveLoad>().CarregarMissao(id)){
         if (player.GetComponent<Items>().LoadMission(id).missionActive){
             CloseQuest();
         }else{
@@ -35,7 +33,7 @@ public class Quest : MonoBehaviour
     
     public void CloseQuest()
     {
-        transform.gameObject.SetActive(false);
+        player.GetComponent<ActivateChallenge>().DesactiveQuest();
         colisor.enabled = false;
     }
 }

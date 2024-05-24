@@ -5,29 +5,12 @@ using UnityEngine;
 public class ActivateChallenge : MonoBehaviour
 {
     public Transform canvasQuest;
-    public CircleCollider2D colisor;
-    // Start is called before the first frame update
-    void Start()
+    public void ActiveQuest()
     {
-        colisor = GetComponent<CircleCollider2D>();
+        canvasQuest.gameObject.SetActive(true);
     }
-
-    // Update is called once per frame
-    void Update()
+    public void DesactiveQuest()
     {
-        
-    }
-    private void OnTriggerStay2D(Collider2D other)
-    {
-        if (other.gameObject.CompareTag("Player"))
-        {
-            canvasQuest.gameObject.SetActive(true);
-        }
-    }
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        if(other.gameObject.CompareTag("Player")){
-            canvasQuest.gameObject.SetActive(false);
-        }
+        canvasQuest.gameObject.SetActive(false);
     }
 }

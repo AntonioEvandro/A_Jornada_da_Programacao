@@ -116,6 +116,10 @@ public class Items : MonoBehaviour
             Debug.LogError("Ops! houve algum erro. Veja se o seguinte valor é 0, 1 ou 2: " + type);
         }
     }
+    public void SaveDialogue(int n){
+        GetComponent<SaveLoad>().dialogos[n] = true;
+        GetComponent<SaveLoad>().SaveGame();
+    }
 
 
     //          *** Funções para carregar os itens salvos   ***
@@ -144,6 +148,9 @@ public class Items : MonoBehaviour
     }
     public Mission LoadMission(int id){
         return GetComponent<SaveLoad>().missoes[id];
+    }
+    public bool LoadDialogue(int n){
+        return GetComponent<SaveLoad>().dialogos[n];
     }
 
 

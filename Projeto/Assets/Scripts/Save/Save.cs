@@ -15,4 +15,5 @@ public class Save
     public int m2;
     public bool partner;
     public List<Mission> missions;
+    public bool[] dialogue;
 }

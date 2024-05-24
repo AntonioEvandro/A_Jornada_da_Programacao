@@ -19,6 +19,7 @@ public class SaveLoad : MonoBehaviour
     public int vidas, moedas, recomen, dicas, m2;
     public bool companheiro;
     public List<Mission> missoes;
+    public bool[] dialogos;
 
     // Start is called before the first frame update
     private void Start()
@@ -38,7 +39,8 @@ public class SaveLoad : MonoBehaviour
             tips = dicas,
             m2 = m2,
             partner = companheiro,
-            missions = missoes
+            missions = missoes,
+            dialogue = dialogos
         };
 
         BinaryFormatter bf = new();
@@ -103,6 +105,7 @@ public class SaveLoad : MonoBehaviour
             //missoes = new(){null,null,null,null,null,null,null,null,null,null};
             missoes = load.missions;
             //Debug.Log("missao " + load.missions[0].id + ", " + load.missions[0].missionActive);
+            dialogos = load.dialogue;
 
             //enviando a variavel load para uso externo
             return load;
@@ -140,6 +143,10 @@ public class SaveLoad : MonoBehaviour
             };
             missoes[x] = aux;
         }
+        dialogos = new bool[tam*2+1];
+        for(x = 0; x < tam*2; x++){
+            dialogos[x] = false;
+        }
         SaveGame();
         SceneManager.LoadScene(newGame);
     }
@@ -150,6 +157,9 @@ public class SaveLoad : MonoBehaviour
         print("<size=23><color=Grey> Missões: </color></size>");
         for(x=0; x<tam; x++){
             Debug.Log("<color=with> Missão " + load.missions[x].id + "</color> completa: " + load.missions[x].missionActive + ", Ajudas usadas: " + load.missions[x].aidsUsed + ",\n recomendação: " + load.missions[x].adviceUsed + ", dica: " + load.missions[x].tipsUsed + ", menos duas opções: " + load.missions[x].m2Used);
+        }
+        for(x=0; x<tam*2; x++){
+            Debug.Log("<color=with> Diálogo </color>exibido: " + load.dialogue[x] + ".");
         }
     }
 }
