@@ -14,7 +14,7 @@ public class Quest : MonoBehaviour
         if (player.GetComponent<Items>().LoadMission(id).missionActive){
             CloseQuest();
         }else{
-            colisor.enabled = true;
+            //colisor.enabled = true;
         }
     }
 
@@ -34,6 +34,6 @@ public class Quest : MonoBehaviour
     public void CloseQuest()
     {
         player.GetComponent<ActivateChallenge>().DesactiveQuest();
-        colisor.enabled = false;
+        //colisor.enabled = false;
     }
 }
