@@ -27,12 +27,13 @@ public class ButtonAction : MonoBehaviour
                 }else{
                     Send4Button();
                 }
-            }else if(idDialogo > 0 && !player.GetComponent<Items>().LoadDialogue(idDialogo-1)){
-                botaoAcao.SetActive(false);
-            }else if(idDialogo != 0 && player.GetComponent<Items>().LoadDialogue(idDialogo)){
-                botaoAcao.SetActive(false);
+            }else if(idDialogo > 0){
+                if(!player.GetComponent<Items>().LoadDialogue(idDialogo-1) || player.GetComponent<Items>().LoadDialogue(idDialogo)){
+                    botaoAcao.SetActive(false);
+                }else{
+                    Send4Button();}
             }else{
-                Send4Button();
+                Debug.Log("Ops! Houve um erro.");
             }
         }
     }
