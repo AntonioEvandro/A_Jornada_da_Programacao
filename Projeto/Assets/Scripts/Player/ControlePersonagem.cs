@@ -2,12 +2,26 @@ using UnityEngine;
 
 public class ControlePersonagem : MonoBehaviour
 {
-    public float velocidade = 5f;
-    public Rigidbody2D rb;
-    public Animator animator;
+    [Header("Movimentação")]
+    [Tooltip(
+        "Variáveis para movimentação.\nPor padrão é 3.75.\nMude nos testes, se quiser."
+    )]
+    [SerializeField]
+    [Range(2.0f, 15.0f)]
+    private float velocidade = 5f;
+    [Header("Movimentação")]
+    [SerializeField]
+    private Rigidbody2D rb;
+    [Header("Animação")]
+    [SerializeField]
+    private Animator animator;
 
-    public Transform npc;
+    [Header("NPC")]
+    [Tooltip("Posição do npc")]
+    [SerializeField]
+    private Transform npc;
 
+    [Header("Sistema de diálogo")]
     public DialogueSystem dialogueSystem;
 
     Vector2 movimento;

@@ -6,7 +6,12 @@ using System;
 
 public class HeartSystem : MonoBehaviour
 {
-    public Transform gameOver;
+    [Header("Fim de Jogo")]
+    [Tooltip("Tela de fim de jogo")]
+    [SerializeField]
+    private Transform gameOver;
+    [Header("Desafios")]
+    [Tooltip("Tela de desafios")]
     public GameObject Quests;
 
     public void DiminuirVida()

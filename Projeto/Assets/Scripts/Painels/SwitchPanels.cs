@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class SwitchPanels : MonoBehaviour
 {
+    [Header("Paineis e canvas")]
+    [Tooltip("Variáveis para telas")]
     public Canvas HUD;
     public GameObject pauseMenu;
     public GameObject panelUI;
