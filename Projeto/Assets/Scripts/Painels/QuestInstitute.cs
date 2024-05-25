@@ -22,8 +22,8 @@ public class QuestInstitute : MonoBehaviour
 
     public void RigthOption()
     {
-        player.GetComponent<Items>().SaveMission(id);
         CloseQuest();
+        player.GetComponent<Items>().SaveMission(id);
         player.GetComponent<Items>().SaveCoins(10, true);
         Debug.Log("<color=blue>Resposta correta!!!</color>");
     }
