@@ -6,7 +6,6 @@ using UnityEngine;
 public class Quest : MonoBehaviour
 {
     public GameObject player;
-    public Collider2D colisor;
     public GameObject quest;
     public int id;
     // Start is called before the first frame update
@@ -14,8 +13,6 @@ public class Quest : MonoBehaviour
     {
         if (player.GetComponent<Items>().LoadMission(id).missionActive){
             CloseQuest();
-        }else{
-            //colisor.enabled = true;
         }
     }
 
@@ -35,6 +32,5 @@ public class Quest : MonoBehaviour
     public void CloseQuest()
     {
         quest.GetComponent<ActivateChallenge>().DesactiveQuest();
-        //colisor.enabled = false;
     }
 }

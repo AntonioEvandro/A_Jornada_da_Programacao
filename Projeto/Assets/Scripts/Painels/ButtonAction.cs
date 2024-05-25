@@ -7,19 +7,14 @@ using UnityEngine.UI;
 public class ButtonAction : MonoBehaviour
 {
     public GameObject player;
-    //private CircleCollider2D colisor;
     public GameObject botaoAcao;
     public int idDialogo;
     public int idQuest;
-    // Start is called before the first frame update
-    void Start()
-    {
-        //colisor = GetComponent<CircleCollider2D>();
-    }
+    
     // Função para mostrar o botão de ação enquanto estiver perto da quest
     private void OnTriggerStay2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player") && Input.GetKey(KeyCode.F))
         {
             if (idDialogo == 0){
                 if (player.GetComponent<Items>().LoadDialogue(idDialogo)){
@@ -45,16 +40,16 @@ public class ButtonAction : MonoBehaviour
         }
     }
     // Função para ocultar o botão de ação depois que for clicado
-    public void ButtonClick(){
+    public void BtnClick(){
         botaoAcao.SetActive(false);
         player.GetComponent<Items>().SaveDialogue(idQuest);
         GetComponent<ActivateChallenge>().ActiveQuest();
     }
+    // Ativa o botão de ação e envia a função BtnClick para ele
     public void Send4Button(){
         botaoAcao.SetActive(true);
-        // Envia uma função para o botão de ação
         Button btn = botaoAcao.GetComponent<Button>();
         btn.onClick.RemoveAllListeners();
-        btn.onClick.AddListener(ButtonClick);
+        btn.onClick.AddListener(BtnClick);
     }
 }
