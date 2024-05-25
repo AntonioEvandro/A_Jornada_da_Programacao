@@ -11,7 +11,7 @@ public class ButtonAction : MonoBehaviour
     public GameObject painelUI;
     public int idDialogo;
     public int idQuest;
-    private GameObject bt = new();
+    private GameObject bt;
     
     // Função para mostrar o botão de ação enquanto estiver perto da quest
     private void OnTriggerEnter2D(Collider2D other)
@@ -24,11 +24,9 @@ public class ButtonAction : MonoBehaviour
                     Send4Button();
                 }
             }else if(idDialogo > 0){
-                if(!player.GetComponent<Items>().LoadDialogue(idDialogo-1) || player.GetComponent<Items>().LoadDialogue(idDialogo)){
-                    GetComponent<Collider2D>().enabled = false;
-                    botaoAcao.SetActive(false);
-                }else{
-                    Send4Button();}
+                if(player.GetComponent<Items>().LoadDialogue(idDialogo-1) && !player.GetComponent<Items>().LoadDialogue(idDialogo)){
+                    Send4Button();
+                }
             }else{
                 Debug.Log("Ops! Houve um erro.");
             }
@@ -38,7 +36,7 @@ public class ButtonAction : MonoBehaviour
     private void OnTriggerExit2D(Collider2D other)
     {
         if(other.gameObject.CompareTag("Player")){
-            botaoAcao.SetActive(false);
+            Destroy(bt);
         }
     }
     // Função para ocultar o botão de ação depois que for clicado
@@ -50,7 +48,7 @@ public class ButtonAction : MonoBehaviour
     // Ativa o botão de ação e envia a função BtnClick para ele
     public void Send4Button(){
         bt = Instantiate(botaoAcao);
-        bt.transform.SetParent(painelUI.transform);
+        bt.transform.SetParent(painelUI.transform,false);
         bt.SetActive(true);
         bt.GetComponent<Button>().onClick.RemoveAllListeners();
         bt.GetComponent<Button>().onClick.AddListener(BtnClick);
