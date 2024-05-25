@@ -11,6 +11,7 @@ public class ButtonAction : MonoBehaviour
     public GameObject painelUI;
     public int idDialogo;
     public int idQuest;
+    private GameObject bt = new();
     
     // Função para mostrar o botão de ação enquanto estiver perto da quest
     private void OnTriggerEnter2D(Collider2D other)
@@ -42,17 +43,17 @@ public class ButtonAction : MonoBehaviour
     }
     // Função para ocultar o botão de ação depois que for clicado
     public void BtnClick(){
-        botaoAcao.SetActive(false);
+        bt.SetActive(false);
         player.GetComponent<Items>().SaveDialogue(idDialogo);
         GetComponent<ActivateChallenge>().ActiveQuest();
     }
     // Ativa o botão de ação e envia a função BtnClick para ele
     public void Send4Button(){
-        Instantiate(botaoAcao).transform.parent = painelUI.transform;
-        botaoAcao.SetActive(true);
-        Button btn = botaoAcao.GetComponent<Button>();
-        btn.onClick.RemoveAllListeners();
-        btn.onClick.AddListener(BtnClick);
+        bt = Instantiate(botaoAcao);
+        bt.transform.SetParent(painelUI.transform);
+        bt.SetActive(true);
+        bt.GetComponent<Button>().onClick.RemoveAllListeners();
+        bt.GetComponent<Button>().onClick.AddListener(BtnClick);
         if(Input.GetKey(KeyCode.F)){
             BtnClick();
         }
