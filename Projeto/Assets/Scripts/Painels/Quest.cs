@@ -13,6 +13,8 @@ public class Quest : MonoBehaviour
     {
         if (player.GetComponent<Items>().LoadMission(id).missionActive){
             CloseQuest();
+        }else{
+            quest.GetComponent<ActivateChallenge>().ActiveQuest();
         }
     }
 
@@ -23,8 +25,8 @@ public class Quest : MonoBehaviour
 
     public void RigthOption()
     {
-        player.GetComponent<Items>().SaveMission(id);
         CloseQuest();
+        player.GetComponent<Items>().SaveMission(id);
         player.GetComponent<Items>().SaveCoins(10, true);
         Debug.Log("<color=blue>Resposta correta!!!</color>");
     }

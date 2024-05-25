@@ -17,7 +17,7 @@ public class QuestInstitute : MonoBehaviour
 
     public void WrongOption()
     {
-        player.gameObject.GetComponent<HeartSystem>().DiminuirVida();
+        player.GetComponent<HeartSystem>().DiminuirVida();
     }
 
     public void RigthOption()
