@@ -7,6 +7,7 @@ public class Quest : MonoBehaviour
 {
     public GameObject player;
     public Collider2D colisor;
+    public GameObject quest;
     public int id;
     // Start is called before the first frame update
     void Start()
@@ -33,7 +34,7 @@ public class Quest : MonoBehaviour
     
     public void CloseQuest()
     {
-        player.GetComponent<ActivateChallenge>().DesactiveQuest();
+        quest.GetComponent<ActivateChallenge>().DesactiveQuest();
         //colisor.enabled = false;
     }
 }

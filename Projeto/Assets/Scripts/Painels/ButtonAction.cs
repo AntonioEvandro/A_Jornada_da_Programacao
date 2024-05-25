@@ -54,7 +54,7 @@ public class ButtonAction : MonoBehaviour
         botaoAcao.SetActive(true);
         // Envia uma função para o botão de ação
         Button btn = botaoAcao.GetComponent<Button>();
-        btn.onClick.RemoveListener(ButtonClick);
+        btn.onClick.RemoveAllListeners();
         btn.onClick.AddListener(ButtonClick);
     }
 }
