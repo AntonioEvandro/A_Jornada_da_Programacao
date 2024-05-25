@@ -14,7 +14,7 @@ public class ButtonAction : MonoBehaviour
     // Função para mostrar o botão de ação enquanto estiver perto da quest
     private void OnTriggerStay2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Player") && Input.GetKey(KeyCode.F))
+        if (other.gameObject.CompareTag("Player"))
         {
             if (idDialogo == 0){
                 if (player.GetComponent<Items>().LoadDialogue(idDialogo)){
@@ -51,5 +51,8 @@ public class ButtonAction : MonoBehaviour
         Button btn = botaoAcao.GetComponent<Button>();
         btn.onClick.RemoveAllListeners();
         btn.onClick.AddListener(BtnClick);
+        if(Input.GetKey(KeyCode.F)){
+            BtnClick();
+        }
     }
 }
