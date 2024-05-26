@@ -4,10 +4,19 @@ using UnityEngine;
 
 public class QuestInstitute : MonoBehaviour
 {
-    public GameObject player;
-    public GameObject quest;
+    [Header("Player")]
+    [Tooltip("Variável para pegar as funções dos scripts no player.\n")]
+    [SerializeField]
+    private GameObject player;
+    
+    [Header("Tela do desafio")]
+    [Tooltip("Variável para pegar o canva da referente quest.")]
+    [SerializeField]
+    private GameObject quest;
+    
+    [Header("ID")]
+    [Tooltip("ID da missão.")]
     public int id;
-    // Start is called before the first frame update
     void Start()
     {
         if (!player.GetComponent<Items>().LoadMission(id-1).missionActive || player.GetComponent<Items>().LoadMission(id).missionActive){
