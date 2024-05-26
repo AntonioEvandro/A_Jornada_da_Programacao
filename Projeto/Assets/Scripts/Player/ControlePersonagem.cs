@@ -11,8 +11,8 @@ public class ControlePersonagem : MonoBehaviour
     private float velocidade = 5f;
     [SerializeField]
     private Rigidbody2D rb;
-    [Space(10)]
-    [Header("Animação")]
+    [Space(15)]
+    [Tooltip("Controle de animações do player")]
     [SerializeField]
     private Animator animator;
 
@@ -21,6 +21,7 @@ public class ControlePersonagem : MonoBehaviour
     [SerializeField]
     private Transform npc;
 
+    [Space(13)]
     [Tooltip("Sistema de diálogo")]
     public DialogueSystem dialogueSystem;
 
