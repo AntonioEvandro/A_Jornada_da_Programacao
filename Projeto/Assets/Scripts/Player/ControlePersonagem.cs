@@ -48,7 +48,7 @@ public class ControlePersonagem : MonoBehaviour
         }
         else
         {
-            // Congela o personagem quando o jogo est� pausado ou a caixa de diálogo está ativa
+            // Congela o personagem quando o jogo está pausado ou a caixa de diálogo está ativa
             movimento = Vector2.zero;
             rb.velocity = Vector2.zero;
         }
