@@ -39,6 +39,9 @@ Zezinho:
  Estou precisando levar esses potes até minha casa, mas eles estão fazendo meu carrinho balançar de um jeito estranho. Me ajuda a deixar os potes com pesos iguais para o carrinho não virar.
 Laida:
  Certo vamos ver como distribuir o peso.
+
+[Após responder corretamente]
+
 Zezinho:
  Obrigado pela ajuda moça!
  Aqui uma ajudinha pra você.
@@ -51,10 +54,10 @@ Laida:
 
 	[Diálogo com T.A.B. 02]
 T.A.B.:
- Com essas moedas ganhas você podera adiquirir ajudas para facilitar as questões, mais pra frente a gente utilizará isso.
+ Com essas moedas ganhas você poderá adiquirir ajudas para facilitar nas resoluções das questões, mais pra frente a gente utilizará elas.
  Vamos continuar.
 Laida:
- Tá certo.
+ Certo!
 
 	[Diálogo com T.A.B. 03]
 T.A.B.:
@@ -110,8 +113,8 @@ Laida:
 Estranho:
  Sou francisco, o Seu Chico. Mas se preferir apenas Chico.
 Chico:
- O melhor mercador mercador desta ilha!
- O único na verdade.
+ O melhor mercador desta ilha!
+ -O único na verdade.-
  Alta qualidade e baixos preços é comigo mesmo.
 Laida:
  Vamos logo ao que interessa.
@@ -193,11 +196,20 @@ T.A.B.:
  Precisa de algo?
 Laida:
  Esqueci de perguntar a Maria, mas...
- pode me dizer o que seria esse tal instituto?
 T.A.B.:
- Um local exclusivo onde alguns programadores se reunem e trocam conhecimentos.
- Eles aceitam desde iniciantes a profissionais.
- E para ser aceita você deve responder alguns questionamentos e estará apta a participar dele.
+quer voltar e perguntar a ela?
+Laida:
+ Acabei de me despedir dela
+não quero mais incomodá-la.
+T.A.B.:
+ Então o que você quer saber?
+Laida:
+ Pode me dizer o que seria esse tal instituto?
+T.A.B.:
+Ah, era isso.
+ O instituto é um lugar exclusivo para alguns programadores se reunirem e trocar conhecimentos.
+ Eles aceitam desde iniciantes a profissionais, mas só se tiverem algum tipo de interesse e se o candidato estiver realmente disposto.
+ Atualmente para ser aceita você deve responder alguns questionamentos e estará apta a participar dele.
 Laida:
  Simples assim?
 T.A.B.:
@@ -207,9 +219,10 @@ Laida:
 T.A.B.:
  Estão em manutenção indefenida.
 Laida:
- O que haverá após a reforma?
+ O que haverá após essa manutenção?
 T.A.B.:
  Estará liberado a entrada para os visitantes e participantes.
+ Mas as demais atividades ainda serão exclusivas.
  Será tipo uma versão 2.0
  Continue a resolver os desafios daqui, no futuro terá mais caminhos a se explorar.
 Laida:
