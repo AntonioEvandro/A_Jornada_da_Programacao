@@ -9,9 +9,9 @@ public class ControlePersonagem : MonoBehaviour
     [SerializeField]
     [Range(2.0f, 15.0f)]
     private float velocidade = 5f;
-    [Header("Movimentação")]
     [SerializeField]
     private Rigidbody2D rb;
+    [Space(10)]
     [Header("Animação")]
     [SerializeField]
     private Animator animator;
@@ -21,7 +21,7 @@ public class ControlePersonagem : MonoBehaviour
     [SerializeField]
     private Transform npc;
 
-    [Header("Sistema de diálogo")]
+    [Tooltip("Sistema de diálogo")]
     public DialogueSystem dialogueSystem;
 
     Vector2 movimento;
