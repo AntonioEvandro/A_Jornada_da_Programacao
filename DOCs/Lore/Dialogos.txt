@@ -2,12 +2,13 @@
 
  Olá ilha mundo!
  Finalmente cheguei aqui.
- Agora posso iniciar minha carreira como desenvolvedora.
+ Agora posso dar inicio ao meu sonho.
 
-	[Diálogo com T.A.B.]
+	[Diálogo com T.A.B. 00]
 Estranho: 
- Seja bem vinda a ilha mundo, Laida!
+ Olá! Laida.
  Fiquei sabendo que viria, eu me chamo Tab!
+ Seja muito bem vinda a ilha mundo!
 Laida:
  Prazer em conhece-lo!
 T.A.B.:
@@ -16,7 +17,7 @@ T.A.B.:
 Laida:
  Vamos nessa!
 
-	[Desafio 00]
+	[Diálogo com T.A.B. 01]
 T.A.B.:
  Olha lá na frente.
 Laida:
@@ -24,6 +25,7 @@ Laida:
 T.A.B.:
  Parece ser seu primeiro desafio, vamos lá.
 
+	[Desafio 00]
 Garoto na estrada:
  Moça, pode me dar uma ajudinha?
 Laida:
@@ -37,29 +39,30 @@ Zezinho:
  Estou precisando levar esses potes até minha casa, mas eles estão fazendo meu carrinho balançar de um jeito estranho. Me ajuda a deixar os potes com pesos iguais para o carrinho não virar.
 Laida:
  Certo vamos ver como distribuir o peso.
-Joãozinho:
+Zezinho:
  Obrigado pela ajuda moça!
  Aqui uma ajudinha pra você.
 Laida:
  Não precisava.
-Joãozinho:
+Zezinho:
  Até mais!
 Laida:
  Até!
 
-	[Diálogo com T.A.B. 2]
+	[Diálogo com T.A.B. 02]
 T.A.B.:
  Com essas moedas ganhas você podera adiquirir ajudas para facilitar as questões, mais pra frente a gente utilizará isso.
  Vamos continuar.
 Laida:
  Tá certo.
 
-	[Desafio 01]
+	[Diálogo com T.A.B. 03]
 T.A.B.:
  Olha, mais alguém pra ajudar, vamos lá.
 Laida:
  Nem precisa falar.
 
+	[Desafio 01]
 Estranho:
  Olá jovenzinha! Eu me chamo João, e estou precisando de ajuda.
 Laida:
@@ -165,8 +168,8 @@ Maria:
  Pode resolver a minha questão?
 Laida:
  Com certeza!
-Maria:
- 
+
+ [Após responder corretamente]
 Maria:
  Sim, está certo!
  Como rescompensa, aceite este pequeno pagamento!
@@ -182,13 +185,15 @@ Maria:
 Laida:
  Digo o mesmo, até mais!
 
-	[Diálogo com T.A.B.]
+	[Diálogo com T.A.B. 04]
 Laida:
- T.A.B. tá aí?
+ T.A.B., tá aí?
 T.A.B.:
- Sempre! Precisa de algo?
+ Sempre!
+ Precisa de algo?
 Laida:
- Esqueci de perguntar a Maria, mas você pode me dizer o que seria esse tal instituto?
+ Esqueci de perguntar a Maria, mas...
+ pode me dizer o que seria esse tal instituto?
 T.A.B.:
  Um local exclusivo onde alguns programadores se reunem e trocam conhecimentos.
  Eles aceitam desde iniciantes a profissionais.
@@ -225,11 +230,15 @@ Laida:
  Estou pronta!
 Atendente:
  Primeiro...
-
+ {
+[inicia no desafio 04]
+[após acertar a resposta]
 Atendente:
  Correto!
  Próximo...
-
+[repete até o último desafio]
+}
+[Depois do último desafio]
 Atendente:
  Ótimo!
  Você está qualificada para ser um de nossos memoráveis participantes. 
@@ -237,19 +246,26 @@ Atendente:
  Quando tudo estiver pronto volte para a cerimônia de aprovação.
  Isso é tudo!
 Laida:
+ Pois é...
+ Fiquei sabendo dessa "Versão 2.0"
  Mas haverá mais desafios para concluir na ilha?
 Atendente:
- Provavelmente sim.
- Vá se encontrar com os demais residentes e veja por si só.
+ Não sei como te responder.
+ Vá se encontrar com os demais residentes e descubra por si só.
+ Caso não haja espere essa tal "2.0".
 Laida:
- Farei isso, foi uma honra senhor atendente!
+ -risos-
+ Você não é tão chato como pensava.
+ Mas farei isso.
+ Foi uma honra senhor atendente!
 Atendente:
- Por favor, senhor atendente não!
- Antonio! No mais, é isso até outro momento.
+ Por favor, "senhor atendente" não!
+ Antonio!
+ No mais, é isso até outro momento.
 Laida:
  Até breve!
 
-	[Diálogo com T.A.B. 3]
+	[Diálogo com T.A.B. 05]
 T.A.B.:
  Laida.
 Laida:
@@ -266,4 +282,10 @@ T.A.B.:
 Laida:
  Você também. 
 
-
+	[Ultimo Monólogo Laida]:(
+Laida:
+ Bem, a experiência foi curta.
+ Pelo menos deu pra aproveitar algo.
+ Espero que as mudanças venham logo.
+ ...
+ Mal posso esperar.
