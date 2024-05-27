@@ -7,9 +7,12 @@ public class GameOver : MonoBehaviour
 {
     [SerializeField] private string newGame;
     [SerializeField] private GameObject player;
+    [SerializeField] 
+    private GameObject gameManager;
     
     public void Jogar ()
     {
+        gameManager.GetComponent<SwitchPanels>().NewGame();
         player.GetComponent<SaveLoad>().TryAgain();
         SceneManager.LoadScene(newGame);
     }

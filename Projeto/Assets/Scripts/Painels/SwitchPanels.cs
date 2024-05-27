@@ -12,7 +12,7 @@ public class SwitchPanels : MonoBehaviour
     public GameObject dialogueBox;
     public GameObject quests;
     public GameObject market;
-    public GameObject gameOver;
+    public Transform gameOver;
     private bool isGamePaused;
     // Start is called before the first frame update
     void Start()
@@ -67,6 +67,21 @@ public class SwitchPanels : MonoBehaviour
         TogglePauseState(false);
         panelUI.SetActive(true);
         HUD.enabled = true;
+    }
+    // Função para a tela de game over
+    public void GameOver(){
+        gameOver.gameObject.SetActive(true);
+        TogglePauseState(true);
+        panelUI.SetActive(false );
+        HUD.enabled = false;
+        quests.SetActive(false);
+    }
+    public void NewGame(){
+        gameOver.gameObject.SetActive(false);
+        TogglePauseState(false);
+        panelUI.SetActive(true );
+        HUD.enabled = true;
+        quests.SetActive(true);
     }
     private void TogglePauseState(bool pause)
     {

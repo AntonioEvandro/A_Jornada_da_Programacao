@@ -5,7 +5,7 @@ using UnityEngine;
 public class QuestInstitute : MonoBehaviour
 {
     [Header("Player")]
-    [Tooltip("Variável para pegar as funções dos scripts no player.\n")]
+    [Tooltip("Variável para pegar as funções dos scripts no player.")]
     [SerializeField]
     private GameObject player;
     
