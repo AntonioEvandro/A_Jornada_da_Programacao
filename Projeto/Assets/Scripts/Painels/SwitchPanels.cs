@@ -79,6 +79,8 @@ public class SwitchPanels : MonoBehaviour
     public void TimeOn(){
         TogglePauseState(false);
     }
+
+    // Alternador de estado de tempo do jogo
     private void TogglePauseState(bool pause)
     {
         if (pause){
