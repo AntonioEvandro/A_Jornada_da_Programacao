@@ -17,7 +17,7 @@ public class HeartSystem : MonoBehaviour
 */
     void Start()
     {
-        NoLife();
+        StartCoroutine (VerificarVida());
     }
     public void DiminuirVida()
     {
@@ -37,5 +37,9 @@ public class HeartSystem : MonoBehaviour
             gameOver.GetComponent<SwitchPanels>().GameOver();
             //Quests.SetActive(false);
         }
+    }
+    IEnumerator VerificarVida(){
+        yield return new WaitForSeconds(0.05f);
+        NoLife();
     }
 }

@@ -68,20 +68,23 @@ public class SwitchPanels : MonoBehaviour
         panelUI.SetActive(true);
         HUD.enabled = true;
     }
-    // Função para a tela de game over
+    // Funções para a tela de game over
     public void GameOver(){
         gameOver.gameObject.SetActive(true);
         TogglePauseState(true);
         panelUI.SetActive(false );
         HUD.enabled = false;
         quests.SetActive(false);
-    }
+    }/*
     public void NewGame(){
         gameOver.gameObject.SetActive(false);
         TogglePauseState(false);
         panelUI.SetActive(true );
         HUD.enabled = true;
         quests.SetActive(true);
+    }*/
+    public void TimeOn(){
+        TogglePauseState(false);
     }
     private void TogglePauseState(bool pause)
     {
