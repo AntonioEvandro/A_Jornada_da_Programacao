@@ -30,7 +30,7 @@ public class SwitchPanels : MonoBehaviour
         }else if(Input.GetKey(KeyCode.Escape) && market.transform.gameObject.activeSelf){
             MarketOff();
         }
-        //esses if's de mercado abaixo é apenas para desenvolvimento, apague/comente depois que der certo
+        // Abaixo os if's de mercado são apenas para desenvolvimento, apague/comente depois que der certo
         if (Input.GetKeyDown(KeyCode.M) && !pauseMenu.transform.gameObject.activeSelf && !isGamePaused){
             MarketOn();
         }else if(Input.GetKeyDown(KeyCode.M) && !pauseMenu.transform.gameObject.activeSelf && isGamePaused){

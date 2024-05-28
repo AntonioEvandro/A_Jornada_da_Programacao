@@ -10,11 +10,6 @@ public class HeartSystem : MonoBehaviour
     [Tooltip("Chama a função GameOver\n dentro do script SwitchPanels.cs \npara habilitar a tela de fim de jogo.")]
     [SerializeField]
     private GameObject gameOver;
-/*
-    [Header("Desafios")]
-    [Tooltip("Tela de desafios")]
-    public GameObject Quests;
-*/
     void Start()
     {
         StartCoroutine (VerificarVida());
@@ -35,7 +30,6 @@ public class HeartSystem : MonoBehaviour
         {
             Debug.Log("<color=black>Fim de jogo!</color>");
             gameOver.GetComponent<SwitchPanels>().GameOver();
-            //Quests.SetActive(false);
         }
     }
     IEnumerator VerificarVida(){
