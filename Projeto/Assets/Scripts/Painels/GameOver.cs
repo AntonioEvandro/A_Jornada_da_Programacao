@@ -12,7 +12,6 @@ public class GameOver : MonoBehaviour
     
     public void Jogar ()
     {
-        //gameManager.GetComponent<SwitchPanels>().NewGame();
         gameManager.GetComponent<SwitchPanels>().TimeOn();
         player.GetComponent<SaveLoad>().TryAgain();
         SceneManager.LoadScene(newGame);

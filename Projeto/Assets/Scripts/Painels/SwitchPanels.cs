@@ -75,14 +75,7 @@ public class SwitchPanels : MonoBehaviour
         panelUI.SetActive(false );
         HUD.enabled = false;
         quests.SetActive(false);
-    }/*
-    public void NewGame(){
-        gameOver.gameObject.SetActive(false);
-        TogglePauseState(false);
-        panelUI.SetActive(true );
-        HUD.enabled = true;
-        quests.SetActive(true);
-    }*/
+    }
     public void TimeOn(){
         TogglePauseState(false);
     }
