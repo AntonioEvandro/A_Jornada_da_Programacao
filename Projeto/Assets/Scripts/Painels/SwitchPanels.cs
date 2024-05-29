@@ -7,6 +7,7 @@ public class SwitchPanels : MonoBehaviour
     [Header("Paineis e canvas")]
     [Tooltip("Variáveis para telas")]
     public Canvas HUD;
+    public GameObject AidsHUD;
     public GameObject pauseMenu;
     public GameObject panelUI;
     public GameObject dialogueBox;
@@ -59,12 +60,16 @@ public class SwitchPanels : MonoBehaviour
     public void MarketOn(){
         market.SetActive(true);
         TogglePauseState(true);
+        quests.transform.gameObject.SetActive(false);
+        dialogueBox.transform.gameObject.SetActive(false);
         panelUI.SetActive(false);
         HUD.enabled = false;
     }
     public void MarketOff(){
         market.SetActive(false);
         TogglePauseState(false);
+        quests.transform.gameObject.SetActive(true);
+        dialogueBox.transform.gameObject.SetActive(true);
         panelUI.SetActive(true);
         HUD.enabled = true;
     }

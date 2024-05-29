@@ -158,16 +158,16 @@ public class Items : MonoBehaviour
     public void ItemsHUD(){
         lifesTextHUD.text = LoadLifes().ToString();
         coinsTextHUD.text = LoadCoins().ToString();
-        //tipsTextHUD.text = LoadTips().ToString();
-        //adviceTextHUD.text = LoadAdvices().ToString();
-        //m2TextHUD.text = LoadMinus2().ToString();
+        tipsTextHUD.text = "x" + LoadTips().ToString();
+        adviceTextHUD.text = "x" + LoadAdvices().ToString();
+        m2TextHUD.text = "x" + LoadMinus2().ToString();
     }
     public void ItemsUI(){
         lifesTextUI.text = LoadLifes().ToString();
         coinsTextUI.text = LoadCoins().ToString();
-        //tipsTextUI.text = LoadTips().ToString();
-        //adviceTextUI.text = LoadAdvices().ToString();
-        //m2TextUI.text = LoadMinus2().ToString();
+        tipsTextUI.text = LoadTips().ToString();
+        adviceTextUI.text = LoadAdvices().ToString();
+        m2TextUI.text = LoadMinus2().ToString();
     }
     public void ItemsGUI(){
         lifesTextGUI.text = LoadLifes().ToString();
