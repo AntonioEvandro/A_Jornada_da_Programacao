@@ -14,5 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogues:
   - name: Laida
-    words:
-    - "Ol\xE1"
+    lines:
+    - "Ol\xE1 ilha"
+    - 2
+  - name: sla
+    lines:
+    - 0
+    - 1

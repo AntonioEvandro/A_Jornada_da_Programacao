@@ -40,7 +40,7 @@ public class DialogSystem : MonoBehaviour
     }
 
     public void NextLine(){
-        if (Lines.Count > 0){
+        if (Lines.Count == 0){
             if(lineIndex < currentDialog.dialogues.Length){
                 //Coloca o nome do personagem na caixa de diálogo
                 nameCharacter.text = currentDialog.dialogues[lineIndex].name;

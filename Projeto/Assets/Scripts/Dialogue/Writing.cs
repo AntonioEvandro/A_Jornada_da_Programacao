@@ -25,7 +25,7 @@ public class Writing : MonoBehaviour
         "Variável para velocidade de digitação.\nPor padrão é 0,02.\nMude nos testes, se quiser."
     )]
     [SerializeField]
-    [Range(0.01f, 1.0f)]
+    [Range(0.01f, 0.5f)]
     private float typingSpeed = 0.2f;
     public bool ItsShow { get; private set; }
     private IEnumerator effectCoroutine;
