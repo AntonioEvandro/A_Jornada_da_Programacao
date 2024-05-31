@@ -44,7 +44,7 @@ public class DialogSystem : MonoBehaviour
     private Dialog currentDialog;
     private int lineIndex;
     private Queue<string> Lines;
-    private bool btnNext = true;
+    private bool btnNext;
     // Update is called once per frame
     void Update()
     {
@@ -95,6 +95,7 @@ public class DialogSystem : MonoBehaviour
         animator.Play("DialogBoxExit");
         yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
         dialogueBox.SetActive(false);
+        btnNext = true;
         player.GetComponent<ControlePersonagem>().UnBlockMovent();
     }
 
@@ -106,7 +107,7 @@ public class DialogSystem : MonoBehaviour
     }
     // Tecla de pular linhas de diálogos
     public void KeyNext(){
-        if(Input.GetKeyDown(KeyCode.Return) && btnNext){
+        if(Input.GetKeyDown(KeyCode.Return) && btnNext && dialogueBox.activeSelf){
             NextLine();
         }
     }
