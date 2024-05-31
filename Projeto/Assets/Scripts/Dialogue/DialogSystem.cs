@@ -5,35 +5,38 @@ using UnityEngine;
 
 public class DialogSystem : MonoBehaviour
 {
-    [Header("Player")]
+    [Space(20)]
     [Tooltip(
         "Objeto para obter a função de salvar diálogo e bloquer o movimento do player"
     )]
     [SerializeField]
     private GameObject player;
 
-    [Header("Dialog ID")]
+    [Space(15)]
+
     [Tooltip("Id do diálogo, recebido pelo botão")]
     public int id;
 
     [Space(15)]
 
     [SerializeField]
-    [Header("Dialog box")]
     [Tooltip("Caixa de diálogo para aparecer os elementos da conversa")]
     private GameObject dialogueBox;
+    
+    [Space(15)]
 
-    [Header("Writing Script")]
     [Tooltip("Script para exibir texto linha por linha")]
     [SerializeField]
     private Writing writing;
+    
+    [Space(15)]
 
-    [Header("Animation")]
     [Tooltip("Animações de entrada e saida da caixa de diálogo")]
     [SerializeField]
     private Animator animator;
 
-    [Header("Character name")]
+    [Space(15)]
+    
     [Tooltip("Texto para por o nome do personagem que está falando")]
     [SerializeField]
     private TextMeshProUGUI nameCharacter;

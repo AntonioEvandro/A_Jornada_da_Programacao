@@ -6,23 +6,13 @@ using UnityEngine;
 
 public class Writing : MonoBehaviour
 {
-/*    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }*/
+    [Space(15)]
     [SerializeField]
     private TextMeshProUGUI text;
     
     [Header("Digitação")]
     [Tooltip(
-        "Variável para velocidade de digitação.\nPor padrão é 0,02.\nMude nos testes, se quiser."
+        "Variável para ajustar velocidade de digitação.\nQuanto menor o valor mais rápido será a exibição.\nPor padrão é 0.02, mas pode mudar nos testes."
     )]
     [SerializeField]
     [Range(0.01f, 0.5f)]
