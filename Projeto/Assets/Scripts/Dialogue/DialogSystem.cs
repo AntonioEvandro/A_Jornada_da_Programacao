@@ -22,6 +22,10 @@ public class DialogSystem : MonoBehaviour
     [Header("Dialog box")]
     [Tooltip("Caixa de diálogo para aparecer os elementos da conversa")]
     private GameObject dialogueBox;
+
+    [Header("Writing Script")]
+    [Tooltip("Script para exibir texto linha por linha")]
+    [SerializeField]
     private Writing writing;
 
     [Header("Animation")]
@@ -38,23 +42,10 @@ public class DialogSystem : MonoBehaviour
     private int lineIndex;
     private Queue<string> Lines;
     private bool btnNext = true;
-   
-    // Start is called before the first frame update
-    void Start()
-    {
-        writing = GetComponent<Writing>();
-    }
     // Update is called once per frame
     void Update()
     {
-        KeyNext();/*
-        if(dialogueBox.activeSelf){
-            if(!player.GetComponent<Items>().LoadMission(id).missionActive){
-                
-            }else{
-                Debug.Log("Diálogo já foi exibido!");
-            }
-        }*/
+        KeyNext();
     }
 
     public void StartDialog(Dialog dialog){
