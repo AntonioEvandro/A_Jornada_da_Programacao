@@ -11,6 +11,7 @@ public class ControlePersonagem : MonoBehaviour
     private float velocidade = 5f;
     [SerializeField]
     private Rigidbody2D rb;
+    private bool blockMove = false;
     [Space(15)]
     [Tooltip("Controle de animações do player")]
     [SerializeField]
@@ -23,14 +24,13 @@ public class ControlePersonagem : MonoBehaviour
 
     [Space(13)]
     [Tooltip("Sistema de diálogo")]
-    public DialogueSystem dialogueSystem;
 
     Vector2 movimento;
 
     void Update()
     {
         // Verifica se o jogo não está pausado
-        if (Time.timeScale > 0 && !dialogueSystem.IsDialogueActive())
+        if (Time.timeScale > 0 && !blockMove)
         {
             movimento.x = Input.GetAxisRaw("Horizontal");
             movimento.y = Input.GetAxisRaw("Vertical");
@@ -53,13 +53,11 @@ public class ControlePersonagem : MonoBehaviour
             movimento = Vector2.zero;
             rb.velocity = Vector2.zero;
         }
-
-        if (Mathf.Abs(transform.position.x - npc.position.x) < 2.0f && Time.timeScale > 0)
-        {
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                dialogueSystem.Next();
-            }
-        }
+    }
+    public void BlockMovent(){
+        blockMove = true;
+    }
+    public void UnBlockMovent(){
+        blockMove = false;
     }
 }

@@ -32,12 +32,15 @@ public class ButtonAction : MonoBehaviour
     [SerializeField]
     private State call;//chama determinada função
     private GameObject bt;
+    private bool playerInRange = false; // Adicionado para rastrear se o jogador está no range
+    private bool FKeyPressed = false; // Adicionado para rastrear se a tecla F foi pressionada
     
     // Função para mostrar o botão de ação enquanto estiver perto da quest
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            playerInRange = true;
             switch (call){
                 case State.Quest://chama o desafio
                     if (id == 0){
@@ -74,6 +77,7 @@ public class ButtonAction : MonoBehaviour
     private void OnTriggerExit2D(Collider2D other)
     {
         if(other.gameObject.CompareTag("Player")){
+            playerInRange = false;
             Destroy(bt);
         }
     }
@@ -85,12 +89,13 @@ public class ButtonAction : MonoBehaviour
                 GetComponent<ActivateChallenge>().ActiveQuest();
                 break;
             case State.Dialog:
+                dialogManager.GetComponent<DialogSystem>().id = id;
                 dialogManager.GetComponent<DialogSystem>().StartDialog(dialog);
-                player.GetComponent<Items>().SaveDialogue(id);
                 break;
             case State.Market:
                 break;
         }
+        FKeyPressed = false; // Define a tecla F como não pressionada após chamar BtnClick()
     }
     // Ativa o botão de ação e envia a função BtnClick para ele
     public void Send4Button(){
@@ -99,8 +104,25 @@ public class ButtonAction : MonoBehaviour
         bt.SetActive(true);
         bt.GetComponent<Button>().onClick.RemoveAllListeners();
         bt.GetComponent<Button>().onClick.AddListener(BtnClick);
-        if(Input.GetKey(KeyCode.F)){
+        /*if(Input.GetKey(KeyCode.F)){
+            BtnClick();
+        }*/
+    }
+
+    /*private void OnTriggerStay2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Player") && bt != null && Input.GetKeyDown(KeyCode.F))
+        {
+            Debug.Log("Clicado!");
             BtnClick();
         }
+    }*/
+    void Update(){
+        if (playerInRange && bt != null && Input.GetKeyDown(KeyCode.F) && !FKeyPressed)
+        {
+            BtnClick();
+            FKeyPressed = true; // Define a tecla F como pressionada após chamar BtnClick()
+        }
+        
     }
 }

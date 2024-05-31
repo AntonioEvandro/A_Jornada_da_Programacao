@@ -7,6 +7,7 @@ public class SwitchPanels : MonoBehaviour
     [Header("Paineis e canvas")]
     [Tooltip("Variáveis para telas")]
     public Canvas HUD;
+    public Canvas GUI;
     public GameObject AidsHUD;
     public GameObject pauseMenu;
     public GameObject panelUI;
@@ -19,14 +20,22 @@ public class SwitchPanels : MonoBehaviour
     void Start()
     {
         HUD.gameObject.SetActive(true);
+        GUI.gameObject.SetActive(true);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && !market.transform.gameObject.activeSelf && !isGamePaused){
+        /*/ Caixa de diálogo
+        if (dialogueBox.activeSelf && !market.transform.gameObject.activeSelf && !gameOver.gameObject.activeSelf && !isGamePaused){
+            TogglePauseState(true);
+        }else if(!dialogueBox.activeSelf && !market.transform.gameObject.activeSelf && !gameOver.gameObject.activeSelf && isGamePaused){
+            TogglePauseState(false);
+        }*/
+        // Exibir/Ocultar tela de pausa
+        if (Input.GetKeyDown(KeyCode.Escape) && !market.transform.gameObject.activeSelf && !gameOver.gameObject.activeSelf && !isGamePaused){
             PauseMenuOn();
-        }else if(Input.GetKeyDown(KeyCode.Escape) && !market.transform.gameObject.activeSelf && isGamePaused){
+        }else if(Input.GetKeyDown(KeyCode.Escape) && !market.transform.gameObject.activeSelf && !gameOver.gameObject.activeSelf && isGamePaused){
             PauseMenuOff();
         }else if(Input.GetKey(KeyCode.Escape) && market.transform.gameObject.activeSelf){
             MarketOff();
@@ -42,19 +51,21 @@ public class SwitchPanels : MonoBehaviour
     //Funções para mostrar/ocultar tela de pausa
     public void PauseMenuOn(){
         pauseMenu.SetActive(true);
-        TogglePauseState(true);
+        TogglePauseState(true);/*
         quests.transform.gameObject.SetActive(false);
-        dialogueBox.transform.gameObject.SetActive(false);
+        dialogueBox.transform.gameObject.SetActive(false);*/
         panelUI.SetActive(false);
         HUD.enabled = false;
+        GUI.enabled = false;
     }
     public void PauseMenuOff(){
         pauseMenu.SetActive(false);
-        TogglePauseState(false);
+        TogglePauseState(false);/*
         quests.transform.gameObject.SetActive(true);
-        dialogueBox.transform.gameObject.SetActive(true);
+        dialogueBox.transform.gameObject.SetActive(true);*/
         panelUI.SetActive(true);
         HUD.enabled = true;
+        GUI.enabled = true;
     }
     // Funçoes para mostrar/ocultar tela do mercado
     public void MarketOn(){
@@ -79,7 +90,8 @@ public class SwitchPanels : MonoBehaviour
         TogglePauseState(true);
         panelUI.SetActive(false );
         HUD.enabled = false;
-        quests.SetActive(false);
+        //quests.SetActive(false);
+        GUI.enabled=false;
     }
     public void TimeOn(){
         TogglePauseState(false);
