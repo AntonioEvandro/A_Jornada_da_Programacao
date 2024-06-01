@@ -10,14 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e7735d5c135e1304290904ce2ed47249, type: 3}
-  m_Name: MonoLogoLaida
+  m_Name: MonologoLaida
   m_EditorClassIdentifier: 
   dialogues:
   - name: Laida
     lines:
-    - "Ol\xE1 ilha"
-    - 2
-  - name: sla
+    - " Ol\xE1 ilha mundo!"
+    - "\r Finalmente cheguei aqui."
+    - "\r Agora posso dar inicio ao meu sonho."
+  - name: '?'
     lines:
-    - 0
-    - 1
+    - ' Por aqui.'
+  - name: Laida
+    lines:
+    - ' ...'
+  - name: '?'
+    lines:
+    - " R\xE1pido!"

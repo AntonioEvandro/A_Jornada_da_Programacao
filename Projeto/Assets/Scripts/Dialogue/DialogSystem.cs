@@ -25,8 +25,8 @@ public class DialogSystem : MonoBehaviour
     
     [Space(15)]
 
-    [Tooltip("Script para exibir texto linha por linha")]
-    [SerializeField]
+    /*[Tooltip("Script para exibir texto linha por linha")]
+    [SerializeField]*/
     private Writing writing;
     
     [Space(15)]
@@ -44,7 +44,13 @@ public class DialogSystem : MonoBehaviour
     private Dialog currentDialog;
     private int lineIndex;
     private Queue<string> Lines;
-    private bool btnNext;
+    private bool btnNext=true;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        writing = GetComponent<Writing>();
+    }
     // Update is called once per frame
     void Update()
     {

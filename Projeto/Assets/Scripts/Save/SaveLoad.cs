@@ -143,8 +143,8 @@ public class SaveLoad : MonoBehaviour
             };
             missoes[x] = aux;
         }
-        dialogos = new bool[tam*2+1];
-        for(x = 0; x < tam*2; x++){
+        dialogos = new bool[tam*3];
+        for(x = 0; x < tam*3-1; x++){
             dialogos[x] = false;
         }
         SaveGame();
@@ -158,8 +158,6 @@ public class SaveLoad : MonoBehaviour
         for(x=0; x<tam; x++){
             Debug.Log("<color=with> Missão " + load.missions[x].id + "</color> completa: " + load.missions[x].missionActive + ", Ajudas usadas: " + load.missions[x].aidsUsed + ",\n recomendação: " + load.missions[x].adviceUsed + ", dica: " + load.missions[x].tipsUsed + ", menos duas opções: " + load.missions[x].m2Used);
         }
-        for(x=0; x<tam*2; x++){
-            Debug.Log("<color=with> Diálogo </color>exibido: " + load.dialogue[x] + ".");
-        }
+        Debug.LogFormat("<color=black><size=14> Diálogos exibidos </size></color> <color=with> 01:</color> {0} <color=with>02:</color> {1} <color=with>03:</color> {2} <color=with>04:</color> {3} <color=with>05:</color> {4} <color=with>06:</color> {5} <color=with>07:</color> {6}\n <color=with>08:</color> {7} <color=with>09:</color> {8} <color=with>10:</color> {9} <color=with>11:</color> {10} <color=with>12:</color> {11} <color=with>13:</color> {12} <color=with>14:</color> {13} <color=with>15:</color> {14} <color=with>16:</color> {15} <color=with>17:</color> {16}\n <color=with>18:</color> {17} <color=with>19:</color> {18} <color=with>20:</color> {19} <color=with>21:</color> {20} <color=with>22:</color> {21} <color=with>23:</color> {22} <color=with>24:</color> {23} <color=with>25:</color> {24} <color=with>26:</color> {25} <color=with>27:</color> {26}\n ", load.dialogue[0], load.dialogue[1], load.dialogue[2], load.dialogue[3], load.dialogue[4], load.dialogue[5],load.dialogue[6],load.dialogue[7],load.dialogue[8],load.dialogue[9],load.dialogue[10],load.dialogue[11],load.dialogue[12],load.dialogue[13],load.dialogue[14],load.dialogue[15],load.dialogue[16],load.dialogue[17],load.dialogue[18],load.dialogue[19],load.dialogue[20],load.dialogue[21],load.dialogue[22],load.dialogue[23],load.dialogue[24],load.dialogue[25],load.dialogue[26]);
     }
 }

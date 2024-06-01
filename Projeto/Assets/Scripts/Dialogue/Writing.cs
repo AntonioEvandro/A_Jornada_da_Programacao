@@ -12,10 +12,10 @@ public class Writing : MonoBehaviour
     
     [Header("Digitação")]
     [Tooltip(
-        "Variável para ajustar velocidade de digitação.\nQuanto menor o valor mais rápido será a exibição.\nPor padrão é 0.02, mas pode mudar nos testes."
+        "Variável para ajustar velocidade de digitação.\nQuanto menor o valor mais rápido será a exibição.\nPor padrão é 0.2, mas pode mudar nos testes."
     )]
     [SerializeField]
-    [Range(0.01f, 0.5f)]
+    [Range(0.001f, 0.5f)]
     private float typingSpeed = 0.2f;
     public bool ItsShow { get; private set; }
     private IEnumerator effectCoroutine;

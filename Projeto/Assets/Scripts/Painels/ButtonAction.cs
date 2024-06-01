@@ -118,7 +118,7 @@ public class ButtonAction : MonoBehaviour
         }
     }*/
     void Update(){
-        if (playerInRange && bt != null && Input.GetKeyDown(KeyCode.F) && !FKeyPressed)
+        if (playerInRange && bt != null && bt.activeSelf && Input.GetKeyDown(KeyCode.F) && !FKeyPressed)
         {
             BtnClick();
             FKeyPressed = true; // Define a tecla F como pressionada após chamar BtnClick()
