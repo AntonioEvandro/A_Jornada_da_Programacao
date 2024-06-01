@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7735d5c135e1304290904ce2ed47249, type: 3}
+  m_Name: Ultima Resposta Instituto
+  m_EditorClassIdentifier: 
+  dialogues:
+  - name: Atendente
+    lines:
+    - " \xD3timo!"
+    - " Voc\xEA est\xE1 qualificada para ser um de nossos memor\xE1veis participantes.
+      \r"
+    - " Como deve saber o instituto est\xE1 atualmente inoperante, exceto pela equipe
+      organizadora.\r"
+    - " Quando tudo estiver pronto volte para a cerim\xF4nia de aprova\xE7\xE3o."
+    - " Isso \xE9 tudo!"
+  - name: Laida
+    lines:
+    - " Pois \xE9..."
+    - " Fiquei sabendo dessa \"Vers\xE3o 2.0\""
+    - " Mas haver\xE1 mais desafios para concluir na ilha?"
+  - name: Atendente
+    lines:
+    - " N\xE3o sei como te responder."
+    - " V\xE1 se encontrar com os demais residentes e descubra por si s\xF3."
+    - " Caso n\xE3o haja espere essa tal \"2.0\"."
+  - name: Laida
+    lines:
+    - ' -risos-'
+    - " Voc\xEA n\xE3o \xE9 t\xE3o chato como pensava."
+    - ' Mas farei isso.'
+    - ' Foi uma honra senhor atendente!'
+  - name: Atendente
+    lines:
+    - " Por favor, \"senhor atendente\" n\xE3o!"
+    - ' Antonio!'
+  - name: Antonio
+    lines:
+    - " No mais, \xE9 isso at\xE9 outro momento."
+  - name: Laida
+    lines:
+    - " At\xE9 breve!"

@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7735d5c135e1304290904ce2ed47249, type: 3}
+  m_Name: Desafio 03
+  m_EditorClassIdentifier: 
+  dialogues:
+  - name: Desconhecida
+    lines:
+    - ' Bom dia!'
+  - name: Laida
+    lines:
+    - ' Bom dia!'
+    - " H\xE1 algo que eu posso fazer por voce mo\xE7a?"
+  - name: Desconhecida
+    lines:
+    - ' Que prestativa.'
+    - ' Tenho apenas um questionamento.'
+    - ' Me chamo Maria.'
+  - name: Laida
+    lines:
+    - ' Eu me chamo Laida, a novata daqui.'
+  - name: Maria
+    lines:
+    - ' Percebi!'
+    - " Pode resolver a minha quest\xE3o?"
+  - name: Maria
+    lines:
+    - ' Com certeza!'

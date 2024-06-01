@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7735d5c135e1304290904ce2ed47249, type: 3}
+  m_Name: T.A.B. 00
+  m_EditorClassIdentifier: 
+  dialogues:
+  - name: Estranho
+    lines:
+    - " Ol\xE1! Laida."
+    - ' Fiquei sabendo que viria, eu me chamo Tab!'
+    - ' Seja muito bem vinda a ilha mundo!'
+  - name: Laida
+    lines:
+    - ' Prazer em conhece-lo!'
+  - name: T.A.B.
+    lines:
+    - ' Serei uma pequena companhia nessa jornada aqui na ilha.'
+    - " Neste lugar voc\xEA poder\xE1 testar seus conhecimentos iniciais de programa\xE7\xE3o.
+      Voc\xEA ter\xE1 que ajudar outros aprendizes e tutores da ilha respondendo
+      quest\xF5es pertinentes a logica de programa\xE7\xE3o para conseguir aprimorar
+      suas capacidades."
+  - name: Laida
+    lines:
+    - ' Vamos nessa!'

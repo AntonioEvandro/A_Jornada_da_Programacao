@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7735d5c135e1304290904ce2ed47249, type: 3}
+  m_Name: Resposta 01
+  m_EditorClassIdentifier: 
+  dialogues:
+  - name: "Jo\xE3o"
+    lines:
+    - ' Correto!!!'
+    - " Aqui est\xE1 seu pr\xEAmio."
+  - name: Laida
+    lines:
+    - " Obrigada Senhor Jo\xE3o!"
+  - name: "Jo\xE3o"
+    lines:
+    - " Pelo visto precisa de carona para atravesar at\xE9 a outra parte."
+  - name: Laida
+    lines:
+    - ' Sim, ficaria agradecida se pudesse me ajudar.'
+  - name: "Jo\xE3o"
+    lines:
+    - ' Com todo prazer.'
+    - " Embarque aqui e vamos l\xE1."
+  - name: Laida
+    lines:
+    - '  Claro!'

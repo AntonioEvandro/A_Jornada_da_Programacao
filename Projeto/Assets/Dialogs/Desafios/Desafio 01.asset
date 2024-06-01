@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7735d5c135e1304290904ce2ed47249, type: 3}
+  m_Name: Desafio 01
+  m_EditorClassIdentifier: 
+  dialogues:
+  - name: Estranho
+    lines:
+    - " Ol\xE1 jovenzinha!"
+    - " Eu me chamo Jo\xE3o, e estou precisando de ajuda."
+  - name: Laida
+    lines:
+    - " Ol\xE1 senhor!"
+    - " Ol\xE1 senhor! Eu Laida, posso te ajudar, se for do meu alcance."
+  - name: "Jo\xE3o"
+    lines:
+    - " Certo, ent\xE3o \xE9 o seguinte..."
+    - " Eu tenho que atravessar esse rio, mas eu s\xF3 tenho essa canoa, al\xE9m
+      de mim, preciso levar essas tr\xEAs cargas para o outro lado do rio sem perder
+      nenhuma dessas cargas, o que eu fa\xE7o?"

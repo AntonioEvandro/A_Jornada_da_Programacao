@@ -197,7 +197,7 @@ T.A.B.:
 Laida:
  Esqueci de perguntar a Maria, mas...
 T.A.B.:
-quer voltar e perguntar a ela?
+ Quer voltar e perguntar a ela?
 Laida:
  Acabei de me despedir dela
 não quero mais incomodá-la.
@@ -206,7 +206,7 @@ T.A.B.:
 Laida:
  Pode me dizer o que seria esse tal instituto?
 T.A.B.:
-Ah, era isso.
+ Ah, era isso.
  O instituto é um lugar exclusivo para alguns programadores se reunirem e trocar conhecimentos.
  Eles aceitam desde iniciantes a profissionais, mas só se tiverem algum tipo de interesse e se o candidato estiver realmente disposto.
  Atualmente para ser aceita você deve responder alguns questionamentos e estará apta a participar dele.
@@ -215,7 +215,7 @@ Laida:
 T.A.B.:
  Porém não está operavél no momento.
 Laida:
- Qual o problema.
+ Qual o problema?
 T.A.B.:
  Estão em manutenção indefenida.
 Laida:
