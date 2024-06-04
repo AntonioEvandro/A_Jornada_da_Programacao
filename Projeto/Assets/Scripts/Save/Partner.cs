@@ -27,7 +27,11 @@ public class Partner : MonoBehaviour
     }
     private void FollowPlayer(){
         if(playerPose.gameObject != null){
-            transform.position = Vector2.MoveTowards(transform.position, playerPose.position, speed * Time.deltaTime);
+            //transform.position = Vector2.MoveTowards(transform.position, playerPose.position, speed * Time.deltaTime);
+            Vector2 playerPos = this.playerPose.position;
+            Vector2 currentPos = this.transform.position;
+            Vector2 direction = playerPos - currentPos;
+            Debug.Log("Direção" + direction);
         }
     }
 }
