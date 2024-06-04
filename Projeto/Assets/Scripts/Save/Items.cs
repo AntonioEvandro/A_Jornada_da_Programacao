@@ -95,6 +95,11 @@ public class Items : MonoBehaviour
         GetComponent<SaveLoad>().companheiro = true;
         GetComponent<SaveLoad>().SaveGame();
     }
+    public void SaveIsland2(){
+        GetComponent<SaveLoad>().ilha2 = true;
+        GetComponent<SaveLoad>().SaveGame();
+    }
+    public void SaveMaeket(){}
     public void SaveMission(int id){
         GetComponent<SaveLoad>().missoes[id].missionActive = true;
     }
@@ -145,6 +150,12 @@ public class Items : MonoBehaviour
     }
     public bool LoadPartner(){
         return gameObject.GetComponent<SaveLoad>().companheiro;
+    }
+    public bool LoadIsland2(){
+        return gameObject.GetComponent<SaveLoad>().ilha2;
+    }
+    public bool LoadMercado(){
+        return gameObject.GetComponent<SaveLoad>().mercado;
     }
     public Mission LoadMission(int id){
         return GetComponent<SaveLoad>().missoes[id];

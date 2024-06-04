@@ -17,7 +17,7 @@ public class SaveLoad : MonoBehaviour
     private readonly int tam = 9;
     public List<float> posicao;
     public int vidas, moedas, recomen, dicas, m2;
-    public bool companheiro;
+    public bool companheiro, ilha2, mercado;
     public List<Mission> missoes;
     public bool[] dialogos;
 
@@ -39,6 +39,8 @@ public class SaveLoad : MonoBehaviour
             tips = dicas,
             m2 = m2,
             partner = companheiro,
+            island2 = ilha2,
+            market = mercado,
             missions = missoes,
             dialogue = dialogos
         };
@@ -132,6 +134,8 @@ public class SaveLoad : MonoBehaviour
         dicas = 0;
         m2 = 0;
         companheiro = false;
+        ilha2 = false;
+        mercado = false;
         for(x = 0; x < tam; x++){
             Mission aux = new(){
                 id = x,
@@ -153,7 +157,8 @@ public class SaveLoad : MonoBehaviour
 
     //Todos os logs de carregamento do arquivo de dados salvos
     public void LoadLogs(Save load){
-        Debug.LogFormat("<color=#519DDA> Posição </color><b>X:</b> {0} <b>Y:</b> {1} <color=red> Vida: </color> {2}<color=yellow> Pontos: </color> {3}\n<color=orange> Recomendações: </color> {4}<color=green> Dicas: </color> {5}<color=purple> Menos dois: </color>{6}<color=cyan> Companheiro: </color>{7}", load.position[0].ToString("F2"), load.position[1].ToString("F2"), load.life, load.coins, load.advices, load.tips, load.m2, load.partner);
+        Debug.LogFormat("<color=#519DDA> Posição </color><b>X:</b> {0} <b>Y:</b> {1} <color=red> Vida: </color> {2}<color=yellow> Pontos: </color> {3}\n<color=orange> Recomendações: </color> {4}<color=green> Dicas: </color> {5}<color=purple> Menos dois: </color>{6}<color=cyan> Companheiro: </color>{7}<color=#7fffd4> Ilha 2ªpt: </color>{8}<color=#8b0000> Mercado: </color>{9}", load.position[0].ToString("F2"), load.position[1].ToString("F2"), load.life, load.coins, load.advices, load.tips, load.m2, load.partner, load.island2, load.market);
+
         print("<size=23><color=Grey> Missões: </color></size>");
         for(x=0; x<tam; x++){
             Debug.Log("<color=with> Missão " + load.missions[x].id + "</color> completa: " + load.missions[x].missionActive + ", Ajudas usadas: " + load.missions[x].aidsUsed + ",\n recomendação: " + load.missions[x].adviceUsed + ", dica: " + load.missions[x].tipsUsed + ", menos duas opções: " + load.missions[x].m2Used);

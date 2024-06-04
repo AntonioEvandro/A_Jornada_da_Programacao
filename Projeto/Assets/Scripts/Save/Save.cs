@@ -13,7 +13,7 @@ public class Save
     public int advices;
     public int tips;
     public int m2;
-    public bool partner;
+    public bool partner, island2, market;
     public List<Mission> missions;
     public bool[] dialogue;
 }
