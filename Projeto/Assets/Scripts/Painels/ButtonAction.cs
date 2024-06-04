@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public enum State{
-    Quest,Dialog,Market
+    Quest,Dialog,Market,Partner
 }
 public class ButtonAction : MonoBehaviour
 {

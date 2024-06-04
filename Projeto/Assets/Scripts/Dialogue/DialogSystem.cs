@@ -45,6 +45,8 @@ public class DialogSystem : MonoBehaviour
     private int lineIndex;
     private Queue<string> Lines;
     private bool btnNext=true;
+    public bool act = false;
+    [SerializeField] State tipo;
 
     // Start is called before the first frame update
     void Start()
@@ -102,6 +104,7 @@ public class DialogSystem : MonoBehaviour
         yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
         dialogueBox.SetActive(false);
         btnNext = true;
+        Action();
         player.GetComponent<ControlePersonagem>().UnBlockMovent();
     }
 
@@ -116,5 +119,22 @@ public class DialogSystem : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Return) && btnNext && dialogueBox.activeSelf){
             NextLine();
         }
+    }
+
+    // Faz algo após terminar o diálogo
+    private void Action(){
+        if(act){
+            switch (tipo)
+            {
+                case State.Partner:
+                    player.GetComponent<Items>().SavePartner();
+                break;
+                case State.Quest:
+                    //
+                break;
+                //default: break;
+            }
+        }
+        act = false;
     }
 }
