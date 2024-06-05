@@ -39,21 +39,26 @@ public class CallDialogue : MonoBehaviour
         }
     }
     public void Activate(){
-        switch (call)// Verifica se após o diálogo ira acontecer algo
+        switch (call)// Verifica se após o diálogo irá acontecer algo
         {
-            case State.Partner://Ativar companheiro
+            case State.Partner:// Chamar ativar/desativar companheiro
                 if(!player.GetComponent<Items>().LoadPartner()){
                     dialogManager.GetComponent<DialogSystem>().act = true;
                     dialogManager.GetComponent<DialogSystem>().id = id;
                     dialogManager.GetComponent<DialogSystem>().StartDialog(dialog);
                 }
             break;
-            case State.Quest://Ativar  desafio
+            case State.Quest:// Ativar  desafio
                 dialogManager.GetComponent<DialogSystem>().act = true;
                 dialogManager.GetComponent<DialogSystem>().id = id;
                 dialogManager.GetComponent<DialogSystem>().StartDialog(dialog);
             break;
-            case State.Dialog://Chamar outro diálogo
+            case State.Dialog:// Chamar outro diálogo
+                dialogManager.GetComponent<DialogSystem>().act = true;
+                dialogManager.GetComponent<DialogSystem>().id = id;
+                dialogManager.GetComponent<DialogSystem>().StartDialog(dialog);
+            break;
+            default: // Apenas chama o próprio diálogo
                 dialogManager.GetComponent<DialogSystem>().id = id;
                 dialogManager.GetComponent<DialogSystem>().StartDialog(dialog);
             break;

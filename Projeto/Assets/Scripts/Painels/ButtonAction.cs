@@ -5,14 +5,18 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public enum State{
-    Quest,Dialog,Market,Partner
+    Quest,Dialog,Market,Partner,Default
 }
 public class ButtonAction : MonoBehaviour
 {
     public GameObject player;
     public GameObject botaoAcao;
     public GameObject painelUI;
-    public int id;
+    [Tooltip("ID deste desafio.")]
+    [SerializeField] private int idMission;
+
+    [Tooltip("ID do diálogo anterior.\nLibera o desafio atual se o diálogo anterior já foi exibido.")]
+    [SerializeField] private int idDialog;
 
     [Header("Diálogo")]
     [Tooltip("Diálogo a ser enviado para exibição.\nCaso o botão seja para chamar o diálogo.")]
@@ -43,25 +47,27 @@ public class ButtonAction : MonoBehaviour
             playerInRange = true;
             switch (call){
                 case State.Quest://chama o desafio
-                    if (id == 0){
-                        if (!player.GetComponent<Items>().LoadMission(id).missionActive){
-                            Send4Button();
+                    if(player.GetComponent<Items>().LoadDialogue(idDialog)){//verifica se exibiu o diálogo anterior
+                        if (idMission == 0){
+                            if (!player.GetComponent<Items>().LoadMission(idMission).missionActive){
+                                Send4Button();
+                            }
+                        }else if(idMission > 0){
+                            if(player.GetComponent<Items>().LoadMission(idMission-1).missionActive && !player.GetComponent<Items>().LoadMission(idMission).missionActive){
+                                Send4Button();
+                            }
+                        }else{
+                            Debug.Log("Ops! Houve um erro.");
                         }
-                    }else if(id > 0){
-                        if(player.GetComponent<Items>().LoadMission(id-1).missionActive && !player.GetComponent<Items>().LoadMission(id).missionActive){
-                            Send4Button();
-                        }
-                    }else{
-                        Debug.Log("Ops! Houve um erro.");
                     }
                     break;
                 case State.Dialog://chama o diálogo
-                    if (id == 0){
-                        if (!player.GetComponent<Items>().LoadDialogue(id)){
+                    if (idDialog == 0){
+                        if (!player.GetComponent<Items>().LoadDialogue(idDialog)){
                             Send4Button();
                         }
-                    }else if(id > 0){
-                        if(player.GetComponent<Items>().LoadDialogue(id-1) && !player.GetComponent<Items>().LoadDialogue(id)){
+                    }else if(idDialog > 0){
+                        if(player.GetComponent<Items>().LoadDialogue(idDialog-1) && !player.GetComponent<Items>().LoadDialogue(idDialog)){
                             Send4Button();
                         }
                     }else{
@@ -89,7 +95,7 @@ public class ButtonAction : MonoBehaviour
                 GetComponent<ActivateChallenge>().ActiveQuest();
                 break;
             case State.Dialog:
-                dialogManager.GetComponent<DialogSystem>().id = id;
+                dialogManager.GetComponent<DialogSystem>().id = idDialog;
                 dialogManager.GetComponent<DialogSystem>().StartDialog(dialog);
                 break;
             case State.Market:

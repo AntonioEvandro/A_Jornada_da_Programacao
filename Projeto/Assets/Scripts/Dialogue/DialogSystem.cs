@@ -127,10 +127,16 @@ public class DialogSystem : MonoBehaviour
             switch (tipo)
             {
                 case State.Partner:
-                    player.GetComponent<Items>().SavePartner();
+                    if(!player.GetComponent<Items>().LoadPartner()){
+                        player.GetComponent<Items>().SavePartner(true);
+                    }else{
+                        player.GetComponent<Items>().SavePartner(false);
+                    }
                 break;
                 case State.Quest:
                     //
+                break;
+                case State.Dialog:
                 break;
                 //default: break;
             }

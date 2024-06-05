@@ -91,8 +91,12 @@ public class Items : MonoBehaviour
             Debug.LogError("Ops! houve algum erro. Veja se o seguinte valor é false ou true: " + ss);
         }
     }
-    public void SavePartner(){
-        GetComponent<SaveLoad>().companheiro = true;
+    public void SavePartner(bool show){
+        if (show){
+            GetComponent<SaveLoad>().companheiro = show;
+        }else{
+            GetComponent<SaveLoad>().companheiro = show;
+        }
         GetComponent<SaveLoad>().SaveGame();
     }
     public void SaveIsland2(){
