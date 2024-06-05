@@ -55,7 +55,7 @@ public class ButtonAction : MonoBehaviour
                         Debug.Log("Ops! Houve um erro.");
                     }
                     break;
-                case State.Dialog://chama o dialogo
+                case State.Dialog://chama o diálogo
                     if (id == 0){
                         if (!player.GetComponent<Items>().LoadDialogue(id)){
                             Send4Button();

@@ -2,6 +2,9 @@ using UnityEngine;
 
 public class ControlePersonagem : MonoBehaviour
 {
+    enum AniPlayer{
+        idle, walk
+    }
     [Header("Movimentação")]
     [Tooltip(
         "Variáveis para movimentação.\nPor padrão é 3.75.\nMude nos testes, se quiser."
@@ -35,14 +38,11 @@ public class ControlePersonagem : MonoBehaviour
             movimento.x = Input.GetAxisRaw("Horizontal");
             movimento.y = Input.GetAxisRaw("Vertical");
 
-            animator.SetFloat("horizontal", movimento.x);
-            animator.SetFloat("vertical", movimento.y);
-            animator.SetFloat("velocidade", movimento.sqrMagnitude);
+            Anim(AniPlayer.walk);
 
             if (movimento != Vector2.zero)
             {
-                animator.SetFloat("horizontalIdle", movimento.x);
-                animator.SetFloat("verticalIdle", movimento.y);
+                Anim(AniPlayer.idle);
             }
 
             rb.MovePosition(rb.position + Time.fixedDeltaTime * velocidade * movimento.normalized);
@@ -52,6 +52,7 @@ public class ControlePersonagem : MonoBehaviour
             // Congela o personagem quando o jogo está pausado ou a caixa de diálogo está ativa
             movimento = Vector2.zero;
             rb.velocity = Vector2.zero;
+            Anim(AniPlayer.walk);
         }
     }
     public void BlockMovent(){
@@ -59,5 +60,20 @@ public class ControlePersonagem : MonoBehaviour
     }
     public void UnBlockMovent(){
         blockMove = false;
+    }
+    private void Anim(AniPlayer ani){
+        switch (ani)
+        {
+            case AniPlayer.idle:
+                animator.SetFloat("horizontalIdle", movimento.x);
+                animator.SetFloat("verticalIdle", movimento.y);
+            break;
+            case AniPlayer.walk:
+                animator.SetFloat("horizontal", movimento.x);
+                animator.SetFloat("vertical", movimento.y);
+                animator.SetFloat("velocidade", movimento.sqrMagnitude);
+            break;
+            //default:
+        }
     }
 }

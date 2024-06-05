@@ -24,25 +24,36 @@ public class CallDialogue : MonoBehaviour
         
     }
     private void OnTriggerEnter2D(Collider2D other){
-        if(other.gameObject.CompareTag("Player")){
-            Activate();
+        if(other.gameObject.CompareTag("Player")){ // Verifica se diálogo pode ser exibido
+            if (id == 0){
+                if (!player.GetComponent<Items>().LoadDialogue(id)){
+                    Activate();        
+                }
+            }else if(id > 0){
+                if(player.GetComponent<Items>().LoadDialogue(id-1) && !player.GetComponent<Items>().LoadDialogue(id)){
+                    Activate();        
+                }
+            }else{
+                Debug.Log("Ops! Houve um erro.");
+            }
         }
     }
     public void Activate(){
-        switch (call)
+        switch (call)// Verifica se após o diálogo ira acontecer algo
         {
             case State.Partner://Ativar companheiro
                 if(!player.GetComponent<Items>().LoadPartner()){
                     dialogManager.GetComponent<DialogSystem>().act = true;
+                    dialogManager.GetComponent<DialogSystem>().id = id;
                     dialogManager.GetComponent<DialogSystem>().StartDialog(dialog);
                 }
             break;
-            case State.Quest:
+            case State.Quest://Ativar  desafio
                 dialogManager.GetComponent<DialogSystem>().act = true;
                 dialogManager.GetComponent<DialogSystem>().id = id;
                 dialogManager.GetComponent<DialogSystem>().StartDialog(dialog);
             break;
-            case State.Dialog:
+            case State.Dialog://Chamar outro diálogo
                 dialogManager.GetComponent<DialogSystem>().id = id;
                 dialogManager.GetComponent<DialogSystem>().StartDialog(dialog);
             break;
