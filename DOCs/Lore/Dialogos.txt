@@ -1,10 +1,10 @@
-	[Monólogo da Laida]
+	[Monólogo da Laida] id: 00
 
  Olá ilha mundo!
  Finalmente cheguei aqui.
  Agora posso dar inicio ao meu sonho.
 
-	[Diálogo com T.A.B. 00]
+	[Diálogo com T.A.B. 00] id: 01
 Estranho: 
  Olá! Laida.
  Fiquei sabendo que viria, eu me chamo Tab!
@@ -17,7 +17,7 @@ T.A.B.:
 Laida:
  Vamos nessa!
 
-	[Diálogo com T.A.B. 01]
+	[Diálogo com T.A.B. 01] id: 02
 T.A.B.:
  Olha lá na frente.
 Laida:
@@ -25,7 +25,7 @@ Laida:
 T.A.B.:
  Parece ser seu primeiro desafio, vamos lá.
 
-	[Desafio 00]
+	[Desafio 00] id: 03
 Garoto na estrada:
  Moça, pode me dar uma ajudinha?
 Laida:
@@ -40,7 +40,7 @@ Zezinho:
 Laida:
  Certo vamos ver como distribuir o peso.
 
-[Após responder corretamente]
+[Após responder corretamente] id: 04
 
 Zezinho:
  Obrigado pela ajuda moça!
@@ -52,20 +52,20 @@ Zezinho:
 Laida:
  Até!
 
-	[Diálogo com T.A.B. 02]
+	[Diálogo com T.A.B. 02] id: 05
 T.A.B.:
  Com essas moedas ganhas você poderá adiquirir ajudas para facilitar nas resoluções das questões, mais pra frente a gente utilizará elas.
  Vamos continuar.
 Laida:
  Certo!
 
-	[Diálogo com T.A.B. 03]
+	[Diálogo com T.A.B. 03] id: 06
 T.A.B.:
  Olha, mais alguém pra ajudar, vamos lá.
 Laida:
  Nem precisa falar.
 
-	[Desafio 01]
+	[Desafio 01] id: 07
 Estranho:
  Olá jovenzinha! Eu me chamo João, e estou precisando de ajuda.
 Laida:
@@ -74,7 +74,7 @@ João:
  Certo, então é o seguinte...
  Eu tenho que atravessar esse rio, mas eu só tenho essa canoa, além de mim, preciso levar essas três cargas para o outro lado do rio sem perder nenhuma dessas cargas, o que eu faço?
 
-[Espaço para escolher as alternativas]
+[Espaço para escolher as alternativas] id: 08
 
 João:
  Correto!!!
@@ -91,7 +91,7 @@ João:
 Laida:
  Claro!
 
-	[Após atravesar o rio]
+	[Após atravesar o rio] id: 09
 Laida:
  Obrigado pela carona!
 João:
@@ -101,7 +101,7 @@ Laida:
  Até!
 
 
-	[Descobrindo o mercado]
+	[Descobrindo o mercado] id: 10
 Estranho:
  Garotinha, tem um minuto?
 Laida:
@@ -120,7 +120,7 @@ Laida:
  Vamos logo ao que interessa.
 Chico:
  Como desejar.
-	[Após descobrir o mercado]
+	[Após descobrir o mercado] id: 11
 Chico:
  Obrigado pela preferência!
 Laida:
@@ -128,7 +128,7 @@ Laida:
 Chico:
  Volte sempre!
 
-	[Desafio 02]
+	[Desafio 02] id: 12
 Chico:
  Espera um pouco Laida.
 Laida:
@@ -140,7 +140,7 @@ Laida:
 Chico:
  Lá vai...
 
-[Após a resposta]
+[Após a resposta] id: 13
 Chico:
  Correto!
  Pegue um pequeno presente!
@@ -154,7 +154,7 @@ Laida:
 Chico:
  Até!
 
-	[Desafio 03]
+	[Desafio 03] id: 14
 Desconhecida:
  Bom dia!
 Laida:
@@ -172,7 +172,7 @@ Maria:
 Laida:
  Com certeza!
 
- [Após responder corretamente]
+ [Após responder corretamente] id: 15
 Maria:
  Sim, está certo!
  Como rescompensa, aceite este pequeno pagamento!
@@ -188,7 +188,7 @@ Maria:
 Laida:
  Digo o mesmo, até mais!
 
-	[Diálogo com T.A.B. 04]
+	[Diálogo com T.A.B. 04] id: 16
 Laida:
  T.A.B., tá aí?
 T.A.B.:
@@ -228,7 +228,7 @@ T.A.B.:
 Laida:
  Melhor seguir em frente.
 
-	[No instituto]
+	[No instituto] id: 17
 Laida:
  Olá!
  Alguém?
@@ -245,13 +245,13 @@ Atendente:
  Primeiro...
  {
 [inicia no desafio 04]
-[após acertar a resposta]
+[após acertar a resposta] id: 18, 19, ... , n.
 Atendente:
  Correto!
  Próximo...
 [repete até o último desafio]
 }
-[Depois do último desafio]
+[Depois do último desafio] id: n+1
 Atendente:
  Ótimo!
  Você está qualificada para ser um de nossos memoráveis participantes. 
@@ -278,7 +278,7 @@ Atendente:
 Laida:
  Até breve!
 
-	[Diálogo com T.A.B. 05]
+	[Diálogo com T.A.B. 05] id: n+2
 T.A.B.:
  Laida.
 Laida:
@@ -295,7 +295,7 @@ T.A.B.:
 Laida:
  Você também. 
 
-	[Ultimo Monólogo Laida]:(
+	[Ultimo Monólogo Laida]:( id: n+3
 Laida:
  Bem, a experiência foi curta.
  Pelo menos deu pra aproveitar algo.
