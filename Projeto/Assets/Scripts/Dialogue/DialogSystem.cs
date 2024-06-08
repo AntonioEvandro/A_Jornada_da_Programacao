@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+public enum State{
+    Quest,Dialog,Market,Partner, Island, Default
+}
 
 public class DialogSystem : MonoBehaviour
 {
@@ -46,7 +49,7 @@ public class DialogSystem : MonoBehaviour
     private Queue<string> Lines;
     private bool btnNext=true;
     public bool act = false;
-    [SerializeField] State tipo;
+    public State tipo;
 
     // Start is called before the first frame update
     void Start()
@@ -138,9 +141,20 @@ public class DialogSystem : MonoBehaviour
                 break;
                 case State.Dialog:
                 break;
+                case State.Island:
+                    if(!player.GetComponent<Items>().LoadIsland()){
+                        player.GetComponent<Items>().SaveIsland(true);
+                        Debug.Log("Ativa" + player.GetComponent<Items>().LoadIsland());
+                    }else{
+                        player.GetComponent<Items>().SaveIsland(false);
+                        Debug.Log("Desativa" + player.GetComponent<Items>().LoadIsland());
+                    }
+                    GetComponent<Island>().LoadIsland();
+                break;
                 //default: break;
             }
+            act = false;
+            tipo = State.Default;
         }
-        act = false;
     }
 }

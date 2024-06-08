@@ -16,8 +16,9 @@ public class SaveLoad : MonoBehaviour
     private int x;
     private readonly int tam = 9;
     public List<float> posicao;
+    public List<float> posiCompa;
     public int vidas, moedas, recomen, dicas, m2;
-    public bool companheiro, ilha2, mercado;
+    public bool companheiro, ilha, mercado;
     public List<Mission> missoes;
     public bool[] dialogos;
 
@@ -33,13 +34,14 @@ public class SaveLoad : MonoBehaviour
         Save s = new()
         {
             position = posicao,
+            partnerPosit = posiCompa,
             life = vidas,
             coins = moedas,
             advices = recomen,
             tips = dicas,
             m2 = m2,
             partner = companheiro,
-            island2 = ilha2,
+            island = ilha,
             market = mercado,
             missions = missoes,
             dialogue = dialogos
@@ -97,6 +99,8 @@ public class SaveLoad : MonoBehaviour
             posicao = load.position;
             //Pegando posição do player salvo no arquivo save e adicionando a ele
             GetComponent<Items>().LoadPosition();
+            posiCompa = load.partnerPosit;
+            GetComponent<Items>().LoadPartnerPosition();
             
             vidas = load.life;
             moedas = load.coins;
@@ -104,6 +108,7 @@ public class SaveLoad : MonoBehaviour
             dicas = load.tips;
             m2 = load.m2;
             companheiro = load.partner;
+            ilha = load.island;
             //missoes = new(){null,null,null,null,null,null,null,null,null,null};
             missoes = load.missions;
             //Debug.Log("missao " + load.missions[0].id + ", " + load.missions[0].missionActive);
@@ -128,13 +133,14 @@ public class SaveLoad : MonoBehaviour
     //Reiniciar o jogo
     public void TryAgain(){
         posicao = new(){-16.5f,-0.75f};
+        posiCompa = new(){-11.5f,0};
         vidas = 3;
         moedas = 0;
         recomen = 0;
         dicas = 0;
         m2 = 0;
         companheiro = false;
-        ilha2 = false;
+        ilha = false;
         mercado = false;
         for(x = 0; x < tam; x++){
             Mission aux = new(){
@@ -157,7 +163,7 @@ public class SaveLoad : MonoBehaviour
 
     //Todos os logs de carregamento do arquivo de dados salvos
     public void LoadLogs(Save load){
-        Debug.LogFormat("<color=#519DDA> Posição </color><b>X:</b> {0} <b>Y:</b> {1} <color=red> Vida: </color> {2}<color=yellow> Pontos: </color> {3}\n<color=orange> Recomendações: </color> {4}<color=green> Dicas: </color> {5}<color=purple> Menos dois: </color>{6}<color=cyan> Companheiro: </color>{7}<color=#7fffd4> Ilha 2ªpt: </color>{8}<color=#8b0000> Mercado: </color>{9}", load.position[0].ToString("F2"), load.position[1].ToString("F2"), load.life, load.coins, load.advices, load.tips, load.m2, load.partner, load.island2, load.market);
+        Debug.LogFormat("<color=#519DDA> Posição </color><b>X:</b> {0} <b>Y:</b> {1} <color=red> Vida: </color> {2}<color=yellow> Pontos: </color> {3}\n<color=orange> Recomendações: </color> {4}<color=green> Dicas: </color> {5}<color=purple> Menos dois: </color>{6}<color=cyan> Companheiro: </color>{7}<color=#7fffd4> Ilha 2ªpt: </color>{8}<color=#8b0000> Mercado: </color>{9}", load.position[0].ToString("F2"), load.position[1].ToString("F2"), load.life, load.coins, load.advices, load.tips, load.m2, load.partner, load.island, load.market);
 
         print("<size=23><color=Grey> Missões: </color></size>");
         for(x=0; x<tam; x++){

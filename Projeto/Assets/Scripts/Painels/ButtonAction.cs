@@ -4,9 +4,6 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
-public enum State{
-    Quest,Dialog,Market,Partner,Default
-}
 public class ButtonAction : MonoBehaviour
 {
     public GameObject player;

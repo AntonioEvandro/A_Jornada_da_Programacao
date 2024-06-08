@@ -6,6 +6,7 @@ using UnityEngine;
 public class Save
 {
     public List<float> position;
+    public List<float> partnerPosit;
     //public bool sound;
     //public float volume;
     public int life;
@@ -13,7 +14,7 @@ public class Save
     public int advices;
     public int tips;
     public int m2;
-    public bool partner, island2, market;
+    public bool partner, island, market;
     public List<Mission> missions;
     public bool[] dialogue;
 }

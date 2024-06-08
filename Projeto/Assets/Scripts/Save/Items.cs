@@ -7,6 +7,9 @@ using UnityEngine;
 public class Items : MonoBehaviour
 {
     public TMP_Text lifesTextHUD, coinsTextHUD, lifesTextUI, coinsTextUI, lifesTextGUI, coinsTextGUI, adviceTextHUD, tipsTextHUD, m2TextHUD,  adviceTextUI, tipsTextUI, m2TextUI, adviceTextGUI, tipsTextGUI, m2TextGUI;
+
+    public GameObject partner;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +20,7 @@ public class Items : MonoBehaviour
     void Update()
     {
         SavePosition();
+        SavePartnerPosition();
         ItemsHUD();
         ItemsGUI();
         ItemsUI();
@@ -29,6 +33,11 @@ public class Items : MonoBehaviour
             transform.position.x, transform.position.y
         };
         
+    }
+    public void SavePartnerPosition(){
+        GetComponent<SaveLoad>().posiCompa = new(){
+            partner.transform.position.x, partner.transform.position.y
+        };
     }
     public void SaveCoins(int c, bool ss){
         if (ss){
@@ -99,9 +108,14 @@ public class Items : MonoBehaviour
         }
         GetComponent<SaveLoad>().SaveGame();
     }
-    public void SaveIsland2(){
-        GetComponent<SaveLoad>().ilha2 = true;
-        GetComponent<SaveLoad>().SaveGame();
+    public void SaveIsland(bool go){
+        if (go){
+            GetComponent<SaveLoad>().ilha = true;
+            GetComponent<SaveLoad>().SaveGame();
+        }else{
+            GetComponent<SaveLoad>().ilha = false;
+            GetComponent<SaveLoad>().SaveGame();
+        }
     }
     public void SaveMaeket(){}
     public void SaveMission(int id){
@@ -137,6 +151,12 @@ public class Items : MonoBehaviour
             GetComponent<SaveLoad>().posicao[0], GetComponent<SaveLoad>().posicao[1]
         );
     }
+    public void LoadPartnerPosition()
+    {
+        partner.transform.position = new Vector2(
+            GetComponent<SaveLoad>().posiCompa[0], GetComponent<SaveLoad>().posiCompa[1]
+        );
+    }
     public int LoadLifes(){
         return GetComponent<SaveLoad>().vidas;
     }
@@ -155,8 +175,8 @@ public class Items : MonoBehaviour
     public bool LoadPartner(){
         return gameObject.GetComponent<SaveLoad>().companheiro;
     }
-    public bool LoadIsland2(){
-        return gameObject.GetComponent<SaveLoad>().ilha2;
+    public bool LoadIsland(){
+        return gameObject.GetComponent<SaveLoad>().ilha;
     }
     public bool LoadMercado(){
         return gameObject.GetComponent<SaveLoad>().mercado;

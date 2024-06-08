@@ -38,29 +38,34 @@ public class CallDialogue : MonoBehaviour
             }
         }
     }
+
+    private void SendDialogue(bool act){
+        if(act){
+            dialogManager.GetComponent<DialogSystem>().act = true;
+            dialogManager.GetComponent<DialogSystem>().tipo = call;
+        }
+        dialogManager.GetComponent<DialogSystem>().id = id;
+        dialogManager.GetComponent<DialogSystem>().StartDialog(dialog);
+    }
     public void Activate(){
         switch (call)// Verifica se após o diálogo irá acontecer algo
         {
             case State.Partner:// Chamar ativar/desativar companheiro
                 if(!player.GetComponent<Items>().LoadPartner()){
-                    dialogManager.GetComponent<DialogSystem>().act = true;
-                    dialogManager.GetComponent<DialogSystem>().id = id;
-                    dialogManager.GetComponent<DialogSystem>().StartDialog(dialog);
+                    SendDialogue(true);
                 }
             break;
             case State.Quest:// Ativar  desafio
-                dialogManager.GetComponent<DialogSystem>().act = true;
-                dialogManager.GetComponent<DialogSystem>().id = id;
-                dialogManager.GetComponent<DialogSystem>().StartDialog(dialog);
+                SendDialogue(true);
             break;
             case State.Dialog:// Chamar outro diálogo
-                dialogManager.GetComponent<DialogSystem>().act = true;
-                dialogManager.GetComponent<DialogSystem>().id = id;
-                dialogManager.GetComponent<DialogSystem>().StartDialog(dialog);
+                SendDialogue(true);
             break;
-            default: // Apenas chama o próprio diálogo
-                dialogManager.GetComponent<DialogSystem>().id = id;
-                dialogManager.GetComponent<DialogSystem>().StartDialog(dialog);
+            case State.Island:
+                SendDialogue(true);
+            break;
+            default: // Apenas chama o próprio diálogo;
+                SendDialogue(false);
             break;
         }
     }
