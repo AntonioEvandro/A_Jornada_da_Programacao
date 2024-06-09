@@ -129,17 +129,22 @@ public class DialogSystem : MonoBehaviour
         if(act){
             switch (tipo)
             {
+                case State.Quest:
+                    //
+                break;
+                case State.Dialog:
+                break;
+                case State.Market:
+                    if(player.GetComponent<Items>().LoadMercado()){
+                        player.GetComponent<Items>().SaveMarket();
+                    }
+                break;
                 case State.Partner:
                     if(!player.GetComponent<Items>().LoadPartner()){
                         player.GetComponent<Items>().SavePartner(true);
                     }else{
                         player.GetComponent<Items>().SavePartner(false);
                     }
-                break;
-                case State.Quest:
-                    //
-                break;
-                case State.Dialog:
                 break;
                 case State.Island:
                     if(!player.GetComponent<Items>().LoadIsland()){
@@ -149,7 +154,7 @@ public class DialogSystem : MonoBehaviour
                         player.GetComponent<Items>().SaveIsland(false);
                         Debug.Log("Desativa" + player.GetComponent<Items>().LoadIsland());
                     }
-                    GetComponent<Island>().LoadIsland();
+                    GetComponent<Island>().Quest();
                 break;
                 //default: break;
             }

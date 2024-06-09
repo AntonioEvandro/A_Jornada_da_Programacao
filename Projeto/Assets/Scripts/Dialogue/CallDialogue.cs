@@ -50,16 +50,19 @@ public class CallDialogue : MonoBehaviour
     public void Activate(){
         switch (call)// Verifica se após o diálogo irá acontecer algo
         {
-            case State.Partner:// Chamar ativar/desativar companheiro
-                if(!player.GetComponent<Items>().LoadPartner()){
-                    SendDialogue(true);
-                }
-            break;
             case State.Quest:// Ativar  desafio
                 SendDialogue(true);
             break;
             case State.Dialog:// Chamar outro diálogo
                 SendDialogue(true);
+            break;
+            case State.Market:// Ativa o mercado
+                SendDialogue(true);
+            break;
+            case State.Partner:// Chamar ativar/desativar companheiro
+                if(!player.GetComponent<Items>().LoadPartner()){
+                    SendDialogue(true);
+                }
             break;
             case State.Island:
                 SendDialogue(true);

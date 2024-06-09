@@ -6,11 +6,11 @@ public class Island : MonoBehaviour
 {
     [SerializeField]
     private GameObject player, partner, joao, bode, onca, alface, canoa;
-    private bool dialogo, island, dialogLoaded;
+    private bool resposta01, proxDialogo, island;
+    private readonly int idDialog = 8;
     // Start is called before the first frame update
     void Start()
     {
-        dialogLoaded = false;
         StartCoroutine(LoadItems());
     }
 
@@ -19,6 +19,37 @@ public class Island : MonoBehaviour
     {
         
     }
+    // Jogo frescoda mulesta, tem q esperar pra ele carregar os dados >:(
+    private IEnumerator LoadItems(){
+        yield return new WaitForSeconds(0.05f);
+        Loader();
+        if(!proxDialogo){
+            LoadIsland();
+        }
+    }
+    public void Quest(){
+        Loader();
+        LoadIsland();
+    }
+    private void Loader(){
+        resposta01 = player.GetComponent<Items>().LoadDialogue(idDialog);
+        if(resposta01){
+            proxDialogo = player.GetComponent<Items>().LoadDialogue(idDialog+1);
+            island = player.GetComponent<Items>().LoadIsland();
+        }
+        Debug.Log("Resposta exibida: " + resposta01 + " Ilha habilitada: " + island);
+    }
+
+    public void LoadIsland(){
+        if(resposta01){
+            if (!island){
+                GoPt1();
+            }else if(island){
+                GoPt2();
+            }
+        }
+    }
+    
     public void GoPt1(){
         player.transform.position = new Vector2(12, 0);
         partner.transform.position = new Vector2(11.3f, 0);
@@ -40,28 +71,5 @@ public class Island : MonoBehaviour
         alface.transform.localPosition = new Vector2(23,3);
         canoa.transform.localPosition = new Vector2(20,2);
 
-    }
-    public void LoadIsland(){
-        if(!dialogLoaded){
-            dialogo = player.GetComponent<Items>().LoadDialogue(8);
-            island = player.GetComponent<Items>().LoadIsland();
-        }else{
-            dialogLoaded = false;
-        }
-        Debug.Log("Dialogo visto: " + dialogo + " Ilha habilitada: " + island);
-        if (!island && dialogo){
-            GoPt1();
-        }else if(island && dialogo){
-            GoPt2();
-        }
-    }
-
-    // Jogo frescoda mulesta, tem q esperar pra ele carregar os dados >:(
-    private IEnumerator LoadItems(){
-        yield return new WaitForSeconds(0.05f);
-        dialogo = player.GetComponent<Items>().LoadDialogue(8);
-        island = player.GetComponent<Items>().LoadIsland();
-        dialogLoaded = true;
-        LoadIsland();
     }
 }

@@ -117,7 +117,9 @@ public class Items : MonoBehaviour
             GetComponent<SaveLoad>().SaveGame();
         }
     }
-    public void SaveMaeket(){}
+    public void SaveMarket(){
+        GetComponent<SaveLoad>().mercado = true;
+    }
     public void SaveMission(int id){
         GetComponent<SaveLoad>().missoes[id].missionActive = true;
     }
