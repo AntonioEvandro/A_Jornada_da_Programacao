@@ -9,6 +9,8 @@ public class ButtonAction : MonoBehaviour
     public GameObject player;
     public GameObject botaoAcao;
     public GameObject painelUI;
+
+    [Header("Mission")]
     [Tooltip("ID deste desafio.")]
     [SerializeField] private int idMission;
 
@@ -19,12 +21,17 @@ public class ButtonAction : MonoBehaviour
     [Tooltip("Diálogo a ser enviado para exibição.\nCaso o botão seja para chamar o diálogo.")]
     [SerializeField]
     private Dialog dialog;
-
     [SerializeField]
     [Tooltip(
         "Pega o script DialogManager dentro do objeto GameManager\npara usar a função de mostrar o diálogo"
     )]
-    private GameObject dialogManager;
+    private DialogSystem dialogManager;
+/*
+    [Header("Mercado")]
+    [Tooltip("Adicionar a tela de mercado para ser exibida.")]
+    [SerializeField]
+    private SwitchPanels market;*/
+
 
     [Header("Chamada")]
     [Tooltip(
@@ -72,6 +79,9 @@ public class ButtonAction : MonoBehaviour
                     }
                     break;
                 case State.Market://Chama o mercado
+                    if (player.GetComponent<Items>().LoadDialogue(idDialog)){
+                        Send4Button();
+                    }
                     break;
             }
         }
@@ -96,6 +106,9 @@ public class ButtonAction : MonoBehaviour
                 dialogManager.GetComponent<DialogSystem>().StartDialog(dialog);
                 break;
             case State.Market:
+                dialogManager.GetComponent<DialogSystem>().act = true;
+                dialogManager.GetComponent<DialogSystem>().tipo = call;
+                dialogManager.GetComponent<DialogSystem>().StartDialog(dialog);
                 break;
         }
         FKeyPressed = false; // Define a tecla F como não pressionada após chamar BtnClick()

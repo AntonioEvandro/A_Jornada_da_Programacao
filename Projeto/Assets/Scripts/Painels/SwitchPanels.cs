@@ -16,6 +16,14 @@ public class SwitchPanels : MonoBehaviour
     public GameObject market;
     public Transform gameOver;
     private bool isGamePaused;
+    
+    [Header("Bye")]
+    [Tooltip("Mensagem de breve despedida")]
+    [SerializeField]
+    private List<Dialog> dialog;
+
+    private int rand;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -41,11 +49,11 @@ public class SwitchPanels : MonoBehaviour
             MarketOff();
         }
         // Abaixo os if's de mercado são apenas para desenvolvimento, apague/comente depois que der certo
-        if (Input.GetKeyDown(KeyCode.M) && !pauseMenu.transform.gameObject.activeSelf && !isGamePaused){
+        /*if (Input.GetKeyDown(KeyCode.M) && !pauseMenu.transform.gameObject.activeSelf && !isGamePaused){
             MarketOn();
         }else if(Input.GetKeyDown(KeyCode.M) && !pauseMenu.transform.gameObject.activeSelf && isGamePaused){
             MarketOff();
-        }
+        }*/
         
     }
     //Funções para mostrar/ocultar tela de pausa
@@ -80,7 +88,8 @@ public class SwitchPanels : MonoBehaviour
         market.SetActive(false);
         TogglePauseState(false);
         quests.transform.gameObject.SetActive(true);
-        dialogueBox.transform.gameObject.SetActive(true);
+        rand = Random.Range (0, dialog.Count);
+        GetComponent<DialogSystem>().StartDialog(dialog[rand]);
         panelUI.SetActive(true);
         HUD.enabled = true;
     }

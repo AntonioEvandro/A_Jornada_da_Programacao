@@ -43,14 +43,15 @@ public class Island : MonoBehaviour
                 canoa.transform.localPosition = new Vector2(17.2f,3.5f);
             }else{
                 if(!proxDialogo){
-                    player.transform.localPosition = new Vector2(22.5f, 2.5f);
-                    partner.transform.localPosition = new Vector2(20.5f, 2.5f);
+                    player.transform.localPosition = new Vector2(22.25f, 3.75f);
+                    partner.transform.localPosition = new Vector2(21.5f, 3.5f);
+                    player.GetComponent<ControlePersonagem>().Anim(ControlePersonagem.AniPlayer.main);
                 }
-                joao.transform.localPosition = new Vector2(23,3);
-                bode.transform.localPosition = new Vector2(23,3);
-                onca.transform.localPosition = new Vector2(23,3);
-                alface.transform.localPosition = new Vector2(23,3);
-                canoa.transform.localPosition = new Vector2(20,2);
+                joao.transform.localPosition = new Vector2(26.75f,6);
+                bode.transform.localPosition = new Vector2(26.1f,5.75f);
+                onca.transform.localPosition = new Vector2(27.5f,5.75f);
+                alface.transform.localPosition = new Vector2(27.25f,6.1f);
+                canoa.transform.localPosition = new Vector2(25,6);
             }
         }
     }

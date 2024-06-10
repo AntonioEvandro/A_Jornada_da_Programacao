@@ -135,9 +135,11 @@ public class DialogSystem : MonoBehaviour
                 case State.Dialog:
                 break;
                 case State.Market:
-                    if(player.GetComponent<Items>().LoadMercado()){
+                    if(!player.GetComponent<Items>().LoadMercado()){
                         player.GetComponent<Items>().SaveMarket();
+                        Debug.Log("Mercado desbloqueado");
                     }
+                    GetComponent<SwitchPanels>().MarketOn();
                 break;
                 case State.Partner:
                     if(!player.GetComponent<Items>().LoadPartner()){

@@ -1,9 +1,10 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class ControlePersonagem : MonoBehaviour
 {
-    enum AniPlayer{
-        idle, walk
+    public enum AniPlayer{
+        idle, walk, main
     }
     [Header("Movimentação")]
     [Tooltip(
@@ -61,7 +62,7 @@ public class ControlePersonagem : MonoBehaviour
     public void UnBlockMovent(){
         blockMove = false;
     }
-    private void Anim(AniPlayer ani){
+    public void Anim(AniPlayer ani){
         switch (ani)
         {
             case AniPlayer.idle:
@@ -73,7 +74,12 @@ public class ControlePersonagem : MonoBehaviour
                 animator.SetFloat("vertical", movimento.y);
                 animator.SetFloat("velocidade", movimento.sqrMagnitude);
             break;
-            //default:
+            case AniPlayer.main:
+                animator.SetFloat("horizontalIdle", 0.01f);
+                animator.SetFloat("verticalIdle", 0);
+            break;
+            default:
+            break;
         }
     }
 }

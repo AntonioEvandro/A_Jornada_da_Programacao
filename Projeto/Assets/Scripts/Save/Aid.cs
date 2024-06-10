@@ -24,18 +24,22 @@ public class Aid : MonoBehaviour
     
     public void LoadMission(){
         missao = player.GetComponent<Items>().LoadMission(id);
+        Debug.Log("<color=with>Missão carregada</color>");
         //LogMissionLoaded(missao);
         DesactiveButtons();
     }
     public void Tip(){
+        player.GetComponent<Items>().SaveTips(false);
         player.GetComponent<Items>().SaveMissionAidsItem(id, 0);
         LoadMission();
     }
     public void Advice(){
+        player.GetComponent<Items>().SaveAdvices(false);
         player.GetComponent<Items>().SaveMissionAidsItem(id, 1);
         LoadMission();
     }
     public void M2(){
+        player.GetComponent<Items>().SaveMinus2(false);
         player.GetComponent<Items>().SaveMissionAidsItem(id, 2);
         LoadMission();
     }
@@ -77,11 +81,10 @@ public class Aid : MonoBehaviour
             if(player.GetComponent<Items>().LoadMinus2() <= 0){
                 btnM2.interactable = false;
             }
-            Debug.Log("Dicas: <color=withe>" + player.GetComponent<Items>().LoadTips() + "</color> Recomendações: <color=withe>" + player.GetComponent<Items>().LoadAdvices() + "</color> Menos 2: <color=withe>" + player.GetComponent<Items>().LoadMinus2() + "</color>.");
         }
+        Debug.Log("Dicas: <color=withe>" + player.GetComponent<Items>().LoadTips() + "</color> Recomendações: <color=withe>" + player.GetComponent<Items>().LoadAdvices() + "</color> Menos 2: <color=withe>" + player.GetComponent<Items>().LoadMinus2() + "</color>.");
     }
     public void LogMissionLoaded(Mission m) {        
-        Debug.Log("<color=with>Missão carregada</color>");
         Debug.Log("<color=Orange> Id: </color><color=Green>" + m.id + "</color>");
         Debug.Log("<color=Orange> Ativada: </color><color=Red>" + m.missionActive + "</color>");
         Debug.Log("<color=Orange> Ajudas usadas: </color><color=Red>" + m.aidsUsed + "</color>");
