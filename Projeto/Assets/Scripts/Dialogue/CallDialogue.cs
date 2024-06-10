@@ -53,7 +53,7 @@ public class CallDialogue : MonoBehaviour
             case State.Quest:// Ativar  desafio
                 SendDialogue(true);
             break;
-            case State.Dialog:// Chamar outro diálogo
+            case State.Dialog:// Chamar outro diálogo após exibir esse
                 SendDialogue(true);
             break;
             case State.Market:// Ativa o mercado
@@ -64,10 +64,10 @@ public class CallDialogue : MonoBehaviour
                     SendDialogue(true);
                 }
             break;
-            case State.Island:
+            case State.Island: // Ativar segunda ilha
                 SendDialogue(true);
             break;
-            default: // Apenas chama o próprio diálogo;
+            default: // Apenas chama o diálogo;
                 SendDialogue(false);
             break;
         }
