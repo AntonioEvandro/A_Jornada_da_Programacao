@@ -19,7 +19,7 @@ public class Island : MonoBehaviour
         yield return new WaitForSeconds(0.05f);
         Loader();
     }
-    public void Quest(){
+    public void Quest(){ // função para teleportar os elementos
         Loader();
     }
 
@@ -29,9 +29,8 @@ public class Island : MonoBehaviour
         if(resposta01){
             island = player.GetComponent<Items>().LoadIsland();
             proxDialogo = player.GetComponent<Items>().LoadDialogue(idDialog+1);
-            //Debug.Log("Resposta exibida: " + resposta01 + " Ilha habilitada: " + island);
 
-            //posicionamento dos elementos da quest01
+            //posicionamento dos elementos
             if (!island){
                 if(!proxDialogo){
                     player.transform.position = new Vector2(12, 0);
@@ -46,7 +45,6 @@ public class Island : MonoBehaviour
                 if(!proxDialogo){
                     player.transform.localPosition = new Vector2(22.5f, 2.5f);
                     partner.transform.localPosition = new Vector2(20.5f, 2.5f);
-                    //PlayerTP();
                 }
                 joao.transform.localPosition = new Vector2(23,3);
                 bode.transform.localPosition = new Vector2(23,3);
@@ -55,7 +53,5 @@ public class Island : MonoBehaviour
                 canoa.transform.localPosition = new Vector2(20,2);
             }
         }
-    }
-    private void PlayerTP(){//Posicionamento player
     }
 }
