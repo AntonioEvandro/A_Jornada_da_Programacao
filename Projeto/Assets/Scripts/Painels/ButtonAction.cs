@@ -41,7 +41,7 @@ public class ButtonAction : MonoBehaviour
     private State call;//chama determinada função
     private GameObject bt;
     private bool playerInRange = false; // Adicionado para rastrear se o jogador está no range
-    private bool FKeyPressed = false; // Adicionado para rastrear se a tecla F foi pressionada
+    private bool SpaceKeyPressed = false; // Adicionado para rastrear se a tecla F foi pressionada
     
     // Função para mostrar o botão de ação enquanto estiver perto da quest
     private void OnTriggerEnter2D(Collider2D other)
@@ -111,7 +111,7 @@ public class ButtonAction : MonoBehaviour
                 dialogManager.GetComponent<DialogSystem>().StartDialog(dialog);
                 break;
         }
-        FKeyPressed = false; // Define a tecla F como não pressionada após chamar BtnClick()
+        SpaceKeyPressed = false; // Define a tecla F como não pressionada após chamar BtnClick()
     }
     // Ativa o botão de ação e envia a função BtnClick para ele
     public void Send4Button(){
@@ -134,10 +134,10 @@ public class ButtonAction : MonoBehaviour
         }
     }*/
     void Update(){
-        if (playerInRange && bt != null && bt.activeSelf && Input.GetKeyDown(KeyCode.F) && !FKeyPressed)
+        if (playerInRange && bt != null && bt.activeSelf && Input.GetKeyDown(KeyCode.Space) && !SpaceKeyPressed)
         {
             BtnClick();
-            FKeyPressed = true; // Define a tecla F como pressionada após chamar BtnClick()
+            SpaceKeyPressed = true; // Define a tecla Espaço como pressionada após chamar BtnClick()
         }
         
     }

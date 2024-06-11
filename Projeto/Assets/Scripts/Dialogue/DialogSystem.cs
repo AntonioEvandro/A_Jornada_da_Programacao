@@ -119,7 +119,7 @@ public class DialogSystem : MonoBehaviour
     }
     // Tecla de pular linhas de diálogos
     public void KeyNext(){
-        if(Input.GetKeyDown(KeyCode.Return) && btnNext && dialogueBox.activeSelf){
+        if(Input.GetKeyDown(KeyCode.F) && btnNext && dialogueBox.activeSelf){
             NextLine();
         }
     }
