@@ -10,6 +10,16 @@
 
 
 
+	***Desafio 00***
+ Os três potes de Zezinho estão com quantidades diferentes de água, como será feito o equilibrio para ele poder transportar facilmente.
+ Primeiro pote: Cabem 8 litros.
+ Segundo: 5, porém está vazio.
+ Terceiro: 4.
+
+Resposta correta:
+ Colocar a água do 3º pote no 2º e do 1º no 3º até encher, 
+
+
 	***Primeiro desafio***
 Para levar as três cargas para a outra margem do rio, haverá as seguintes opções:
 
