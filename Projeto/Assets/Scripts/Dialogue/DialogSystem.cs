@@ -64,8 +64,8 @@ public class DialogSystem : MonoBehaviour
 
     public void StartDialog(Dialog dialog){
         player.GetComponent<ControlePersonagem>().BlockMovent();
-        // Dialogo fica com estado Exibindo.
-        player.GetComponent<Items>().SaveDialogue(id, Dialogs.DialogType.Exibindo);
+        
+        player.GetComponent<Items>().SaveDialogue(id, DialogState.Exibindo);// Dialogo fica com estado Exibindo.
         //Deixa a caixa de diálogo visível
         dialogueBox.SetActive(true);
         // Inicializa a fila de falas
@@ -95,7 +95,7 @@ public class DialogSystem : MonoBehaviour
                 //bloqueia o botão de pular diálogo
                 btnNext = false;
                 // Torna a o diálogo inacessível
-                player.GetComponent<Items>().SaveDialogue(id, Dialogs.DialogType.Exibido);
+                player.GetComponent<Items>().SaveDialogue(id, DialogState.Exibido);
                 // Chama a função de fechar a caixa de diálogo
                 StartCoroutine(CloseBox());
                 return;
@@ -160,7 +160,9 @@ public class DialogSystem : MonoBehaviour
                     }
                     GetComponent<Island>().Quest();
                 break;
-                //default: break;
+                default:
+                    Debug.Log("Nada a se fazer");
+                break;
             }
             act = false;
             tipo = State.Default;

@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class CallDialogue : MonoBehaviour
 {
-    [SerializeField] private GameObject player;
+    [SerializeField] private Items items;//Encurta chamada do GameObjeto: player.GetComponent<Items>() apenas por: Items
 
     [SerializeField] private Dialog dialog;
     [SerializeField] private int id;
-    [SerializeField] private GameObject dialogManager;
+    [SerializeField] private DialogSystem dialogManager; //Encurtado GetComponent<DialogSystem>(). -> dialogManager
 
     [SerializeField] private State call;
 
-    // Start is called before the first frame update
+    /*/ Start is called before the first frame update
     void Start()
     {
         
@@ -22,15 +22,15 @@ public class CallDialogue : MonoBehaviour
     void Update()
     {
         
-    }
+    }*/
     private void OnTriggerEnter2D(Collider2D other){
         if(other.gameObject.CompareTag("Player")){ // Verifica se diálogo pode ser exibido
             if (id == 0){
-                if (player.GetComponent<Items>().LoadDialogue(id) == Dialogs.DialogType.Exibir){
+                if (items.LoadDialogue(id) != DialogState.Exibido){
                     Activate();        
                 }
             }else if(id > 0){
-                if(player.GetComponent<Items>().LoadDialogue(id-1) == Dialogs.DialogType.Exibir && player.GetComponent<Items>().LoadDialogue(id) != Dialogs.DialogType.Exibir){
+                if(items.LoadDialogue(id-1) == DialogState.Exibido && items.LoadDialogue(id) != DialogState.Exibido){
                     Activate();        
                 }
             }else{
@@ -41,11 +41,11 @@ public class CallDialogue : MonoBehaviour
 
     private void SendDialogue(bool act){
         if(act){
-            dialogManager.GetComponent<DialogSystem>().act = true;
-            dialogManager.GetComponent<DialogSystem>().tipo = call;
+            dialogManager.act = true;
+            dialogManager.tipo = call;
         }
-        dialogManager.GetComponent<DialogSystem>().id = id;
-        dialogManager.GetComponent<DialogSystem>().StartDialog(dialog);
+        dialogManager.id = id;
+        dialogManager.StartDialog(dialog);
     }
     public void Activate(){
         switch (call)// Verifica se após o diálogo irá acontecer algo
@@ -60,7 +60,7 @@ public class CallDialogue : MonoBehaviour
                 SendDialogue(true);
             break;
             case State.Partner:// Chamar ativar/desativar companheiro
-                if(!player.GetComponent<Items>().LoadPartner()){
+                if(!items.LoadPartner()){
                     SendDialogue(true);
                 }
             break;

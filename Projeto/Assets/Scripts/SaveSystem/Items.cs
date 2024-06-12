@@ -142,19 +142,9 @@ public class Items : MonoBehaviour
             Debug.LogError("Ops! houve algum erro. Veja se o seguinte valor é 0, 1 ou 2: " + type);
         }
     }
-    public void SaveDialogue(int n, Dialogs.DialogType type){
-        switch (type)
-        {
-            case Dialogs.DialogType.Exibindo:
-                GetComponent<SaveLoad>().dialogos[n].dialogType = Dialogs.DialogType.Exibindo;
-                GetComponent<SaveLoad>().SaveGame();
-            break;
-            case Dialogs.DialogType.Exibido:
-                GetComponent<SaveLoad>().dialogos[n].dialogType = Dialogs.DialogType.Exibido;
-                GetComponent<SaveLoad>().SaveGame();
-            break;
-            default: break;
-        }
+    public void SaveDialogue(int n, DialogState type){
+        GetComponent<SaveLoad>().dialogos[n].type = type;
+        GetComponent<SaveLoad>().SaveGame();
     }
 
 
@@ -197,8 +187,8 @@ public class Items : MonoBehaviour
     public Mission LoadMission(int id){
         return GetComponent<SaveLoad>().missoes[id];
     }
-    public Dialogs.DialogType LoadDialogue(int n){
-        return GetComponent<SaveLoad>().dialogos[n].dialogType;
+    public DialogState LoadDialogue(int n){
+        return GetComponent<SaveLoad>().dialogos[n].type;
     }
 
 

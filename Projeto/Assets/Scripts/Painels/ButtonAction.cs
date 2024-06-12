@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class ButtonAction : MonoBehaviour
 {
-    public GameObject player;
+    public Items items; // Pega "Items items" ao invés de "GameObject player" Chamando "items." ao invés "player.GetComponent<Items>()."
     public GameObject botaoAcao;
     public GameObject painelUI;
 
@@ -25,7 +25,7 @@ public class ButtonAction : MonoBehaviour
     [Tooltip(
         "Pega o script DialogManager dentro do objeto GameManager\npara usar a função de mostrar o diálogo"
     )]
-    private DialogSystem dialogManager;
+    private DialogSystem dialogManager; // Removido o "GetComponent<DialogSystem>()." desnecessário nas chamadas
 /*
     [Header("Mercado")]
     [Tooltip("Adicionar a tela de mercado para ser exibida.")]
@@ -50,36 +50,36 @@ public class ButtonAction : MonoBehaviour
         {
             playerInRange = true;
             switch (call){
-                case State.Quest://chama o desafio
-                    if(player.GetComponent<Items>().LoadDialogue(idDialog) == Dialogs.DialogType.Exibir){//verifica se exibiu o diálogo anterior
-                        if (idMission == 0){
-                            if (!player.GetComponent<Items>().LoadMission(idMission).missionActive){
+                case State.Quest:// *** Para chamar o desafio ***
+                    if(items.LoadDialogue(idDialog) == DialogState.Exibido){//verifica se exibiu o diálogo anterior
+                        if (idMission == 0){ // Verifica se é a primeira missão do jogo
+                            if (!items.LoadMission(idMission).missionActive){ // Verifica se foi respondida
                                 Send4Button();
                             }
-                        }else if(idMission > 0){
-                            if(player.GetComponent<Items>().LoadMission(idMission-1).missionActive && !player.GetComponent<Items>().LoadMission(idMission).missionActive){
+                        }else if(idMission > 0){ // Verifica se é uma missão adiante
+                            if(items.LoadMission(idMission-1).missionActive && !items.LoadMission(idMission).missionActive){ // Verifica se o desafio anterior foi respondido e se essa pode ser respondida.
                                 Send4Button();
                             }
-                        }else{
+                        }else{ // Caso não tenha satisfeito nenhuma das opções acima
                             Debug.Log("Ops! Houve um erro.");
                         }
                     }
                     break;
-                case State.Dialog://chama o diálogo
-                    if (idDialog == 0){
-                        if (player.GetComponent<Items>().LoadDialogue(idDialog) != Dialogs.DialogType.Exibir){
+                case State.Dialog: // *** Para chamar o diálogo ***
+                    if (idDialog == 0){ // Verifica se é o primeiro diálogo do jogo
+                        if (items.LoadDialogue(idDialog) != DialogState.Exibido){ // Já foi exibido
                             Send4Button();
                         }
-                    }else if(idDialog > 0){
-                        if(player.GetComponent<Items>().LoadDialogue(idDialog-1) == Dialogs.DialogType.Exibir && player.GetComponent<Items>().LoadDialogue(idDialog) != Dialogs.DialogType.Exibir){
+                    }else if(idDialog > 0){ // É um dos próximos diálogos
+                        if(items.LoadDialogue(idDialog-1) == DialogState.Exibido && items.LoadDialogue(idDialog) != DialogState.Exibido){ // anterior foi exibido, esse pode ser exibido
                             Send4Button();
                         }
-                    }else{
+                    }else{ // Houve um problema
                         Debug.Log("Ops! Houve um erro.");
                     }
                     break;
                 case State.Market://Chama o mercado
-                    if (player.GetComponent<Items>().LoadDialogue(idDialog) == Dialogs.DialogType.Exibir){
+                    if (items.LoadDialogue(idDialog) == DialogState.Exibido){
                         Send4Button();
                     }
                     break;
@@ -102,13 +102,13 @@ public class ButtonAction : MonoBehaviour
                 GetComponent<ActivateChallenge>().ActiveQuest();
                 break;
             case State.Dialog:
-                dialogManager.GetComponent<DialogSystem>().id = idDialog;
-                dialogManager.GetComponent<DialogSystem>().StartDialog(dialog);
+                dialogManager.id = idDialog;
+                dialogManager.StartDialog(dialog);
                 break;
             case State.Market:
-                dialogManager.GetComponent<DialogSystem>().act = true;
-                dialogManager.GetComponent<DialogSystem>().tipo = call;
-                dialogManager.GetComponent<DialogSystem>().StartDialog(dialog);
+                dialogManager.act = true;
+                dialogManager.tipo = call;
+                dialogManager.StartDialog(dialog);
                 break;
         }
         SpaceKeyPressed = false; // Define a tecla F como não pressionada após chamar BtnClick()

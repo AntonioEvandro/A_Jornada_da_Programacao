@@ -160,7 +160,7 @@ public class SaveLoad : MonoBehaviour
         }*/
         for(x = 0; x < tam*3; x++){
             Dialogs aux = new(){
-                dialogType = Dialogs.DialogType.Exibir
+                type = DialogState.Exibir
             };
             dialogos[x] = aux;
         }
