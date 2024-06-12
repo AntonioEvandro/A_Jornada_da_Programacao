@@ -16,5 +16,6 @@ public class Save
     public int m2;
     public bool partner, island, market;
     public List<Mission> missions;
-    public bool[] dialogue;
+    //public bool[] dialogue;
+    public List<Dialogs> dialogues;
 }

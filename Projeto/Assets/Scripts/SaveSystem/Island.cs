@@ -6,7 +6,8 @@ public class Island : MonoBehaviour
 {
     [SerializeField]
     private GameObject player, partner, joao, bode, onca, alface, canoa;
-    private bool resposta01, proxDialogo, island;
+    private bool island;
+    private Dialogs.DialogType resposta01, proxDialogo;
     private readonly int idDialog = 8;
     // Start is called before the first frame update
     void Start()
@@ -26,13 +27,13 @@ public class Island : MonoBehaviour
     private void Loader(){
         //Atribuindo valores
         resposta01 = player.GetComponent<Items>().LoadDialogue(idDialog);
-        if(resposta01){
+        if(resposta01 == Dialogs.DialogType.Exibir){
             island = player.GetComponent<Items>().LoadIsland();
             proxDialogo = player.GetComponent<Items>().LoadDialogue(idDialog+1);
 
             //posicionamento dos elementos
             if (!island){
-                if(!proxDialogo){
+                if(proxDialogo == Dialogs.DialogType.Exibir){
                     player.transform.position = new Vector2(12, 0);
                     partner.transform.position = new Vector2(11.3f, 0);
                 }
@@ -42,7 +43,7 @@ public class Island : MonoBehaviour
                 alface.transform.localPosition = new Vector2(15.3f,3.3f);
                 canoa.transform.localPosition = new Vector2(17.2f,3.5f);
             }else{
-                if(!proxDialogo){
+                if(proxDialogo == Dialogs.DialogType.Exibindo){
                     player.transform.localPosition = new Vector2(22.25f, 3.75f);
                     partner.transform.localPosition = new Vector2(21.5f, 3.5f);
                     player.GetComponent<ControlePersonagem>().Anim(ControlePersonagem.AniPlayer.main);

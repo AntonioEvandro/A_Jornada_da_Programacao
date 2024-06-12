@@ -26,11 +26,11 @@ public class CallDialogue : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other){
         if(other.gameObject.CompareTag("Player")){ // Verifica se diálogo pode ser exibido
             if (id == 0){
-                if (!player.GetComponent<Items>().LoadDialogue(id)){
+                if (player.GetComponent<Items>().LoadDialogue(id) == Dialogs.DialogType.Exibir){
                     Activate();        
                 }
             }else if(id > 0){
-                if(player.GetComponent<Items>().LoadDialogue(id-1) && !player.GetComponent<Items>().LoadDialogue(id)){
+                if(player.GetComponent<Items>().LoadDialogue(id-1) == Dialogs.DialogType.Exibir && player.GetComponent<Items>().LoadDialogue(id) != Dialogs.DialogType.Exibir){
                     Activate();        
                 }
             }else{

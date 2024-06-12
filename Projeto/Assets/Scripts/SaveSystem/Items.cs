@@ -142,7 +142,7 @@ public class Items : MonoBehaviour
         }
     }
     public void SaveDialogue(int n){
-        GetComponent<SaveLoad>().dialogos[n] = true;
+        GetComponent<SaveLoad>().dialogos[n].dialogType = Dialogs.DialogType.Exibido;
         GetComponent<SaveLoad>().SaveGame();
     }
 
@@ -186,8 +186,8 @@ public class Items : MonoBehaviour
     public Mission LoadMission(int id){
         return GetComponent<SaveLoad>().missoes[id];
     }
-    public bool LoadDialogue(int n){
-        return GetComponent<SaveLoad>().dialogos[n];
+    public Dialogs.DialogType LoadDialogue(int n){
+        return GetComponent<SaveLoad>().dialogos[n].dialogType;
     }
 
 

@@ -51,7 +51,7 @@ public class ButtonAction : MonoBehaviour
             playerInRange = true;
             switch (call){
                 case State.Quest://chama o desafio
-                    if(player.GetComponent<Items>().LoadDialogue(idDialog)){//verifica se exibiu o diálogo anterior
+                    if(player.GetComponent<Items>().LoadDialogue(idDialog) == Dialogs.DialogType.Exibir){//verifica se exibiu o diálogo anterior
                         if (idMission == 0){
                             if (!player.GetComponent<Items>().LoadMission(idMission).missionActive){
                                 Send4Button();
@@ -67,11 +67,11 @@ public class ButtonAction : MonoBehaviour
                     break;
                 case State.Dialog://chama o diálogo
                     if (idDialog == 0){
-                        if (!player.GetComponent<Items>().LoadDialogue(idDialog)){
+                        if (player.GetComponent<Items>().LoadDialogue(idDialog) != Dialogs.DialogType.Exibir){
                             Send4Button();
                         }
                     }else if(idDialog > 0){
-                        if(player.GetComponent<Items>().LoadDialogue(idDialog-1) && !player.GetComponent<Items>().LoadDialogue(idDialog)){
+                        if(player.GetComponent<Items>().LoadDialogue(idDialog-1) == Dialogs.DialogType.Exibir && player.GetComponent<Items>().LoadDialogue(idDialog) != Dialogs.DialogType.Exibir){
                             Send4Button();
                         }
                     }else{
@@ -79,7 +79,7 @@ public class ButtonAction : MonoBehaviour
                     }
                     break;
                 case State.Market://Chama o mercado
-                    if (player.GetComponent<Items>().LoadDialogue(idDialog)){
+                    if (player.GetComponent<Items>().LoadDialogue(idDialog) == Dialogs.DialogType.Exibir){
                         Send4Button();
                     }
                     break;
