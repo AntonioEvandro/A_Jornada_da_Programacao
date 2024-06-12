@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Items : MonoBehaviour
@@ -141,9 +142,19 @@ public class Items : MonoBehaviour
             Debug.LogError("Ops! houve algum erro. Veja se o seguinte valor é 0, 1 ou 2: " + type);
         }
     }
-    public void SaveDialogue(int n){
-        GetComponent<SaveLoad>().dialogos[n].dialogType = Dialogs.DialogType.Exibido;
-        GetComponent<SaveLoad>().SaveGame();
+    public void SaveDialogue(int n, Dialogs.DialogType type){
+        switch (type)
+        {
+            case Dialogs.DialogType.Exibindo:
+                GetComponent<SaveLoad>().dialogos[n].dialogType = Dialogs.DialogType.Exibindo;
+                GetComponent<SaveLoad>().SaveGame();
+            break;
+            case Dialogs.DialogType.Exibido:
+                GetComponent<SaveLoad>().dialogos[n].dialogType = Dialogs.DialogType.Exibido;
+                GetComponent<SaveLoad>().SaveGame();
+            break;
+            default: break;
+        }
     }
 
 
