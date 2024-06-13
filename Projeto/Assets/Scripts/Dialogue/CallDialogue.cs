@@ -47,9 +47,10 @@ public class CallDialogue : MonoBehaviour
             Debug.Log("Ops! Provávelmente o diálogo já foi exibido ou houve algum erro.");
         }
     }
-    private void OnTriggerEnter2D(Collider2D other){
-        if(other.gameObject.CompareTag("Player") && !isResponse){ // Verifica se diálogo pode ser exibido
+    private void OnTriggerStay2D(Collider2D other){
+        if(!isResponse && other.gameObject.CompareTag("Player") && !stopVerify){
             Verify();
+            stopVerify = true;
         }
     }
 
