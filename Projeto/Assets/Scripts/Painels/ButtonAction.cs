@@ -41,14 +41,10 @@ public class ButtonAction : MonoBehaviour
     private State call;//chama determinada função
     private GameObject bt;
     private bool playerInRange = false; // Adicionado para rastrear se o jogador está no range
-    private bool SpaceKeyPressed = false; // Adicionado para rastrear se a tecla F foi pressionada
+    private bool keyActionPressed = false; // Adicionado para rastrear se a tecla F foi pressionada
     
-    // Função para mostrar o botão de ação enquanto estiver perto da quest
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.gameObject.CompareTag("Player"))
-        {
-            playerInRange = true;
+    // Função para verificar a ação que o botão fará
+    private void VerifyAction(){
             switch (call){
                 case State.Quest:// *** Para chamar o desafio ***
                     if(items.LoadDialogue(idDialog) == DialogState.Exibido){//verifica se exibiu o diálogo anterior
@@ -85,6 +81,14 @@ public class ButtonAction : MonoBehaviour
                     break;
             }
         }
+    // Função para mostrar o botão de ação enquanto estiver perto da quest
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            playerInRange = true;
+            VerifyAction();
+        }
     }
     // Função para ocultar o botão de ação enquanto estiver perto da quest
     private void OnTriggerExit2D(Collider2D other)
@@ -111,7 +115,7 @@ public class ButtonAction : MonoBehaviour
                 dialogManager.StartDialog(dialog);
                 break;
         }
-        SpaceKeyPressed = false; // Define a tecla F como não pressionada após chamar BtnClick()
+        keyActionPressed = false; // Define a tecla F como não pressionada após chamar BtnClick()
     }
     // Ativa o botão de ação e envia a função BtnClick para ele
     public void Send4Button(){
@@ -134,10 +138,10 @@ public class ButtonAction : MonoBehaviour
         }
     }*/
     void Update(){
-        if (playerInRange && bt != null && bt.activeSelf && Input.GetKeyDown(KeyCode.Space) && !SpaceKeyPressed)
+        if (playerInRange && bt != null && bt.activeSelf && Input.GetKeyDown(KeyCode.E) && !keyActionPressed)
         {
             BtnClick();
-            SpaceKeyPressed = true; // Define a tecla Espaço como pressionada após chamar BtnClick()
+            keyActionPressed = true; // Define a tecla Espaço como pressionada após chamar BtnClick()
         }
         
     }
