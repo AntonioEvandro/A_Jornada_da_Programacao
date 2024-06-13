@@ -1,9 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-#if UNITY_EDITOR
-using UnityEditor;
-#endif
 
 public class CallDialogue : MonoBehaviour
 {
@@ -15,10 +12,8 @@ public class CallDialogue : MonoBehaviour
 
     [SerializeField] private State call;
     
-    [HideInInspector] 
-    public bool isResponse = false; // Ligado é resposta a um desafio, desligado apenas um diálogo normal. Será exibido se o desafio anterior estiver concluido.
-    [Header("Hidde fields")]
-    [HideInInspector] public int missionId; // ID do desafio anterior
+    [SerializeField] private bool isResponse = false; // Ligado é resposta a um desafio, desligado apenas um diálogo normal. Será exibido se o desafio anterior estiver concluido.
+    [SerializeField] private int missionId; // ID do desafio anterior
     private bool stopVerify = false; // Fazer o Update() parar de chamar o Verify()
 
     /*/ Start is called before the first frame update
@@ -31,14 +26,16 @@ public class CallDialogue : MonoBehaviour
     void Update()
     {
         if(isResponse){
-            if(!stopVerify && items.LoadMission(missionId).missionActive){
+            if( items.LoadMission(missionId).missionActive && !stopVerify){
                 Verify();
                 stopVerify = true;
             }
         }
     }
     private void Verify(){
-        if (id == 0){
+        if(items.LoadDialogue(id) == DialogState.Exibindo){
+            Activate();
+        }else if (id == 0){
             if (items.LoadDialogue(id) != DialogState.Exibido){
                 Activate();        
             }
@@ -51,7 +48,7 @@ public class CallDialogue : MonoBehaviour
         }
     }
     private void OnTriggerEnter2D(Collider2D other){
-        if(other.gameObject.CompareTag("Player")){ // Verifica se diálogo pode ser exibido
+        if(other.gameObject.CompareTag("Player") && !isResponse){ // Verifica se diálogo pode ser exibido
             Verify();
         }
     }
@@ -90,16 +87,3 @@ public class CallDialogue : MonoBehaviour
         }
     }
 }
-
-#if UNITY_EDITOR
-[CustomEditor(typeof(CallDialogue))]
-class CallDialogueEditor : Editor {
-    public override void OnInspectorGUI() {
-        var script = (CallDialogue)target;
-        script.isResponse = EditorGUILayout.Toggle(label: "Resposta", script.isResponse);
-        if(script.isResponse == false)
-            return;
-        script.missionId = EditorGUILayout.IntField(label:"ID da missão", script.missionId);
-    }
-}
-#endif

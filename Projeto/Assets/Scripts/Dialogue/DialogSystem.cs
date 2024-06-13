@@ -64,8 +64,11 @@ public class DialogSystem : MonoBehaviour
 
     public void StartDialog(Dialog dialog){
         player.GetComponent<ControlePersonagem>().BlockMovent();
-        
-        player.GetComponent<Items>().SaveDialogue(id, DialogState.Exibindo);// Dialogo fica com estado Exibindo.
+
+        // Dialogo fica com estado Exibindo, até ser salvo como exibido.
+        if(player.GetComponent<Items>().LoadDialogue(id) != DialogState.Exibindo){
+            player.GetComponent<Items>().SaveDialogue(id, DialogState.Exibindo);
+        }
         //Deixa a caixa de diálogo visível
         dialogueBox.SetActive(true);
         // Inicializa a fila de falas
@@ -139,24 +142,26 @@ public class DialogSystem : MonoBehaviour
                 case State.Market:
                     if(!player.GetComponent<Items>().LoadMercado()){
                         player.GetComponent<Items>().SaveMarket();
-                        Debug.Log("Mercado desbloqueado");
+                        Debug.Log("Mercado desbloqueado!");
                     }
                     GetComponent<SwitchPanels>().MarketOn();
                 break;
                 case State.Partner:
                     if(!player.GetComponent<Items>().LoadPartner()){
                         player.GetComponent<Items>().SavePartner(true);
+                        Debug.Log("Companheiro ativado!");
                     }else{
                         player.GetComponent<Items>().SavePartner(false);
+                        Debug.Log("Companheiro descansando!");
                     }
                 break;
                 case State.Island:
                     if(!player.GetComponent<Items>().LoadIsland()){
                         player.GetComponent<Items>().SaveIsland(true);
-                        Debug.Log("Ativa" + player.GetComponent<Items>().LoadIsland());
+                        Debug.Log("TP p/ 2ª ilha ativado" + player.GetComponent<Items>().LoadIsland());
                     }else{
                         player.GetComponent<Items>().SaveIsland(false);
-                        Debug.Log("Desativa" + player.GetComponent<Items>().LoadIsland());
+                        Debug.Log("TP desativado" + player.GetComponent<Items>().LoadIsland());
                     }
                     GetComponent<Island>().Quest();
                 break;
