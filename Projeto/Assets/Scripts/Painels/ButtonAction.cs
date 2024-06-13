@@ -42,6 +42,7 @@ public class ButtonAction : MonoBehaviour
     private GameObject bt;
     private bool playerInRange = false; // Adicionado para rastrear se o jogador está no range
     private bool keyActionPressed = false; // Adicionado para rastrear se a tecla F foi pressionada
+    private bool actionVerified = false; // Indica se a ação para o botão foi verificada
     
     // Função para verificar a ação que o botão fará
     private void VerifyAction(){
@@ -87,13 +88,13 @@ public class ButtonAction : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             playerInRange = true;
-            VerifyAction();
         }
     }
     // Função para ocultar o botão de ação enquanto estiver perto da quest
     private void OnTriggerExit2D(Collider2D other)
     {
         if(other.gameObject.CompareTag("Player")){
+            actionVerified = false;
             playerInRange = false;
             Destroy(bt);
         }
@@ -127,6 +128,7 @@ public class ButtonAction : MonoBehaviour
         /*if(Input.GetKey(KeyCode.F)){
             BtnClick();
         }*/
+        actionVerified = true;
     }
 
     /*private void OnTriggerStay2D(Collider2D other)
@@ -138,11 +140,15 @@ public class ButtonAction : MonoBehaviour
         }
     }*/
     void Update(){
-        if (playerInRange && bt != null && bt.activeSelf && Input.GetKeyDown(KeyCode.E) && !keyActionPressed)
-        {
-            BtnClick();
-            keyActionPressed = true; // Define a tecla Espaço como pressionada após chamar BtnClick()
+        if(playerInRange){
+            if(items.LoadDialogue(idDialog) == DialogState.Exibido && !actionVerified){
+                VerifyAction();
+            }
+            if (bt != null && bt.activeSelf && Input.GetKeyDown(KeyCode.E) && !keyActionPressed)
+            {
+                BtnClick();
+                keyActionPressed = true; // Define a tecla Espaço como pressionada após chamar BtnClick()
+            }
         }
-        
     }
 }
