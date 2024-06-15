@@ -14,7 +14,7 @@ public class SaveLoad : MonoBehaviour
 {
     [SerializeField] private string newGame;
     private int x;
-    private readonly int tam = 9;
+    private readonly int tam = 25;
     public List<float> posicao;
     public List<float> posiCompa;
     public int vidas, moedas, recomen, dicas, m2;
@@ -143,6 +143,7 @@ public class SaveLoad : MonoBehaviour
         companheiro = false;
         ilha = false;
         mercado = false;
+        missoes.Clear();
         for(x = 0; x < tam; x++){
             Mission aux = new(){
                 id = x,
@@ -152,17 +153,18 @@ public class SaveLoad : MonoBehaviour
                 tipsUsed = false,
                 m2Used = false,
             };
-            missoes[x] = aux;
+            missoes.Add(aux);
         }
         /*dialogos = new bool[tam*3];
         for(x = 0; x < tam*3-1; x++){
             dialogos[x] = false;
         }*/
+        dialogos.Clear();
         for(x = 0; x < tam*3; x++){
             Dialogs aux = new(){
                 type = DialogState.Exibir
             };
-            dialogos[x] = aux;
+            dialogos.Add(aux);
         }
         SaveGame();
         SceneManager.LoadScene(newGame);

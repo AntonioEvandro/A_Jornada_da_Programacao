@@ -120,6 +120,7 @@ Laida:
  Vamos logo ao que interessa.
 Chico:
  Como desejar.
+
 	[Após descobrir o mercado] id: 11
 Chico:
  Obrigado pela preferência!
@@ -302,3 +303,8 @@ Laida:
  Espero que as mudanças venham logo.
  ...
  Mal posso esperar.
+
+
+
+			***Dialogos sem identificadores***
+	[Sair do mercado]
