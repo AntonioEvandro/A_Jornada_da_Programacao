@@ -76,7 +76,7 @@ public class ButtonAction : MonoBehaviour
                     }
                     break;
                 case State.Market://Chama o mercado
-                    if (items.LoadDialogue(idDialog) == DialogState.Exibido){
+                    if (items.LoadMercado()){
                         Send4Button();
                     }
                     break;
@@ -111,6 +111,7 @@ public class ButtonAction : MonoBehaviour
                 dialogManager.StartDialog(dialog);
                 break;
             case State.Market:
+                dialogManager.id = idDialog;
                 dialogManager.act = true;
                 dialogManager.tipo = call;
                 dialogManager.StartDialog(dialog);

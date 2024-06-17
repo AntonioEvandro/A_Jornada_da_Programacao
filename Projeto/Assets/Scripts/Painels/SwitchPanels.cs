@@ -23,6 +23,12 @@ public class SwitchPanels : MonoBehaviour
     private List<Dialog> dialog;
 
     private int rand;
+    [Tooltip("ID do dialógo após o mercado for encontrado")]
+    [SerializeField]
+    private int idMktFinded;
+    [Tooltip("Itens do player")]
+    [SerializeField]
+    private Items items;
 
     // Start is called before the first frame update
     void Start()
@@ -89,7 +95,9 @@ public class SwitchPanels : MonoBehaviour
         TogglePauseState(false);
         quests.transform.gameObject.SetActive(true);
         rand = Random.Range (0, dialog.Count);
-        GetComponent<DialogSystem>().StartDialog(dialog[rand]);
+        if(items.LoadDialogue(idMktFinded) == DialogState.Exibido){
+            GetComponent<DialogSystem>().StartDialog(dialog[rand]);
+        }
         panelUI.SetActive(true);
         HUD.enabled = true;
     }

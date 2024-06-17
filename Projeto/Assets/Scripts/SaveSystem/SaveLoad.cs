@@ -110,6 +110,7 @@ public class SaveLoad : MonoBehaviour
             m2 = load.m2;
             companheiro = load.partner;
             ilha = load.island;
+            mercado = load.market;
             //missoes = new(){null,null,null,null,null,null,null,null,null,null};
             missoes = load.missions;
             //Debug.Log("missao " + load.missions[0].id + ", " + load.missions[0].missionActive);

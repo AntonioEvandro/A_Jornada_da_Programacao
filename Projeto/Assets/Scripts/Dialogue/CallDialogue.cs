@@ -11,8 +11,12 @@ public class CallDialogue : MonoBehaviour
     [SerializeField] private DialogSystem dialogManager; //Encurtado GetComponent<DialogSystem>(). -> dialogManager
 
     [SerializeField] private State call;
+
+    [Tooltip("Caso o dialogo deve aparecer apos outro no mesmo colisor")]
+    [SerializeField] private bool SecDialog;
     
-    [SerializeField] private bool isResponse = false; // Ligado é resposta a um desafio, desligado apenas um diálogo normal. Será exibido se o desafio anterior estiver concluido.
+    [Tooltip("Ligado é resposta a um desafio, desligado apenas um diálogo normal.\n Será exibido se o desafio anterior estiver concluido.")]
+    [SerializeField] private bool isResponse = false;
     [SerializeField] private int missionId; // ID do desafio anterior
     private bool stopVerify = false; // Fazer o Update() parar de chamar o Verify()
 
@@ -25,32 +29,36 @@ public class CallDialogue : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(isResponse){
-            if( items.LoadMission(missionId).missionActive && !stopVerify){
+        if(!stopVerify){
+            if(isResponse){
+                if( items.LoadMission(missionId).missionActive){
+                    Verify();
+                }
+            }else if(SecDialog && items.LoadMercado()){
                 Verify();
-                stopVerify = true;
             }
         }
     }
     private void Verify(){
-        if(items.LoadDialogue(id) == DialogState.Exibindo){
+        if(items.LoadDialogue(id) == DialogState.Exibido){
+            stopVerify = true;
+        }else if(items.LoadDialogue(id) == DialogState.Exibindo){
             Activate();
-        }else if (id == 0){
-            if (items.LoadDialogue(id) != DialogState.Exibido){
+        }else if  (items.LoadDialogue(id) == DialogState.Exibir){
+            if(id == 0){
                 Activate();        
-            }
-        }else if(id > 0){
-            if(items.LoadDialogue(id-1) == DialogState.Exibido && items.LoadDialogue(id) != DialogState.Exibido){
-                Activate();        
-            }
+            }else if(id > 0 && items.LoadDialogue(id-1) == DialogState.Exibido){
+                Activate();
+            }/*else{
+                Debug.LogFormat("ID invalido {0}!", id);
+            }*/
         }else{
-            Debug.Log("Ops! Provávelmente o diálogo já foi exibido ou houve algum erro.");
+            Debug.Log("Ops! Provávelmente o diálogo já foi exibido ou houve algum outro erro.");
         }
     }
     private void OnTriggerStay2D(Collider2D other){
         if(!isResponse && other.gameObject.CompareTag("Player") && !stopVerify){
             Verify();
-            stopVerify = true;
         }
     }
 
@@ -63,6 +71,7 @@ public class CallDialogue : MonoBehaviour
         dialogManager.StartDialog(dialog);
     }
     public void Activate(){
+        stopVerify = true;
         switch (call)// Verifica se após o diálogo irá acontecer algo
         {
             case State.Quest:// Ativar  desafio

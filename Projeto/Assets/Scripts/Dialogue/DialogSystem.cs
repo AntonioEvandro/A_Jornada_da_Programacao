@@ -66,7 +66,7 @@ public class DialogSystem : MonoBehaviour
         player.GetComponent<ControlePersonagem>().BlockMovent();
 
         // Dialogo fica com estado Exibindo, até ser salvo como exibido.
-        if(player.GetComponent<Items>().LoadDialogue(id) != DialogState.Exibindo){
+        if(!(player.GetComponent<Items>().LoadMercado() && id == 0) && player.GetComponent<Items>().LoadDialogue(id) != DialogState.Exibindo){
             player.GetComponent<Items>().SaveDialogue(id, DialogState.Exibindo);
         }
         //Deixa a caixa de diálogo visível
@@ -98,7 +98,9 @@ public class DialogSystem : MonoBehaviour
                 //bloqueia o botão de pular diálogo
                 btnNext = false;
                 // Torna a o diálogo inacessível
-                player.GetComponent<Items>().SaveDialogue(id, DialogState.Exibido);
+                if(!(player.GetComponent<Items>().LoadMercado() && id == 0)){
+                    player.GetComponent<Items>().SaveDialogue(id, DialogState.Exibido);
+                }
                 // Chama a função de fechar a caixa de diálogo
                 StartCoroutine(CloseBox());
                 return;
