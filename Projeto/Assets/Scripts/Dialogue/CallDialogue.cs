@@ -84,9 +84,7 @@ public class CallDialogue : MonoBehaviour
                 SendDialogue(true);
             break;
             case State.Partner:// Chamar ativar/desativar companheiro
-                if(!items.LoadPartner()){
-                    SendDialogue(true);
-                }
+                SendDialogue(true);
             break;
             case State.Island: // Ativar segunda ilha
                 SendDialogue(true);
